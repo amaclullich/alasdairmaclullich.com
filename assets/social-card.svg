@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Alasdair MacLullich</title>
+  <desc id="desc">Geriatrician, delirium researcher and writer</desc>
+  <rect width="1200" height="630" fill="#f6f5f1"/>
+  <rect x="72" y="72" width="1056" height="486" fill="#fffefa" stroke="#cad4cf" stroke-width="2"/>
+  <rect x="72" y="72" width="14" height="486" fill="#1e625a"/>
+  <circle cx="168" cy="164" r="43" fill="#124b45"/>
+  <text x="168" y="174" text-anchor="middle" fill="#ffffff" font-family="Georgia, serif" font-size="25" font-weight="700" letter-spacing="1">AM</text>
+  <text x="132" y="320" fill="#17231f" font-family="Georgia, serif" font-size="76" font-weight="500" letter-spacing="-2">Alasdair MacLullich</text>
+  <text x="136" y="395" fill="#1e625a" font-family="Arial, sans-serif" font-size="29" font-weight="700" letter-spacing="2">GERIATRICIAN · DELIRIUM RESEARCHER · WRITER</text>
+  <line x1="136" y1="458" x2="1060" y2="458" stroke="#cad4cf" stroke-width="2"/>
+  <text x="136" y="511" fill="#56615d" font-family="Arial, sans-serif" font-size="26">Clinical work, research and public resources</text>
+</svg>
