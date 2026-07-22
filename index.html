@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'">
   <title>Alasdair MacLullich | Geriatrician, delirium researcher and writer</title>
   <meta name="description" content="The clinical work, research, books and public resources of Alasdair MacLullich, Professor of Geriatric Medicine at the University of Edinburgh.">
   <meta name="author" content="Alasdair MacLullich">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="google-site-verification" content="gtLMXNe2ZIDilDQbfje5Y5RQW3nKgfYlMBcDy4FEtKs">
   <meta name="theme-color" content="#f6f5f1">
   <link rel="canonical" href="https://www.alasdairmaclullich.com/">
@@ -39,6 +42,7 @@
         "@id": "https://www.alasdairmaclullich.com/#website",
         "url": "https://www.alasdairmaclullich.com/",
         "name": "Alasdair MacLullich",
+        "alternateName": "alasdairmaclullich.com",
         "description": "Clinical work, research, books and public resources",
         "inLanguage": "en-GB",
         "publisher": { "@id": "https://www.alasdairmaclullich.com/#person" }
@@ -50,21 +54,38 @@
         "name": "Alasdair MacLullich",
         "isPartOf": { "@id": "https://www.alasdairmaclullich.com/#website" },
         "mainEntity": { "@id": "https://www.alasdairmaclullich.com/#person" },
+        "dateCreated": "2026-07-21",
+        "dateModified": "2026-07-22",
         "inLanguage": "en-GB"
       },
       {
         "@type": "Person",
         "@id": "https://www.alasdairmaclullich.com/#person",
         "name": "Alasdair MacLullich",
+        "alternateName": "Alasdair M. J. MacLullich",
+        "honorificPrefix": "Professor",
         "givenName": "Alasdair",
         "familyName": "MacLullich",
         "jobTitle": "Professor of Geriatric Medicine",
+        "description": "Professor of Geriatric Medicine at the University of Edinburgh, geriatrician, delirium researcher and writer.",
         "url": "https://www.alasdairmaclullich.com/",
         "worksFor": {
           "@type": "CollegeOrUniversity",
           "name": "The University of Edinburgh",
           "url": "https://www.ed.ac.uk/"
         },
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Scottish Hip Fracture Audit",
+          "url": "https://publichealthscotland.scot/resources-and-tools/health-strategy-and-outcomes/scottish-national-audit-programme-snap/scottish-hip-fracture-audit-shfa/overview-of-shfa/"
+        },
+        "knowsAbout": [
+          "Geriatric medicine",
+          "Delirium",
+          "Delirium assessment",
+          "Acute orthogeriatrics",
+          "Hip fracture care"
+        ],
         "sameAs": [
           "https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich",
           "https://usher.ed.ac.uk/ageing-health/people/academic-staff/professor-alasdair-m-j-maclullich",
@@ -74,6 +95,7 @@
           "https://www.linkedin.com/in/amaclullich/",
           "https://x.com/A_MacLullich",
           "https://bsky.app/profile/amaclullich.bsky.social",
+          "https://www.wikidata.org/wiki/Q48288045",
           "https://en.wikipedia.org/wiki/Alasdair_MacLullich"
         ]
       }
@@ -104,7 +126,7 @@
     <section class="hero shell" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">Geriatrician <span aria-hidden="true">·</span> delirium researcher <span aria-hidden="true">·</span> writer</p>
-        <h1 id="hero-title">Clinical work, research and <em>public resources</em></h1>
+        <h1 id="hero-title"><span class="hero-person-name">Alasdair MacLullich</span>Clinical work, research and <em>public resources</em></h1>
         <p class="hero-lead">I am Professor of Geriatric Medicine at the University of Edinburgh and work in acute geriatric medicine and acute orthogeriatrics at the Royal Infirmary of Edinburgh.</p>
         <p class="hero-summary">This website brings together the main resources, books, writing and public roles connected with my work.</p>
         <div class="hero-actions">
@@ -121,11 +143,11 @@
           </li>
           <li>
             <span class="role-number" aria-hidden="true">02</span>
-            <span>Editor-in-Chief, <cite>Delirium</cite></span>
+            <a class="role-link" href="https://deliriumjournal.com/editorial-board">Editor-in-Chief, <cite>Delirium</cite> <span aria-hidden="true">↗</span></a>
           </li>
           <li>
             <span class="role-number" aria-hidden="true">03</span>
-            <span>Chair, Scottish Hip Fracture Audit</span>
+            <a class="role-link" href="https://publichealthscotland.scot/resources-and-tools/health-strategy-and-outcomes/scottish-national-audit-programme-snap/scottish-hip-fracture-audit-shfa/overview-of-shfa/">Chair, Scottish Hip Fracture Audit <span aria-hidden="true">↗</span></a>
           </li>
         </ul>
       </aside>
@@ -303,11 +325,11 @@
             <dd>Clinical work in acute geriatric medicine and acute orthogeriatrics</dd>
           </div>
           <div>
-            <dt><cite>Delirium</cite></dt>
+            <dt><a href="https://deliriumjournal.com/editorial-board"><cite>Delirium</cite> <span aria-hidden="true">↗</span></a></dt>
             <dd>Editor-in-Chief</dd>
           </div>
           <div>
-            <dt>Scottish Hip Fracture Audit</dt>
+            <dt><a href="https://publichealthscotland.scot/resources-and-tools/health-strategy-and-outcomes/scottish-national-audit-programme-snap/scottish-hip-fracture-audit-shfa/overview-of-shfa/">Scottish Hip Fracture Audit <span aria-hidden="true">↗</span></a></dt>
             <dd>Chair</dd>
           </div>
         </dl>
@@ -331,20 +353,25 @@
 
   <footer class="site-footer">
     <div class="shell footer-main">
-      <a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">
-        <span class="brand-mark" aria-hidden="true">AM</span>
-        <span class="brand-name">Alasdair MacLullich</span>
-      </a>
+      <div class="footer-identity">
+        <a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">
+          <span class="brand-mark" aria-hidden="true">AM</span>
+          <span class="brand-name">Alasdair MacLullich</span>
+        </a>
+        <p class="footer-identity-note">Professor of Geriatric Medicine at the University of Edinburgh.</p>
+      </div>
       <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/#work">Work</a>
         <a href="/about/">About</a>
         <a href="/social/">Social</a>
         <a href="/privacy/">Privacy</a>
+        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile <span aria-hidden="true">↗</span></a>
+        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer <span aria-hidden="true">↗</span></a>
         <a href="https://orcid.org/0000-0003-3159-9370">ORCID <span aria-hidden="true">↗</span></a>
-        <a href="https://www.linkedin.com/in/amaclullich/">LinkedIn <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
     <div class="shell footer-note">
-      <p>Maintained independently by Alasdair MacLullich. This is not an official website of the University of Edinburgh, NHS, <cite>Delirium</cite> journal, European Delirium Association, Scottish Hip Fracture Audit or iDelirium. Linked websites have their own editorial responsibility.</p>
+      <p>Maintained independently by Alasdair MacLullich. This is not an official website of the University of Edinburgh, NHS, <cite>Delirium</cite> journal, European Delirium Association, Scottish Hip Fracture Audit or iDelirium. Linked websites have their own editorial responsibility. Profile information reviewed 22 July 2026.</p>
       <p>General information only; not individual medical advice.</p>
     </div>
   </footer>

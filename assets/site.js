@@ -2,7 +2,9 @@
   "use strict";
 
   var measurementId = "G-DEJ9C50DTY";
-  var consentKey = "am_analytics_consent_v1";
+  var preferenceName = "am_analytics_choice";
+  var legacyConsentKey = "am_analytics_consent_v1";
+  var preferenceMaxAge = 183 * 24 * 60 * 60;
   var analyticsLoaded = false;
   var returnFocus = null;
 
@@ -20,20 +22,47 @@
   });
   window.gtag("set", "ads_data_redaction", true);
 
-  function readConsent() {
-    try {
-      return window.localStorage.getItem(consentKey);
-    } catch (error) {
-      return null;
-    }
+  function secureCookieAttribute() {
+    return window.location.protocol === "https:" ? "; Secure" : "";
   }
 
-  function saveConsent(value) {
-    try {
-      window.localStorage.setItem(consentKey, value);
-    } catch (error) {
-      // If browser storage is unavailable, the visitor can choose again next time.
+  function readPreferenceCookie() {
+    var cookies = document.cookie ? document.cookie.split(";") : [];
+    var prefix = preferenceName + "=";
+
+    for (var index = 0; index < cookies.length; index += 1) {
+      var cookie = cookies[index].trim();
+      if (cookie.indexOf(prefix) === 0) {
+        var value = decodeURIComponent(cookie.slice(prefix.length));
+        return value === "granted" || value === "denied" ? value : null;
+      }
     }
+
+    return null;
+  }
+
+  function savePreference(value) {
+    document.cookie = preferenceName + "=" + encodeURIComponent(value) +
+      "; Max-Age=" + preferenceMaxAge +
+      "; Path=/; SameSite=Lax" + secureCookieAttribute();
+  }
+
+  function migrateLegacyPreference() {
+    var legacyValue = null;
+
+    try {
+      legacyValue = window.localStorage.getItem(legacyConsentKey);
+      window.localStorage.removeItem(legacyConsentKey);
+    } catch (error) {
+      // Browser storage may be unavailable; no migration is needed in that case.
+    }
+
+    if (legacyValue === "granted" || legacyValue === "denied") {
+      savePreference(legacyValue);
+      return legacyValue;
+    }
+
+    return null;
   }
 
   function updateConsent(value) {
@@ -59,26 +88,46 @@
     document.head.appendChild(script);
 
     window.gtag("js", new Date());
-    window.gtag("config", measurementId);
+    window.gtag("config", measurementId, {
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+      cookie_expires: preferenceMaxAge,
+      cookie_update: false
+    });
+  }
+
+  function expireCookie(name, domain) {
+    var domainAttribute = domain ? "; Domain=" + domain : "";
+    document.cookie = name + "=; Max-Age=0; Path=/; SameSite=Lax" +
+      domainAttribute + secureCookieAttribute();
+  }
+
+  function clearAnalyticsCookies() {
+    var cookies = document.cookie ? document.cookie.split(";") : [];
+
+    cookies.forEach(function (cookie) {
+      var name = cookie.split("=")[0].trim();
+      if (name === "_ga" || name.indexOf("_ga_") === 0) {
+        expireCookie(name);
+        expireCookie(name, ".alasdairmaclullich.com");
+      }
+    });
   }
 
   var banner = document.createElement("section");
   banner.className = "consent-banner";
   banner.hidden = true;
-  banner.setAttribute("role", "dialog");
-  banner.setAttribute("aria-modal", "false");
-  banner.setAttribute("aria-labelledby", "consent-title");
+  banner.setAttribute("role", "region");
+  banner.setAttribute("aria-label", "Analytics choices");
   banner.setAttribute("aria-describedby", "consent-description");
   banner.innerHTML =
     '<div class="consent-inner">' +
       '<div class="consent-copy">' +
-        '<p class="consent-label">Your privacy</p>' +
-        '<h2 id="consent-title">Optional website analytics</h2>' +
-        '<p id="consent-description">I use Google Analytics only if you allow it, to understand which pages are useful. It is not used for advertising. <a href="/privacy/">Read the privacy information</a>.</p>' +
+        '<p id="consent-description"><strong>Optional analytics.</strong> Google Analytics helps me understand which pages are useful. It loads only if you accept and is not used for advertising. <a href="/privacy/">Privacy</a>.</p>' +
       '</div>' +
       '<div class="consent-actions">' +
-        '<button class="consent-button consent-accept" type="button" data-consent-accept>Allow analytics</button>' +
-        '<button class="consent-button consent-decline" type="button" data-consent-decline>Decline</button>' +
+        '<button class="consent-button consent-accept" type="button" data-consent-accept>Accept analytics</button>' +
+        '<button class="consent-button consent-decline" type="button" data-consent-decline>Reject analytics</button>' +
       '</div>' +
     '</div>';
   document.body.appendChild(banner);
@@ -86,7 +135,9 @@
   function showBanner(source) {
     returnFocus = source || null;
     banner.hidden = false;
-    banner.querySelector("[data-consent-accept]").focus();
+    if (source) {
+      banner.querySelector("[data-consent-accept]").focus();
+    }
   }
 
   function hideBanner() {
@@ -98,15 +149,16 @@
   }
 
   banner.querySelector("[data-consent-accept]").addEventListener("click", function () {
-    saveConsent("granted");
+    savePreference("granted");
     loadAnalytics();
     hideBanner();
   });
 
   banner.querySelector("[data-consent-decline]").addEventListener("click", function () {
     var needsReload = analyticsLoaded;
-    saveConsent("denied");
+    savePreference("denied");
     updateConsent("denied");
+    clearAnalyticsCookies();
     hideBanner();
     if (needsReload) {
       window.location.reload();
@@ -125,17 +177,20 @@
     var footerButton = document.createElement("button");
     footerButton.className = "cookie-settings-button js-cookie-settings";
     footerButton.type = "button";
-    footerButton.textContent = "Cookie settings";
+    footerButton.textContent = "Analytics settings";
     footerButton.addEventListener("click", function () {
       showBanner(footerButton);
     });
     footerNavigation.appendChild(footerButton);
   }
 
-  var savedConsent = readConsent();
-  if (savedConsent === "granted") {
+  var savedPreference = readPreferenceCookie() || migrateLegacyPreference();
+  if (savedPreference === "granted") {
     loadAnalytics();
-  } else if (savedConsent !== "denied") {
+  } else if (savedPreference === "denied") {
+    clearAnalyticsCookies();
+  } else {
+    clearAnalyticsCookies();
     showBanner();
   }
 }());

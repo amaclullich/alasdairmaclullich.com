@@ -3,8 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'">
   <title>Privacy | Alasdair MacLullich</title>
   <meta name="description" content="Privacy information for alasdairmaclullich.com, a static independent professional website.">
+  <meta name="author" content="Alasdair MacLullich">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#f6f5f1">
   <link rel="canonical" href="https://www.alasdairmaclullich.com/privacy/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -16,7 +20,40 @@
   <meta property="og:description" content="Privacy information for this static independent professional website.">
   <meta property="og:url" content="https://www.alasdairmaclullich.com/privacy/">
   <meta property="og:image" content="https://www.alasdairmaclullich.com/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Alasdair MacLullich: geriatrician, delirium researcher and writer">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Privacy | Alasdair MacLullich">
+  <meta name="twitter:description" content="Privacy information for this static independent professional website.">
+  <meta name="twitter:image" content="https://www.alasdairmaclullich.com/assets/social-card.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.alasdairmaclullich.com/privacy/#webpage",
+        "url": "https://www.alasdairmaclullich.com/privacy/",
+        "name": "Privacy | Alasdair MacLullich",
+        "description": "Privacy information for alasdairmaclullich.com.",
+        "isPartOf": { "@id": "https://www.alasdairmaclullich.com/#website" },
+        "dateModified": "2026-07-22",
+        "breadcrumb": { "@id": "https://www.alasdairmaclullich.com/privacy/#breadcrumb" },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.alasdairmaclullich.com/privacy/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alasdairmaclullich.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Privacy", "item": "https://www.alasdairmaclullich.com/privacy/" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -36,11 +73,28 @@
     </div>
   </header>
 
+  <nav class="breadcrumbs shell" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">Privacy</li>
+    </ol>
+  </nav>
+
   <main class="page-main" id="main-content" tabindex="-1">
     <section class="page-hero shell">
       <p class="eyebrow">Privacy</p>
       <h1>Privacy on this website</h1>
       <p class="page-standfirst">This is a static website with no forms, accounts, comments or newsletters. Optional audience measurement is used only if you allow it.</p>
+    </section>
+
+    <section class="prose-section" aria-labelledby="responsibility-heading">
+      <div class="shell prose-layout">
+        <h2 id="responsibility-heading">Who is responsible</h2>
+        <div class="prose">
+          <p>I, Alasdair MacLullich, operate this independent professional website and am responsible for its optional use of Google Analytics. For questions about this notice, please use the current contact details on my <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University of Edinburgh profile</a>.</p>
+          <p>This notice covers alasdairmaclullich.com. The organisations and services linked from this website have their own privacy notices.</p>
+        </div>
+      </div>
     </section>
 
     <section class="prose-section" aria-labelledby="collection-heading">
@@ -54,22 +108,41 @@
           <p>The site is hosted using GitHub Pages. As with most web hosting, GitHub may process technical information such as IP addresses and browser details for delivery, security and operational purposes. GitHub describes its handling of this information in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p>
 
           <h3>Cookies and analytics</h3>
-          <p>Google Analytics is available as an optional audience-measurement service. It is not loaded unless you select <strong>Allow analytics</strong>. If you accept, it can record information such as page views, approximate location, device and browser details, scrolling and outbound-link clicks. Google Analytics may then set identifiers such as <code>_ga</code>. Analytics is not used for advertising on this website.</p>
-          <p>If you decline, the Google Analytics tag is not loaded. Your choice is stored in your browser's local storage so that the site can remember it. You can review or change that choice at any time.</p>
+          <p>Google Analytics is optional. The Google tag is not loaded unless you select <strong>Accept analytics</strong>. If you accept, the analytics stream records standard page views, including the page address and title, so that I can understand which pages are visited. Enhanced measurement, granular location and device collection, advertising and profiling are disabled.</p>
+          <p>If you reject analytics or do not make a choice, Google Analytics remains off.</p>
+
+          <dl class="technology-list">
+            <div>
+              <dt><code>am_analytics_choice</code></dt>
+              <dd>A first-party preference cookie that remembers whether you accepted or rejected analytics. It lasts for six months.</dd>
+            </div>
+            <div>
+              <dt><code>_ga</code></dt>
+              <dd>An optional Google Analytics cookie used to distinguish visits. It is set only after acceptance and lasts for no more than six months.</dd>
+            </div>
+            <div>
+              <dt><code>_ga_DEJ9C50DTY</code></dt>
+              <dd>An optional Google Analytics cookie used to maintain session information. It is set only after acceptance and lasts for no more than six months.</dd>
+            </div>
+          </dl>
+
           <p><button class="privacy-settings-button js-cookie-settings" type="button">Review or change analytics choice</button></p>
-          <p>Google explains how it safeguards data in <a href="https://support.google.com/analytics/answer/6004245">Safeguarding your data</a> and provides further information in its <a href="https://policies.google.com/privacy">Privacy Policy</a>.</p>
         </div>
       </div>
     </section>
 
-    <section class="prose-section" aria-labelledby="links-heading">
+    <section class="prose-section" aria-labelledby="basis-heading">
       <div class="shell prose-layout">
-        <h2 id="links-heading">Other websites</h2>
+        <h2 id="basis-heading">Basis, retention and choices</h2>
         <div class="prose">
-          <p>This website links to external sites, including university, research, professional and public-resource websites. Those services have their own privacy practices. Following a link takes you to a separate website whose operator is responsible for it.</p>
+          <p>The legal basis for optional analytics is your consent. You can withdraw it at any time through <strong>Analytics settings</strong> in the footer. Withdrawal stops future analytics loading and removes the <code>_ga</code> cookies that this site can access. A rejection preference remains for six months so that the site does not ask again on every visit.</p>
+          <p>Google Analytics event and user data are retained for two months, and that period is not extended when someone returns. Google Signals and advertising-personalisation features are disabled. Google may process analytics data outside the United Kingdom and describes the safeguards it uses in <a href="https://support.google.com/analytics/answer/6004245">Safeguarding your data</a> and its <a href="https://policies.google.com/privacy">Privacy Policy</a>.</p>
 
-          <h3>Contact</h3>
-          <p>If you have a question about this website, please use the current contact details on my <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University of Edinburgh profile</a>.</p>
+          <h3>Your rights</h3>
+          <p>You may ask about personal data connected with this website, object to its use, withdraw consent, or ask for correction or deletion where those rights apply. Please contact me through my <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University of Edinburgh profile</a>. You can also <a href="https://ico.org.uk/make-a-complaint/">raise a concern with the Information Commissioner's Office</a>.</p>
+
+          <h3>Other websites</h3>
+          <p>This website links to external sites, including university, research, professional and public-resource websites. Those services have their own privacy practices. Following a link takes you to a separate website whose operator is responsible for it.</p>
           <p><small>Last updated: 22 July 2026.</small></p>
         </div>
       </div>
@@ -78,20 +151,25 @@
 
   <footer class="site-footer">
     <div class="shell footer-main">
-      <a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">
-        <span class="brand-mark" aria-hidden="true">AM</span>
-        <span class="brand-name">Alasdair MacLullich</span>
-      </a>
+      <div class="footer-identity">
+        <a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">
+          <span class="brand-mark" aria-hidden="true">AM</span>
+          <span class="brand-name">Alasdair MacLullich</span>
+        </a>
+        <p class="footer-identity-note">Professor of Geriatric Medicine at the University of Edinburgh.</p>
+      </div>
       <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/#work">Work</a>
         <a href="/about/">About</a>
         <a href="/social/">Social</a>
         <a href="/privacy/" aria-current="page">Privacy</a>
+        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile <span aria-hidden="true">↗</span></a>
+        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer <span aria-hidden="true">↗</span></a>
         <a href="https://orcid.org/0000-0003-3159-9370">ORCID <span aria-hidden="true">↗</span></a>
-        <a href="https://www.linkedin.com/in/amaclullich/">LinkedIn <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
     <div class="shell footer-note">
-      <p>Maintained independently by Alasdair MacLullich. Linked websites have their own editorial responsibility.</p>
+      <p>Maintained independently by Alasdair MacLullich. Linked websites have their own editorial responsibility. Profile information reviewed 22 July 2026.</p>
       <p>General information only; not individual medical advice.</p>
     </div>
   </footer>

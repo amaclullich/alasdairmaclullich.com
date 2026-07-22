@@ -3,8 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'">
   <title>Social media | Alasdair MacLullich</title>
   <meta name="description" content="Social media profiles and public-information channels for Alasdair MacLullich, Think Delirium and Delirium Support.">
+  <meta name="author" content="Alasdair MacLullich">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#f6f5f1">
   <link rel="canonical" href="https://www.alasdairmaclullich.com/social/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -21,25 +25,43 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Alasdair MacLullich: geriatrician, delirium researcher and writer">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Social media | Alasdair MacLullich">
+  <meta name="twitter:description" content="Professional profiles and public-information channels across LinkedIn, X, Bluesky, Threads and Facebook.">
+  <meta name="twitter:image" content="https://www.alasdairmaclullich.com/assets/social-card.png">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Social media | Alasdair MacLullich",
-    "url": "https://www.alasdairmaclullich.com/social/",
-    "inLanguage": "en-GB",
-    "about": { "@id": "https://www.alasdairmaclullich.com/#person" },
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "LinkedIn", "url": "https://www.linkedin.com/in/amaclullich/" },
-        { "@type": "ListItem", "position": 2, "name": "X", "url": "https://x.com/A_MacLullich" },
-        { "@type": "ListItem", "position": 3, "name": "Bluesky", "url": "https://bsky.app/profile/amaclullich.bsky.social" },
-        { "@type": "ListItem", "position": 4, "name": "Think Delirium on Threads", "url": "https://www.threads.com/@think_delirium" },
-        { "@type": "ListItem", "position": 5, "name": "Delirium Support on Facebook", "url": "https://www.facebook.com/deliriumsupport" }
-      ]
-    }
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://www.alasdairmaclullich.com/social/#webpage",
+        "name": "Social media | Alasdair MacLullich",
+        "url": "https://www.alasdairmaclullich.com/social/",
+        "isPartOf": { "@id": "https://www.alasdairmaclullich.com/#website" },
+        "inLanguage": "en-GB",
+        "about": { "@id": "https://www.alasdairmaclullich.com/#person" },
+        "breadcrumb": { "@id": "https://www.alasdairmaclullich.com/social/#breadcrumb" },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "LinkedIn", "url": "https://www.linkedin.com/in/amaclullich/" },
+            { "@type": "ListItem", "position": 2, "name": "X", "url": "https://x.com/A_MacLullich" },
+            { "@type": "ListItem", "position": 3, "name": "Bluesky", "url": "https://bsky.app/profile/amaclullich.bsky.social" },
+            { "@type": "ListItem", "position": 4, "name": "Think Delirium on Threads", "url": "https://www.threads.com/@think_delirium" },
+            { "@type": "ListItem", "position": 5, "name": "Delirium Support on Facebook", "url": "https://www.facebook.com/deliriumsupport" }
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.alasdairmaclullich.com/social/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alasdairmaclullich.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Social", "item": "https://www.alasdairmaclullich.com/social/" }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -61,6 +83,13 @@
       </nav>
     </div>
   </header>
+
+  <nav class="breadcrumbs shell" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">Social</li>
+    </ol>
+  </nav>
 
   <main class="page-main" id="main-content" tabindex="-1">
     <section class="page-hero shell">
@@ -125,20 +154,25 @@
 
   <footer class="site-footer">
     <div class="shell footer-main">
-      <a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">
-        <span class="brand-mark" aria-hidden="true">AM</span>
-        <span class="brand-name">Alasdair MacLullich</span>
-      </a>
+      <div class="footer-identity">
+        <a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">
+          <span class="brand-mark" aria-hidden="true">AM</span>
+          <span class="brand-name">Alasdair MacLullich</span>
+        </a>
+        <p class="footer-identity-note">Professor of Geriatric Medicine at the University of Edinburgh.</p>
+      </div>
       <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/#work">Work</a>
         <a href="/about/">About</a>
         <a href="/social/" aria-current="page">Social</a>
         <a href="/privacy/">Privacy</a>
+        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile <span aria-hidden="true">↗</span></a>
+        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer <span aria-hidden="true">↗</span></a>
         <a href="https://orcid.org/0000-0003-3159-9370">ORCID <span aria-hidden="true">↗</span></a>
-        <a href="https://www.linkedin.com/in/amaclullich/">LinkedIn <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
     <div class="shell footer-note">
-      <p>Maintained independently by Alasdair MacLullich. Linked websites and social-media services have their own editorial responsibility.</p>
+      <p>Maintained independently by Alasdair MacLullich. Linked websites and social-media services have their own editorial responsibility. Profile information reviewed 22 July 2026.</p>
       <p>General information only; not individual medical advice.</p>
     </div>
   </footer>

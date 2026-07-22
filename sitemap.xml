@@ -3,25 +3,17 @@
   <url>
     <loc>https://www.alasdairmaclullich.com/</loc>
     <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.alasdairmaclullich.com/social/</loc>
     <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.alasdairmaclullich.com/about/</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-07-22</lastmod>
   </url>
   <url>
     <loc>https://www.alasdairmaclullich.com/privacy/</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-07-22</lastmod>
   </url>
 </urlset>
