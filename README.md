@@ -9,6 +9,9 @@ The site is hosted with GitHub Pages from the `main` branch and repository root.
 Edit the files in this repository and publish the changes to `main`. The main pages are:
 
 - `index.html`
+- `delirium/index.html`
+- `books/delirium-family-guide/index.html`
+- `media/index.html`
 - `about/index.html`
 - `social/index.html`
 - `privacy/index.html`
