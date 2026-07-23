@@ -19,5 +19,7 @@ Edit the files in this repository and publish the changes to `main`. The main pa
 The `CNAME` file sets the public host to `www.alasdairmaclullich.com` and must remain in the repository root.
 
 Search Console ownership is maintained through the verification tag in the homepage.
+The root `llms.txt` file gives AI retrieval systems a concise, canonical map of the public site and verified identity sources.
+The root `428ff4a4c1504d5e996655fb7bc9ddca.txt` file is the public IndexNow key used to notify participating search engines when canonical pages change.
 
 Because GitHub Pages publishes from the repository root, assume that every committed file can become publicly accessible. Do not commit credentials, private notes or unpublished material.
