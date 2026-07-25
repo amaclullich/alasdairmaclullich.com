@@ -22,8 +22,7 @@ Last updated: 2026-07-25
 
 ## Verified identity sources
 
-- [University of Edinburgh profile](https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich)
-- [University of Edinburgh Research Explorer](https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/)
+- [University of Edinburgh profile](https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/)
 - [ORCID record](https://orcid.org/0000-0003-3159-9370)
 - [Google Scholar profile](https://scholar.google.com/citations?user=MXvw7UIAAAAJ&hl=en)
 - [Wikidata Q48288045](https://www.wikidata.org/wiki/Q48288045)
