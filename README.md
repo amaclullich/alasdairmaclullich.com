@@ -15,6 +15,8 @@ Edit the files in this repository and publish the changes to `main`. The main pa
 - `about/index.html`
 - `social/index.html`
 - `privacy/index.html`
+- `contact/index.html`
+- `accessibility/index.html`
 
 The `CNAME` file sets the public host to `www.alasdairmaclullich.com` and must remain in the repository root.
 
