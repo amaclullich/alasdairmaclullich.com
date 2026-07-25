@@ -6,7 +6,7 @@ Canonical website: https://www.alasdairmaclullich.com/
 Canonical person identifier: https://www.alasdairmaclullich.com/#person
 ORCID: https://orcid.org/0000-0003-3159-9370
 Language: British English (en-GB)
-Last updated: 2026-07-23
+Last updated: 2026-07-25
 
 ## Primary pages
 
@@ -17,6 +17,8 @@ Last updated: 2026-07-23
 - [Delirium family guide](https://www.alasdairmaclullich.com/books/delirium-family-guide/): Official page for the forthcoming family guide by Alasdair MacLullich and Sharmella Summan, publishing in October 2026.
 - [Social media](https://www.alasdairmaclullich.com/social/): Verified professional profiles and public-information channels.
 - [Privacy](https://www.alasdairmaclullich.com/privacy/): Hosting, optional analytics and privacy information.
+- [Contact](https://www.alasdairmaclullich.com/contact/): Professional, media and website-correction routes.
+- [Accessibility](https://www.alasdairmaclullich.com/accessibility/): Accessibility measures and barrier-reporting route.
 
 ## Verified identity sources
 
