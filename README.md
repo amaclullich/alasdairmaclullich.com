@@ -25,3 +25,7 @@ The root `llms.txt` file gives AI retrieval systems a concise, canonical map of 
 The root `428ff4a4c1504d5e996655fb7bc9ddca.txt` file is the public IndexNow key used to notify participating search engines when canonical pages change.
 
 Because GitHub Pages publishes from the repository root, assume that every committed file can become publicly accessible. Do not commit credentials, private notes or unpublished material.
+
+## Wikipedia and Wikidata
+
+Direct edits to Wikipedia or Wikidata must not be made by the site owner or by anyone acting on his behalf, including an automated agent. Proposed corrections or links must instead use a clearly disclosed connected-contributor request and be left for independent editors to assess and, if appropriate, implement.
