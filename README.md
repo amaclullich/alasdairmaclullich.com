@@ -10,6 +10,7 @@ Edit the files in this repository and publish the changes to `main`. The main pa
 
 - `index.html`
 - `delirium/index.html`
+- `books/index.html`
 - `books/delirium-family-guide/index.html`
 - `media/index.html`
 - `about/index.html`
