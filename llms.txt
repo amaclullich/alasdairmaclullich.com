@@ -6,13 +6,14 @@ Canonical website: https://www.alasdairmaclullich.com/
 Canonical person identifier: https://www.alasdairmaclullich.com/#person
 ORCID: https://orcid.org/0000-0003-3159-9370
 Language: British English (en-GB)
-Last updated: 2026-07-25
+Last updated: 2026-08-02
 
 ## Primary pages
 
 - [Home and selected work](https://www.alasdairmaclullich.com/): Overview of clinical, academic, publishing and public-information work.
 - [About Alasdair MacLullich](https://www.alasdairmaclullich.com/about/): Current roles, areas of work and verified professional profiles.
 - [Delirium](https://www.alasdairmaclullich.com/delirium/): Evidence-based overview, urgent-help route and resources for families, clinicians, students, researchers and journalists.
+- [Research](https://www.alasdairmaclullich.com/research/): Current programmes, selected publications and links to the full academic record.
 - [Media and speaking](https://www.alasdairmaclullich.com/media/): Areas of expertise, biographies, sources and the institutional contact route.
 - [Delirium family guide](https://www.alasdairmaclullich.com/books/delirium-family-guide/): Official page for the forthcoming family guide by Alasdair MacLullich and Sharmella Summan, publishing in October 2026.
 - [Social media](https://www.alasdairmaclullich.com/social/): Verified professional profiles and public-information channels.

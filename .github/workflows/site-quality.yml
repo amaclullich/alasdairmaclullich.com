@@ -1,0 +1,20 @@
+name: Site quality
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '23 5 * * 1'
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-node@1e60f620b9541d4bde4d2d17bf675c60c87e4e44
+        with:
+          node-version: 22
+      - run: npm install --package-lock=false
+      - run: npm run check
+      - run: npx html-validate "**/*.html"
+      - run: python3 -m http.server 8080 --directory . > /tmp/site-server.log 2>&1 & npx wait-on http://127.0.0.1:8080/ && npx axe http://127.0.0.1:8080/ http://127.0.0.1:8080/delirium/ http://127.0.0.1:8080/research/ http://127.0.0.1:8080/books/delirium-family-guide/
