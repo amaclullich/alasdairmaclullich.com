@@ -4,7 +4,7 @@
   var measurementId = "G-DEJ9C50DTY";
   var preferenceName = "am_analytics_choice";
   var legacyConsentKey = "am_analytics_consent_v1";
-  var preferenceMaxAge = 183 * 24 * 60 * 60;
+  var preferenceMaxAge = 90 * 24 * 60 * 60;
   var analyticsLoaded = false;
   var returnFocus = null;
 
@@ -13,8 +13,10 @@
     window.dataLayer.push(arguments);
   };
 
+  var initialPreference = readPreferenceCookie();
+
   window.gtag("consent", "default", {
-    analytics_storage: "denied",
+    analytics_storage: initialPreference === "denied" ? "denied" : "granted",
     ad_storage: "denied",
     ad_user_data: "denied",
     ad_personalization: "denied",
@@ -92,7 +94,8 @@
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
       cookie_expires: preferenceMaxAge,
-      cookie_update: false
+      cookie_update: false,
+      page_location: window.location.origin + window.location.pathname
     });
   }
 
@@ -123,11 +126,11 @@
   banner.innerHTML =
     '<div class="consent-inner">' +
       '<div class="consent-copy">' +
-        '<p id="consent-description"><strong>Optional analytics.</strong> Google Analytics helps me understand which pages are useful. It loads only if you accept and is not used for advertising. <a href="/privacy/">Privacy</a>.</p>' +
+        '<p id="consent-description"><strong>Limited analytics is on.</strong> Google Analytics counts visits so I can improve this independent website. Advertising features are disabled. You can turn analytics off now or later without losing access. <a href="/privacy/">Privacy</a>.</p>' +
       '</div>' +
       '<div class="consent-actions">' +
-        '<button class="consent-button consent-accept" type="button" data-consent-accept>Accept analytics</button>' +
-        '<button class="consent-button consent-decline" type="button" data-consent-decline>Reject analytics</button>' +
+        '<button class="consent-button consent-accept" type="button" data-consent-accept>Keep analytics on</button>' +
+        '<button class="consent-button consent-decline" type="button" data-consent-decline>Turn analytics off</button>' +
       '</div>' +
     '</div>';
   document.body.appendChild(banner);
@@ -184,13 +187,14 @@
     footerNavigation.appendChild(footerButton);
   }
 
-  var savedPreference = readPreferenceCookie() || migrateLegacyPreference();
+  var savedPreference = initialPreference || migrateLegacyPreference();
   if (savedPreference === "granted") {
     loadAnalytics();
   } else if (savedPreference === "denied") {
+    updateConsent("denied");
     clearAnalyticsCookies();
   } else {
-    clearAnalyticsCookies();
+    loadAnalytics();
     showBanner();
   }
 }());

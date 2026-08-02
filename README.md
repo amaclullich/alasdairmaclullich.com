@@ -2,7 +2,7 @@
 
 Static source for [www.alasdairmaclullich.com](https://www.alasdairmaclullich.com/).
 
-The site is hosted with GitHub Pages from the `main` branch and repository root. It uses plain HTML, CSS and a small consent script, with no content management system or contact form. Google Analytics is loaded only after explicit visitor consent. The consent choice lasts for six months, and the site uses a restrictive content security policy in each HTML page.
+The site is hosted with GitHub Pages from the `main` branch and repository root. It uses plain HTML, CSS and a small analytics-preference script, with no content management system or contact form. Limited Google Analytics measures ordinary visits for aggregate service-improvement statistics; visitors can turn it off immediately or later, and that choice is remembered for 90 days. The site uses a restrictive content security policy in each HTML page.
 
 ## Editing
 
@@ -10,6 +10,7 @@ Edit the files in this repository and publish the changes to `main`. The main pa
 
 - `index.html`
 - `delirium/index.html`
+- `books/index.html`
 - `books/delirium-family-guide/index.html`
 - `media/index.html`
 - `about/index.html`
