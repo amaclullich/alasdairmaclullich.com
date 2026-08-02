@@ -481,6 +481,17 @@ cite {
   background: var(--accent-dark);
 }
 
+.book-cover-home {
+  max-width: 280px;
+  margin-bottom: 1.5rem;
+}
+
+.book-cover-detail {
+  display: block;
+  max-width: 240px;
+  margin-bottom: 1.5rem;
+}
+
 .book-status {
   margin-bottom: 2rem;
   color: #d5e7e2;
