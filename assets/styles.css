@@ -320,8 +320,28 @@ cite {
   border-top: 1px solid var(--line);
 }
 
-.section-work {
+.section-resources {
   background: var(--surface);
+}
+
+.compatibility-anchor {
+  position: relative;
+  top: -5rem;
+}
+
+.resource-groups {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4rem);
+}
+
+.resource-group > h3 {
+  margin: 0 0 0.85rem;
+  color: var(--accent-dark);
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
 }
 
 .section-heading {
@@ -403,6 +423,33 @@ cite {
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.55;
+}
+
+.card-audience {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--accent-dark);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+}
+
+.publication-list {
+  display: grid;
+  gap: 1.5rem;
+  padding-left: 1.4rem;
+}
+
+.publication-list li {
+  padding-left: 0.4rem;
+}
+
+.publication-list p {
+  margin-bottom: 0.35rem;
+}
+
+.publication-list p + p {
+  color: var(--muted);
 }
 
 .card-arrow {
@@ -1268,6 +1315,19 @@ cite {
 
 .error-page .button {
   margin-top: 1rem;
+}
+
+.error-routes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+  margin-top: 2rem;
+}
+
+.error-routes a {
+  color: var(--accent-dark);
+  font-weight: 750;
 }
 
 @media (max-width: 52rem) {

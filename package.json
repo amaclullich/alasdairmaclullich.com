@@ -1,0 +1,14 @@
+{
+  "name": "alasdairmaclullich-com",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "check": "node scripts/check-site.mjs && node scripts/check-metadata-dates.mjs && node scripts/check-book-metadata.mjs",
+    "serve": "python3 -m http.server 8080"
+  },
+  "devDependencies": {
+    "@axe-core/cli": "4.10.2",
+    "html-validate": "9.5.0",
+    "wait-on": "8.0.2"
+  }
+}
