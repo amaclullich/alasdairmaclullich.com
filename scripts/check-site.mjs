@@ -32,7 +32,8 @@ for (const file of all) {
   for (const link of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const target = link[1];
     if (!target.startsWith('/') || target.startsWith('//') || target.includes('#')) continue;
-    const candidate = resolve(root, `.${target}`);
+    const pathTarget = target.split('?')[0];
+    const candidate = resolve(root, `.${pathTarget}`);
     const candidates = [candidate, join(candidate, 'index.html')];
     if (!(await Promise.all(candidates.map(async (item) => !!(await stat(item).catch(() => null)))).then((checks) => checks.some(Boolean)))) throw new Error(`${label} has broken internal link ${target}`);
   }
