@@ -492,6 +492,12 @@ cite {
   margin-bottom: 1.5rem;
 }
 
+.book-cover-portrait {
+  width: min(100%, 240px);
+  height: auto;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.22);
+}
+
 .book-status {
   margin-bottom: 2rem;
   color: #d5e7e2;
@@ -838,6 +844,20 @@ cite {
 .page-hero-book h1 {
   max-width: 20ch;
   font-size: clamp(2.45rem, 5.2vw, 4.9rem);
+}
+
+.book-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 21rem);
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: center;
+}
+
+.family-guide-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 1.5rem 4rem rgba(20, 50, 57, 0.2);
 }
 
 .book-subtitle {
@@ -1364,8 +1384,13 @@ cite {
   .section-heading,
   .split-layout,
   .contact-panel,
+  .book-hero-layout,
   .prose-layout {
     grid-template-columns: 1fr;
+  }
+
+  .family-guide-cover {
+    max-width: 20rem;
   }
 
   .section-heading > p {
