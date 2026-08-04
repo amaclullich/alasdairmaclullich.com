@@ -66,6 +66,10 @@ p:last-child {
   margin-bottom: 0;
 }
 
+small {
+  font-size: 0.875rem;
+}
+
 cite {
   font-style: italic;
 }
@@ -176,7 +180,7 @@ cite {
 .eyebrow {
   margin-bottom: 1.15rem;
   color: var(--accent-dark);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 800;
   letter-spacing: 0.13em;
   line-height: 1.4;
@@ -268,7 +272,7 @@ cite {
 .note-label {
   margin-bottom: 1.25rem;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 750;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -310,7 +314,7 @@ cite {
 .card-index {
   color: var(--muted);
   font-family: var(--sans);
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   font-weight: 750;
   letter-spacing: 0.08em;
 }
@@ -501,7 +505,7 @@ cite {
 .book-status {
   margin-bottom: 2rem;
   color: #d5e7e2;
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   font-weight: 800;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -608,7 +612,7 @@ cite {
 .roles-grid dt {
   margin-bottom: 1rem;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -732,12 +736,8 @@ cite {
 }
 
 .consent-banner {
-  position: fixed;
-  z-index: 1000;
-  bottom: 1rem;
-  left: 50%;
-  width: min(calc(100% - 2rem), 64rem);
-  transform: translateX(-50%);
+  width: min(calc(100% - 3rem), 64rem);
+  margin: 1rem auto 0;
   border: 1px solid #4b5a55;
   background: var(--ink);
   box-shadow: 0 0.8rem 2rem rgb(8 20 16 / 20%);
@@ -1028,7 +1028,7 @@ cite {
   margin-bottom: 1.25rem;
   color: var(--accent-dark);
   font-family: var(--sans);
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   font-weight: 800;
   letter-spacing: 0.11em;
   line-height: 1.4;
@@ -1271,7 +1271,7 @@ cite {
 .social-platform {
   margin-bottom: 1.5rem;
   color: var(--accent-dark);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   line-height: 1.4;
@@ -1328,7 +1328,7 @@ cite {
 .error-code {
   margin-bottom: 1rem;
   color: var(--accent-dark);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 800;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -1524,7 +1524,6 @@ cite {
   }
 
   .consent-banner {
-    bottom: 0.5rem;
     width: min(calc(100% - 1rem), 64rem);
   }
 

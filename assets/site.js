@@ -133,7 +133,12 @@
         '<button class="consent-button consent-decline" type="button" data-consent-decline>Turn analytics off</button>' +
       '</div>' +
     '</div>';
-  document.body.appendChild(banner);
+  var siteHeader = document.querySelector(".site-header");
+  if (siteHeader) {
+    siteHeader.insertAdjacentElement("afterend", banner);
+  } else {
+    document.body.insertBefore(banner, document.body.firstChild);
+  }
 
   function showBanner(source) {
     returnFocus = source || null;
