@@ -6,7 +6,7 @@ Canonical website: https://www.alasdairmaclullich.com/
 Canonical person identifier: https://www.alasdairmaclullich.com/#person
 ORCID: https://orcid.org/0000-0003-3159-9370
 Language: British English (en-GB)
-Last updated: 2026-08-02
+Last updated: 2026-08-04
 
 ## Primary pages
 
@@ -15,9 +15,9 @@ Last updated: 2026-08-02
 - [Delirium](https://www.alasdairmaclullich.com/delirium/): Evidence-based overview, urgent-help route and resources for families, clinicians, students, researchers and journalists.
 - [Research](https://www.alasdairmaclullich.com/research/): Current programmes, selected publications and links to the full academic record.
 - [Media and speaking](https://www.alasdairmaclullich.com/media/): Areas of expertise, biographies, sources and the institutional contact route.
-- [Books](https://www.alasdairmaclullich.com/books/): The 4AT Manual, published 30 July 2026 and available on Amazon, and the forthcoming family guide to delirium.
+- [Books](https://www.alasdairmaclullich.com/books/): The 4AT Manual, published in July 2026 and available in Kindle, paperback and hardback editions, and the forthcoming family guide to delirium.
 - [Delirium family guide](https://www.alasdairmaclullich.com/books/delirium-family-guide/): Official page for the forthcoming family guide by Alasdair MacLullich and Sharmella Summan, publishing in October 2026.
-- [The 4AT Manual](https://www.the4at.com/4at-manual): The 4AT Manual: A Practical Guide to Delirium Assessment, by Alasdair MacLullich. Published 30 July 2026 by Delirium Support Press. Free PDF and EPUB, CC BY 4.0; also a Kindle e-book on Amazon (ASIN B0HC85425K), with paperback and hardback to follow.
+- [The 4AT Manual](https://www.the4at.com/4at-manual): The 4AT Manual: A Practical Guide to Delirium Assessment, by Alasdair MacLullich. Published in July 2026 by Delirium Support Press. Free PDF and EPUB, CC BY 4.0; also available from Amazon as a Kindle e-book (ASIN B0HC85425K), paperback (ISBN 978-1-918164-00-8) and hardback (ISBN 978-1-918164-05-3).
 - [Social media](https://www.alasdairmaclullich.com/social/): Verified professional profiles and public-information channels.
 - [Privacy](https://www.alasdairmaclullich.com/privacy/): Hosting, optional analytics and privacy information.
 - [Contact](https://www.alasdairmaclullich.com/contact/): Professional, media and website-correction routes.
