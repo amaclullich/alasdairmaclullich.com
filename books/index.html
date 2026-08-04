@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'">
   <title>Books | Alasdair MacLullich</title>
-  <meta name="description" content="Books by Alasdair MacLullich: The 4AT Manual, a practical guide to delirium assessment, published 30 July 2026 and available on Amazon, and a family guide to delirium publishing in October 2026.">
+  <meta name="description" content="Books by Alasdair MacLullich: The 4AT Manual, a practical guide to delirium assessment, available in Kindle, paperback and hardback editions, and a family guide to delirium publishing in October 2026.">
   <meta name="author" content="Alasdair MacLullich">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -14,7 +14,7 @@
   <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable site guide">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260803-family-guide">
+  <link rel="stylesheet" href="/assets/styles.css?v=20260804-4at-editions">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Alasdair MacLullich">
@@ -43,7 +43,7 @@
         "isPartOf": { "@id": "https://www.alasdairmaclullich.com/#website" },
         "about": { "@id": "https://www.alasdairmaclullich.com/#person" },
         "datePublished": "2026-07-31",
-        "dateModified": "2026-08-03",
+        "dateModified": "2026-08-04",
         "inLanguage": "en-GB",
         "breadcrumb": { "@id": "https://www.alasdairmaclullich.com/books/#breadcrumb" },
         "hasPart": [
@@ -56,11 +56,10 @@
         "@id": "https://www.alasdairmaclullich.com/books/#4at-manual",
         "url": "https://www.alasdairmaclullich.com/books/",
         "name": "The 4AT Manual: A Practical Guide to Delirium Assessment",
-        "description": "A 104-page practical guide to using the 4AT: why it was developed, how to administer and score it, how to interpret the result and decide what to do next, worked clinical cases from a range of settings, and notes on implementation and audit.",
+        "description": "A practical guide to using the 4AT: why it was developed, how to administer and score it, how to interpret the result and decide what to do next, thirty worked clinical cases, and guidance on implementation and audit.",
         "inLanguage": "en-GB",
         "bookEdition": "First edition",
-        "datePublished": "2026-07-30",
-        "numberOfPages": 104,
+        "datePublished": "2026-07-31",
         "author": { "@id": "https://www.alasdairmaclullich.com/#person" },
         "publisher": { "@type": "Organization", "name": "Delirium Support Press" },
         "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -72,6 +71,7 @@
             "bookFormat": "https://schema.org/EBook",
             "url": "https://www.the4at.com/4at-manual",
             "isAccessibleForFree": true,
+            "numberOfPages": 104,
             "inLanguage": "en-GB"
           },
           {
@@ -79,6 +79,26 @@
             "name": "The 4AT Manual: Kindle edition",
             "bookFormat": "https://schema.org/EBook",
             "url": "https://www.amazon.co.uk/dp/B0HC85425K",
+            "isAccessibleForFree": false,
+            "inLanguage": "en-GB"
+          },
+          {
+            "@type": "Book",
+            "name": "The 4AT Manual: paperback edition",
+            "bookFormat": "https://schema.org/Paperback",
+            "isbn": "9781918164008",
+            "numberOfPages": 102,
+            "url": "https://www.amazon.co.uk/dp/1918164002",
+            "isAccessibleForFree": false,
+            "inLanguage": "en-GB"
+          },
+          {
+            "@type": "Book",
+            "name": "The 4AT Manual: hardback edition",
+            "bookFormat": "https://schema.org/Hardcover",
+            "isbn": "9781918164053",
+            "numberOfPages": 102,
+            "url": "https://www.amazon.co.uk/dp/1918164053",
             "isAccessibleForFree": false,
             "inLanguage": "en-GB"
           }
@@ -153,7 +173,7 @@
     <section class="page-hero page-hero-wide shell">
       <p class="eyebrow">Books</p>
       <h1>Books</h1>
-      <p class="page-standfirst">Longer-form writing about delirium. <cite>The 4AT manual</cite> was published on 30 July 2026, and is available in Kindle, paperback, and hardback editions on Amazon. It is also available as a free ePub and pdf download on <a href="https://www.the4at.com/4at-manual">www.the4AT.com</a>. A guide for patients, families and carers follows in October 2026.</p>
+      <p class="page-standfirst">Longer-form writing about delirium. <cite>The 4AT Manual</cite> was published in July 2026 and is available in Kindle, paperback and hardback editions on Amazon. It is also available as a free PDF and EPUB download from <a href="https://www.the4at.com/4at-manual">the4AT.com</a>. A guide for patients, families and carers follows in October 2026.</p>
       <div class="page-actions">
         <a class="button button-primary" href="#the-4at-manual">The 4AT Manual</a>
         <a class="button button-secondary" href="#delirium-family-guide">Delirium family guide</a>
@@ -164,15 +184,17 @@
       <div class="shell prose-layout">
         <h2 id="manual-heading"><cite>The 4AT Manual</cite></h2>
         <div class="prose">
-          <img class="book-cover-detail" src="/assets/4at-manual-book.jpg" alt="The 4AT Manual book cover" width="400" height="267">
-          <p class="book-status">Published 30 July 2026</p>
+          <img class="book-cover-detail" src="/assets/4at-manual-book.jpg" alt="The 4AT Manual shown as a printed book and on a tablet" width="1600" height="1070">
+          <p class="book-status">Published 31 July 2026</p>
           <p><strong><cite>The 4AT Manual: A Practical Guide to Delirium Assessment</cite></strong></p>
           <p class="book-byline">By Professor Alasdair MacLullich</p>
           <p>The 4AT Manual gives clinicians clear, practical guidance on using the 4AT well, from preparing for the assessment and scoring each item to interpreting the result and acting on concerns.</p>
-          <p>A 104-page guide to using the 4AT: why it was developed, how to administer and score it, how to interpret the result and decide what to do next, worked clinical cases from a range of settings, and notes on implementation and audit. Written for nurses, doctors, allied health professionals, students and educators. Free to download as a PDF or EPUB, with no registration.</p>
-          <p>Also available as a Kindle e-book from <a href="https://www.amazon.co.uk/dp/B0HC85425K">Amazon UK</a>, or from <a href="/4at-manual-kindle.html">your local Amazon store</a>. Paperback and hardback editions coming soon.</p>
+          <p>The 102-page print edition explains why the 4AT was developed, how to administer and score it, how to interpret the result and decide what to do next, with thirty worked clinical cases and guidance on implementation and audit. It is written for nurses, doctors, allied health professionals, students and educators. A free PDF and EPUB edition is also available, with no registration.</p>
+          <p>All three Amazon editions are available now: <a href="https://www.amazon.co.uk/dp/B0HC85425K">Kindle</a>, <a href="https://www.amazon.co.uk/dp/1918164002">paperback</a> and <a href="https://www.amazon.co.uk/dp/1918164053">hardback</a>. International readers can choose their Amazon store on <a href="https://www.the4at.com/4at-manual">the4AT.com</a>.</p>
           <div class="page-actions">
-            <a class="button button-primary" href="/4at-manual-kindle.html">Buy on Amazon</a>
+            <a class="button button-primary" href="https://www.amazon.co.uk/dp/B0HC85425K">Kindle</a>
+            <a class="button button-secondary" href="https://www.amazon.co.uk/dp/1918164002">Paperback</a>
+            <a class="button button-secondary" href="https://www.amazon.co.uk/dp/1918164053">Hardback</a>
             <a class="button button-secondary" href="https://www.the4at.com/4at-manual">Download it free <span aria-hidden="true">↗</span></a>
           </div>
         </div>
@@ -223,14 +245,14 @@
             </div>
             <div>
               <dt>Paid editions</dt>
-              <dd>Kindle e-book on Amazon (<a href="https://www.amazon.co.uk/dp/B0HC85425K">Amazon UK</a>, or <a href="/4at-manual-kindle.html">your local Amazon store</a>). Paperback and hardback editions coming soon.</dd>
+              <dd><a href="https://www.amazon.co.uk/dp/B0HC85425K">Kindle</a>, <a href="https://www.amazon.co.uk/dp/1918164002">paperback</a> (ISBN 978-1-918164-00-8) and <a href="https://www.amazon.co.uk/dp/1918164053">hardback</a> (ISBN 978-1-918164-05-3) from Amazon. International store links are listed on <a href="https://www.the4at.com/4at-manual">the4AT.com</a>.</dd>
             </div>
             <div>
               <dt>Licence</dt>
               <dd>Creative Commons Attribution 4.0 International (CC BY 4.0), excluding the 4AT logo and the cover artwork.</dd>
             </div>
           </dl>
-          <p class="profile-reviewed">Page reviewed 31 July 2026.</p>
+          <p class="profile-reviewed">Page reviewed 4 August 2026.</p>
         </div>
       </div>
     </section>
