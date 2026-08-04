@@ -482,12 +482,14 @@ cite {
 }
 
 .book-cover-home {
+  height: auto;
   max-width: 280px;
   margin-bottom: 1.5rem;
 }
 
 .book-cover-detail {
   display: block;
+  height: auto;
   max-width: 240px;
   margin-bottom: 1.5rem;
 }
