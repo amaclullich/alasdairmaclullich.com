@@ -117,6 +117,82 @@
     });
   }
 
+  var amazonCountryByDomain = {
+    "amazon.co.uk": "UK",
+    "amazon.com": "US",
+    "amazon.ca": "CA",
+    "amazon.com.au": "AU",
+    "amazon.de": "DE",
+    "amazon.fr": "FR",
+    "amazon.es": "ES",
+    "amazon.it": "IT",
+    "amazon.nl": "NL",
+    "amazon.in": "IN",
+    "amazon.co.jp": "JP",
+    "amazon.com.br": "BR",
+    "amazon.com.mx": "MX"
+  };
+
+  function normaliseAmazonDomain(hostname) {
+    return hostname.toLowerCase().replace(/^www\./, "");
+  }
+
+  function amazonFormat(url) {
+    var identifier = (url.pathname + url.search).toUpperCase();
+
+    if (identifier.indexOf("B0HC85425K") !== -1) {
+      return "kindle";
+    }
+    if (identifier.indexOf("1918164002") !== -1) {
+      return "paperback";
+    }
+    if (identifier.indexOf("1918164053") !== -1) {
+      return "hardback";
+    }
+
+    return "unknown";
+  }
+
+  function recordAmazonClick(event) {
+    var target = event.target;
+    var link;
+    var url;
+    var domain;
+
+    if (!target || typeof target.closest !== "function") {
+      return;
+    }
+
+    link = target.closest("a[href]");
+    if (!link) {
+      return;
+    }
+
+    try {
+      url = new URL(link.href, window.location.href);
+    } catch (error) {
+      return;
+    }
+
+    domain = normaliseAmazonDomain(url.hostname);
+    if (domain.indexOf("amazon.") !== 0) {
+      return;
+    }
+
+    window.gtag("event", "amazon_click", {
+      source_site: "alasdairmaclullich.com",
+      source_page: window.location.pathname || "/",
+      format: amazonFormat(url),
+      marketplace: domain,
+      marketplace_country: amazonCountryByDomain[domain] || "unknown",
+      link_url: url.href,
+      link_domain: domain,
+      transport_type: "beacon"
+    });
+  }
+
+  document.addEventListener("click", recordAmazonClick);
+
   var banner = document.createElement("section");
   banner.className = "consent-banner";
   banner.hidden = true;
