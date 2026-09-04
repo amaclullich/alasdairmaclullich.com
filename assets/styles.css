@@ -1015,8 +1015,8 @@ cite {
   padding-left: 1.25rem;
 }
 
-.edition-list,
-.store-list {
+.prose .edition-list,
+.prose .store-list {
   display: grid;
   margin: 1.5rem 0 0;
   padding: 0;
