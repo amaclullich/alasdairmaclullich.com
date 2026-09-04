@@ -8,6 +8,7 @@
   --wash: #eaf1ee;
   --line: #cad4cf;
   --focus: #9b5200;
+  --focus-light: #ffdc7a;
   --white: #ffffff;
   --max-width: 72rem;
   --serif: ui-serif, Iowan Old Style, Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
@@ -68,6 +69,18 @@ p:last-child {
 
 cite {
   font-style: italic;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .shell {
@@ -402,6 +415,22 @@ cite {
   outline-offset: -5px;
 }
 
+.resource-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  padding-top: 1rem;
+}
+
+.resource-quick-links a {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-dark);
+  font-size: 0.9375rem;
+  font-weight: 750;
+}
+
 .card-copy {
   min-width: 0;
 }
@@ -452,6 +481,18 @@ cite {
   color: var(--muted);
 }
 
+.evidence-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.evidence-list li {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
 .card-arrow {
   color: var(--accent-dark);
   font-size: 1.15rem;
@@ -471,7 +512,7 @@ cite {
 
 .book-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
   background: rgba(255, 255, 255, 0.3);
 }
@@ -692,8 +733,21 @@ cite {
   border-color: #d5e7e2;
 }
 
+.site-footer a:focus-visible,
+.site-footer button:focus-visible,
+.section-books a:focus-visible,
+.consent-banner a:focus-visible,
+.consent-banner button:focus-visible {
+  outline-color: var(--focus-light);
+}
+
 .footer-nav a:hover,
 .cookie-settings-button:hover {
+  color: #d5e7e2;
+}
+
+.footer-nav a[aria-current="page"],
+.footer-nav a[aria-current="location"] {
   color: #d5e7e2;
 }
 
@@ -1101,7 +1155,8 @@ cite {
   list-style: none;
 }
 
-.topic-grid li {
+.topic-grid li,
+.topic-grid article {
   min-height: 8rem;
   padding: 1.25rem;
   border-right: 1px solid var(--line);
@@ -1111,6 +1166,19 @@ cite {
   font-family: var(--serif);
   font-size: 1.18rem;
   line-height: 1.4;
+}
+
+.topic-grid article h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.18rem;
+}
+
+.topic-grid article p {
+  margin: 0;
+  color: #33413c;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .fact-list,
@@ -1367,6 +1435,26 @@ cite {
   font-weight: 750;
 }
 
+.back-to-top {
+  display: flex;
+  justify-content: flex-end;
+  padding-block: 1.25rem 2.5rem;
+}
+
+.back-to-top a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--accent-dark);
+  font-weight: 750;
+}
+
+@media (min-width: 68.01rem) {
+  .resource-grid-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 52rem) {
   .header-inner,
   .footer-main {
@@ -1572,6 +1660,7 @@ cite {
   .route-card,
   .topic-grid,
   .topic-grid li,
+  .topic-grid article,
   .asset-download {
     border-color: CanvasText;
   }
@@ -1580,5 +1669,104 @@ cite {
     forced-color-adjust: none;
     background: CanvasText;
     color: Canvas;
+  }
+}
+
+@media print {
+  @page {
+    margin: 18mm;
+  }
+
+  html,
+  body {
+    min-width: 0;
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .site-header,
+  .breadcrumbs,
+  .site-footer,
+  .skip-link,
+  .consent-banner,
+  .page-actions,
+  .hero-actions,
+  .back-to-top {
+    display: none !important;
+  }
+
+  .shell {
+    width: 100%;
+  }
+
+  .hero,
+  .section,
+  .prose-section,
+  .route-section,
+  .section-books,
+  .section-roles,
+  .section-resources,
+  .section-tint {
+    padding-block: 1rem;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .hero,
+  .section-heading,
+  .split-layout,
+  .contact-panel,
+  .book-hero-layout,
+  .prose-layout {
+    display: block;
+  }
+
+  .resource-grid,
+  .book-grid,
+  .roles-grid,
+  .social-grid,
+  .route-grid,
+  .topic-grid {
+    display: block;
+    border: 0;
+    background: #fff;
+  }
+
+  .resource-card,
+  .book-card,
+  .roles-grid div,
+  .social-card,
+  .route-card,
+  .topic-grid li,
+  .topic-grid article {
+    min-height: 0;
+    margin-bottom: 0.5rem;
+    padding: 0.8rem 0;
+    border: 0;
+    border-bottom: 1px solid #aaa;
+    background: #fff !important;
+    color: #000 !important;
+    break-inside: avoid;
+  }
+
+  .section-heading-light .eyebrow,
+  .section-heading-light > p,
+  .book-card p:not(.book-status),
+  .book-card .book-status,
+  .card-description,
+  .footer-note,
+  .prose p,
+  .prose li {
+    color: #000 !important;
+  }
+
+  a {
+    color: #000 !important;
+  }
+
+  img {
+    max-height: 12cm;
+    width: auto;
   }
 }

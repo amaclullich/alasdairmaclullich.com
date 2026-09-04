@@ -15,6 +15,40 @@ async function files(dir) {
   return found;
 }
 const all = await files(root);
+const requiredNavigation = [
+  ['/delirium/', 'Delirium'],
+  ['/research/', 'Research'],
+  ['/books/', 'Books'],
+  ['/media/', 'Media'],
+  ['/about/', 'About']
+];
+const requiredFooterLinks = [
+  '/delirium/',
+  '/research/',
+  '/books/',
+  '/media/',
+  '/about/',
+  '/social/',
+  '/contact/',
+  '/accessibility/',
+  '/privacy/',
+  'https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich',
+  'https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/',
+  'https://orcid.org/0000-0003-3159-9370'
+];
+const houseStylePatterns = [
+  [/—/, 'em dash'],
+  [/\bcannot\b/i, 'cannot'],
+  [/\bmatters\b/i, 'matters'],
+  [/\bsits across\b/i, 'sits across'],
+  [/\bsit alongside\b/i, 'sit alongside'],
+  [/\bLonger-form\b/i, 'Longer-form'],
+  [/\bPlain-English\b/i, 'Plain-English'],
+  [/\bpublic-information\b/i, 'public-information'],
+  [/\bsocial-media\b/i, 'social-media'],
+  [/\bpublic-resource\b/i, 'public-resource'],
+  [/\bcare-home\b/i, 'care-home']
+];
 for (const file of all) {
   const html = await readFile(file, 'utf8');
   const label = relative(root, file);
@@ -22,8 +56,26 @@ for (const file of all) {
   if (h1 !== 1) throw new Error(`${label} must have exactly one H1`);
   const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]);
   if (new Set(ids).size !== ids.length) throw new Error(`${label} has duplicate IDs`);
+  const brands = [...html.matchAll(/<a class="brand(?: footer-brand)?"[^>]*aria-label="([^"]+)"/g)];
+  if (brands.length < 1 || brands.some((match) => match[1] !== 'AM, Alasdair MacLullich, home')) throw new Error(`${label} has an inconsistent brand accessible name`);
+  const primaryNavigation = html.match(/<nav class="primary-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+  if (!primaryNavigation) throw new Error(`${label} is missing primary navigation`);
+  for (const [href, text] of requiredNavigation) {
+    if (!new RegExp(`<a href="${href.replaceAll('/', '\\/')}"(?: aria-current="(?:page|location)")?>${text}<\\/a>`).test(primaryNavigation)) throw new Error(`${label} primary navigation is missing ${text}`);
+  }
+  if (/href="\/#work"/.test(primaryNavigation)) throw new Error(`${label} contains the retired Work navigation link`);
+  const footerNavigation = html.match(/<nav class="footer-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+  const footerLinks = [...(footerNavigation || '').matchAll(/<a href="([^"]+)"/g)].map((match) => match[1]);
+  if (JSON.stringify(footerLinks) !== JSON.stringify(requiredFooterLinks)) throw new Error(`${label} footer navigation is inconsistent`);
+  if (/<span\b[^>]*aria-hidden="true"[^>]*>↗<\/span>(?!<span class="visually-hidden"> \(external\)<\/span>)/.test(html)) throw new Error(`${label} has an external-link arrow without accessible text`);
+  for (const [pattern, wording] of houseStylePatterns) if (pattern.test(html)) throw new Error(`${label} contains retired house-style wording: ${wording}`);
+  if (label !== 'buy/4at-manual/index.html' && /href="https:\/\/(?:www\.)?amazon\.[^"]+\/dp\//i.test(html)) throw new Error(`${label} bypasses the regional Amazon chooser`);
+  for (const link of html.matchAll(/<a href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
+    if (/University(?: of Edinburgh)? profile/i.test(link[2]) && link[1] !== 'https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich') throw new Error(`${label} labels a non-staff-profile link as the University profile`);
+  }
   if (file.endsWith('404.html')) continue;
   for (const pattern of [/<title>[^<]+<\/title>/, /<meta name="description" content="[^"]+">/, /<link rel="canonical" href="https:\/\/www\.alasdairmaclullich\.com\//, /<meta property="og:url" content="https:\/\/www\.alasdairmaclullich\.com\//]) if (!pattern.test(html)) throw new Error(`${label} is missing required metadata`);
+  if (/<meta name="twitter:image"/.test(html) && !/<meta name="twitter:image:alt" content="[^"]+">/.test(html)) throw new Error(`${label} is missing twitter:image:alt`);
   for (const json of html.matchAll(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/g)) JSON.parse(json[1]);
   for (const image of html.matchAll(/<img\b[^>]*>/g)) {
     const tag = image[0];

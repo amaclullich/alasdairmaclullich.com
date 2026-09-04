@@ -13,5 +13,6 @@ for (const page of pages) {
   for (const value of general) if (!content.includes(value)) throw new Error(`${page} does not match book metadata: ${value}`);
 }
 const bookPage = await readFile(join(root, 'books/delirium-family-guide/index.html'), 'utf8');
-for (const value of [get('title'), get('subtitle'), ...general]) if (!bookPage.includes(value)) throw new Error(`Family-guide page does not match book metadata: ${value}`);
+for (const value of [get('title'), get('subtitle'), ...general, get('publisher'), get('formats'), get('isbn')]) if (!bookPage.includes(value)) throw new Error(`Family-guide page does not match book metadata: ${value}`);
+if (!bookPage.includes(`"dateModified": "${get('updated_at')}"`)) throw new Error('Family-guide dateModified does not match book metadata');
 console.log('Book metadata is consistent.');

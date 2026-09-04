@@ -15,7 +15,7 @@
   <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable site guide">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260804-4at-editions">
+  <link rel="stylesheet" href="/assets/styles.css?v=20260904-panel-fixes">
 
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Alasdair MacLullich">
@@ -68,7 +68,7 @@
         "isPartOf": { "@id": "https://www.alasdairmaclullich.com/#website" },
         "mainEntity": { "@id": "https://www.alasdairmaclullich.com/#person" },
         "dateCreated": "2026-07-21",
-        "dateModified": "2026-08-04",
+        "dateModified": "2026-09-04",
         "inLanguage": "en-GB"
       },
       {
@@ -106,6 +106,7 @@
           "Hip fracture care"
         ],
         "sameAs": [
+          "https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich",
           "https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/",
           "https://orcid.org/0000-0003-3159-9370",
           "https://scholar.google.com/citations?user=MXvw7UIAAAAJ&hl=en",
@@ -125,7 +126,7 @@
 
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="/" aria-label="Alasdair MacLullich, home">
+      <a class="brand" href="/" aria-label="AM, Alasdair MacLullich, home">
         <span class="brand-mark" aria-hidden="true">AM</span>
         <span class="brand-name">Alasdair MacLullich</span>
       </a>
@@ -145,15 +146,15 @@
         <p class="eyebrow">Geriatrician <span aria-hidden="true">·</span> delirium researcher <span aria-hidden="true">·</span> writer</p>
         <h1 id="hero-title"><span class="hero-person-name">Alasdair MacLullich:</span>
           <span class="hero-subject">Clinical work, research and <em>public resources</em></span></h1>
-        <p class="hero-lead">I am Professor of Geriatric Medicine at the University of Edinburgh and work in acute geriatric medicine and acute orthogeriatrics at the Royal Infirmary of Edinburgh.</p>
+        <p class="hero-lead">I am Professor of Geriatric Medicine at the University of Edinburgh and work in acute geriatric medicine and acute orthogeriatrics (care of older people with fractures) at the Royal Infirmary of Edinburgh.</p>
         <p class="hero-summary">My work aims to improve how delirium is recognised, assessed, explained and acted on, from clinical care and the 4AT to practical information for families. This site brings the work together and directs each reader to the right resource.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="/delirium/">Start with delirium</a>
           <a class="button button-secondary" href="#resources">Explore resources</a>
-          <a class="button button-secondary" href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">University profile <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
         </div>
       </div>
-      <aside class="hero-note" aria-label="Current roles">
+      <div class="hero-note">
         <p class="note-label">Edinburgh, Scotland</p>
         <ul class="role-list">
           <li>
@@ -162,14 +163,14 @@
           </li>
           <li>
             <span class="role-number" aria-hidden="true">02</span>
-            <a class="role-link" href="https://deliriumjournal.com/editorial-board">Editor-in-Chief, <cite>Delirium</cite> <span aria-hidden="true">↗</span></a>
+            <a class="role-link" href="https://deliriumjournal.com/editorial-board">Editor-in-Chief, <cite>Delirium</cite> <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
           </li>
           <li>
             <span class="role-number" aria-hidden="true">03</span>
-            <a class="role-link" href="https://publichealthscotland.scot/resources-and-tools/health-strategy-and-outcomes/scottish-national-audit-programme-snap/scottish-hip-fracture-audit-shfa/overview-of-shfa/">Chair, Scottish Hip Fracture Audit <span aria-hidden="true">↗</span></a>
+            <a class="role-link" href="https://publichealthscotland.scot/resources-and-tools/health-strategy-and-outcomes/scottish-national-audit-programme-snap/scottish-hip-fracture-audit-shfa/overview-of-shfa/">Chair, Scottish Hip Fracture Audit <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
           </li>
         </ul>
-      </aside>
+      </div>
     </section>
 
     <section class="section section-resources" id="resources" aria-labelledby="resources-title">
@@ -180,7 +181,7 @@
             <p class="eyebrow">Resources</p>
             <h2 id="resources-title">Find the right delirium resource</h2>
           </div>
-          <p>Separate websites for patients, families, clinicians, researchers and the wider public.</p>
+          <p>This page brings together my own resources and separate organisations connected with my work. Each link states its audience and purpose.</p>
         </div>
 
         <div class="resource-groups">
@@ -192,9 +193,9 @@
             <span class="card-copy">
               <span class="card-title">Delirium Support</span>
               <span class="card-audience">For patients, families and carers</span>
-              <span class="card-description">Plain-English information about delirium for patients, families and carers.</span>
+              <span class="card-description">Free information in plain English, with printable resources for patients, families and carers.</span>
             </span>
-            <span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="card-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
 
           <a class="resource-card" href="https://thinkdelirium.com/">
@@ -204,42 +205,47 @@
               <span class="card-audience">For patients, families and carers</span>
               <span class="card-description">Videos about delirium for healthcare professionals, patients and carers.</span>
             </span>
-            <span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="card-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
             </div>
           </section>
 
           <section class="resource-group" aria-labelledby="clinical-resources">
             <h3 id="clinical-resources">Clinical practice</h3>
-            <div class="resource-grid">
+            <div class="resource-grid resource-grid-three">
           <a class="resource-card resource-card-featured" href="https://www.the4at.com/">
             <span class="card-index">03</span>
             <span class="card-copy">
               <span class="card-title">The 4AT</span>
               <span class="card-audience">For clinical practice</span>
-              <span class="card-description">A brief assessment for possible delirium and cognitive impairment, with a user guide, evidence and translations.</span>
+              <span class="card-description">A free, brief assessment for possible delirium and cognitive impairment, with guidance, evidence and translations. No registration is required.</span>
             </span>
-            <span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="card-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
           <a class="resource-card" href="https://www.deliriumtools.com/">
             <span class="card-index">04</span>
             <span class="card-copy">
               <span class="card-title">Delirium Tools</span>
               <span class="card-audience">For clinical practice</span>
-              <span class="card-description">A referenced catalogue of delirium assessment tools, with profiles, evidence and source links.</span>
+              <span class="card-description">A referenced directory I maintain of delirium assessment tools, with profiles, evidence and source links.</span>
             </span>
-            <span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="card-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
           <a class="resource-card" href="https://deliriumacademy.com/">
             <span class="card-index">05</span>
             <span class="card-copy">
               <span class="card-title">Delirium Academy</span>
               <span class="card-audience">For healthcare professionals</span>
-              <span class="card-description">Practical online education about delirium for healthcare professionals.</span>
+              <span class="card-description">Four free 20–35-minute modules about delirium, with questions and no registration.</span>
             </span>
-            <span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="card-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
             </div>
+            <nav class="resource-quick-links" aria-label="Direct clinical resources">
+              <a href="https://www.the4at.com/4at-download">4AT form <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+              <a href="https://www.the4at.com/4atcases">4AT case examples <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+              <a href="https://deliriumsupport.com/staff-resources/">Ward print resources <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+            </nav>
           </section>
 
           <section class="resource-group" aria-labelledby="research-resources">
@@ -259,9 +265,9 @@
             <span class="card-copy">
               <span class="card-title"><cite>Delirium</cite> journal</span>
               <span class="card-audience">For research and policy</span>
-              <span class="card-description">An open-access scientific journal published by the European Delirium Association.</span>
+              <span class="card-description">The open-access scientific journal of the European Delirium Association, where I serve as Editor-in-Chief.</span>
             </span>
-            <span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="card-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
             </div>
           </section>
@@ -276,7 +282,7 @@
               <span class="card-audience">For learning and writing</span>
               <span class="card-description">Articles and commentary about delirium.</span>
             </span>
-            <span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="card-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
           <a class="resource-card" href="https://www.deliriumday.com/">
             <span class="card-index">09</span>
@@ -285,7 +291,7 @@
               <span class="card-audience">For awareness and advocacy</span>
               <span class="card-description">The website for World Delirium Awareness Day, an iDelirium initiative.</span>
             </span>
-            <span class="card-arrow" aria-hidden="true">↗</span>
+            <span class="card-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
             </div>
           </section>
@@ -298,7 +304,7 @@
         <div class="section-heading section-heading-light">
           <div>
             <p class="eyebrow">Books</p>
-            <h2 id="books-title">Longer-form guides</h2>
+            <h2 id="books-title">Books</h2>
           </div>
           <p>Writing for patients, families, carers and healthcare professionals.</p>
         </div>
@@ -308,9 +314,10 @@
             <img class="book-cover-home" src="/assets/4at-manual-mockup-front-cropped.jpg" alt="Front cover of The 4AT Manual" width="900" height="1067">
             <p class="book-status">Published 31 July 2026</p>
             <h3><cite>The 4AT Manual: A Practical Guide to Delirium Assessment</cite></h3>
-            <p>The 102-page print edition explains how to administer, score and interpret the 4AT, with thirty worked clinical cases and guidance on implementation and audit. It is written for nurses, doctors, allied health professionals, students and educators. A free PDF and EPUB edition is also available, with no registration.</p>
-            <p>Available now from Amazon in <a href="https://www.amazon.co.uk/dp/B0HC85425K">Kindle</a>, <a href="https://www.amazon.co.uk/dp/1918164002">paperback</a> and <a href="https://www.amazon.co.uk/dp/1918164053">hardback</a> editions.</p>
-            <a class="text-link text-link-light" href="https://www.the4at.com/4at-manual">Read and download the manual on the4AT.com <span aria-hidden="true">↗</span></a>
+            <p>The manual explains how to administer, score and interpret the 4AT, with thirty worked clinical cases and guidance on implementation and audit. It is written for nurses, doctors, allied health professionals, students and educators.</p>
+            <p>The full manual is free to read or download as a PDF or EPUB, with no registration.</p>
+            <a class="text-link text-link-light" href="https://www.the4at.com/4at-manual">Read or download the manual free on the4AT.com <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+            <p>Kindle, <a href="/buy/4at-manual/?format=paperback">paperback</a> and <a href="/buy/4at-manual/?format=hardback">hardback</a> editions are also available through Amazon. <a href="/buy/4at-manual/?format=kindle">Choose a local store</a>.</p>
             <a class="text-link text-link-light" href="/books/">All books <span aria-hidden="true">→</span></a>
           </article>
 
@@ -331,7 +338,7 @@
         <div class="section-intro">
           <p class="eyebrow">Writing &amp; media</p>
           <h2 id="writing-title">Articles, videos and research</h2>
-          <p>Public-facing writing and teaching sit alongside my academic publications.</p>
+          <p>Public writing and teaching are listed here with my academic publications.</p>
         </div>
         <div class="link-list">
           <a href="/media/">
@@ -346,35 +353,35 @@
               <strong>Delirium Words</strong>
               <small>Articles and commentary</small>
             </span>
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
           <a href="https://www.youtube.com/@thinkdelirium">
             <span>
               <strong>Think Delirium</strong>
               <small>Videos and teaching</small>
             </span>
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
           <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">
             <span>
               <strong>Research Explorer</strong>
               <small>Publications and academic activity</small>
             </span>
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
           <a href="https://orcid.org/0000-0003-3159-9370" rel="me">
             <span>
               <strong>ORCID iD</strong>
               <small>0000-0003-3159-9370</small>
             </span>
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
           <a href="https://scholar.google.com/citations?user=MXvw7UIAAAAJ&amp;hl=en">
             <span>
               <strong>Google Scholar</strong>
               <small>Citations and research profile</small>
             </span>
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span>
           </a>
         </div>
       </div>
@@ -398,11 +405,11 @@
             <dd>Clinical work in acute geriatric medicine and acute orthogeriatrics</dd>
           </div>
           <div>
-            <dt><a href="https://deliriumjournal.com/editorial-board"><cite>Delirium</cite> <span aria-hidden="true">↗</span></a></dt>
+            <dt><a href="https://deliriumjournal.com/editorial-board"><cite>Delirium</cite> <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a></dt>
             <dd>Editor-in-Chief</dd>
           </div>
           <div>
-            <dt><a href="https://publichealthscotland.scot/resources-and-tools/health-strategy-and-outcomes/scottish-national-audit-programme-snap/scottish-hip-fracture-audit-shfa/overview-of-shfa/">Scottish Hip Fracture Audit <span aria-hidden="true">↗</span></a></dt>
+            <dt><a href="https://publichealthscotland.scot/resources-and-tools/health-strategy-and-outcomes/scottish-national-audit-programme-snap/scottish-hip-fracture-audit-shfa/overview-of-shfa/">Scottish Hip Fracture Audit <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a></dt>
             <dd>Chair</dd>
           </div>
         </dl>
@@ -416,18 +423,19 @@
           <h2 id="contact-title">Professional enquiries</h2>
         </div>
         <div class="contact-copy">
-          <p>Please use the current contact details on my University of Edinburgh profile.</p>
-          <a class="button button-primary" href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">University profile <span aria-hidden="true">↗</span></a>
-          <p class="small-print">I cannot provide individual medical advice.</p>
+          <p>Email <a href="mailto:a.maclullich@ed.ac.uk">a.maclullich@ed.ac.uk</a> or use my University of Edinburgh profile for current institutional details.</p>
+          <a class="button button-primary" href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+          <p class="small-print">This website does not give individual medical advice.</p>
         </div>
       </div>
     </section>
+    <div class="back-to-top shell"><a href="#main-content">Back to top <span aria-hidden="true">↑</span></a></div>
   </main>
 
   <footer class="site-footer">
     <div class="shell footer-main">
       <div class="footer-identity">
-        <a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">
+        <a class="brand footer-brand" href="/" aria-label="AM, Alasdair MacLullich, home">
           <span class="brand-mark" aria-hidden="true">AM</span>
           <span class="brand-name">Alasdair MacLullich</span>
         </a>
@@ -443,15 +451,16 @@
         <a href="/contact/">Contact</a>
         <a href="/accessibility/">Accessibility</a>
         <a href="/privacy/">Privacy</a>
-        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">University profile <span aria-hidden="true">↗</span></a>
-        <a href="https://orcid.org/0000-0003-3159-9370">ORCID <span aria-hidden="true">↗</span></a>
+        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+        <a href="https://orcid.org/0000-0003-3159-9370">ORCID <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
       </nav>
     </div>
     <div class="shell footer-note">
-      <p>Maintained independently by Alasdair MacLullich. This is not an official website of the University of Edinburgh, NHS, <cite>Delirium</cite> journal, European Delirium Association, Scottish Hip Fracture Audit or iDelirium. Linked websites have their own editorial responsibility. Profile information reviewed 22 July 2026.</p>
+      <p>Maintained independently by Alasdair MacLullich. This is not an official website of the University of Edinburgh, NHS, <cite>Delirium</cite> journal, European Delirium Association, Scottish Hip Fracture Audit or iDelirium. Linked websites have their own editorial responsibility. Profile information reviewed 4 September 2026.</p>
       <p>General information only; not individual medical advice.</p>
     </div>
   </footer>
-  <script src="/assets/site.js?v=20260808-amazon-click" defer></script>
+  <script src="/assets/site.js?v=20260904-panel-fixes" defer></script>
 </body>
 </html>

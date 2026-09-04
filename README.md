@@ -10,6 +10,7 @@ Edit the files in this repository and publish the changes to `main`. The main pa
 
 - `index.html`
 - `delirium/index.html`
+- `research/index.html`
 - `books/index.html`
 - `books/delirium-family-guide/index.html`
 - `media/index.html`
@@ -18,6 +19,10 @@ Edit the files in this repository and publish the changes to `main`. The main pa
 - `privacy/index.html`
 - `contact/index.html`
 - `accessibility/index.html`
+
+The noindex utility page at `buy/4at-manual/index.html` sends Kindle, paperback and hardback links to the visitor's regional Amazon store and also provides a manual store chooser. The legacy `4at-manual-kindle.html` route is retained as a compatibility redirect.
+
+Before publishing, run `npm install --package-lock=false`, `npm run check` and `npx html-validate "**/*.html"`. The GitHub Actions workflow repeats these checks and runs automated accessibility tests across the public pages and the bookshop chooser.
 
 The `CNAME` file sets the public host to `www.alasdairmaclullich.com` and must remain in the repository root.
 

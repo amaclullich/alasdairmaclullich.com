@@ -14,7 +14,7 @@
   <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable site guide">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/styles.css?v=20260904-panel-fixes">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Alasdair MacLullich">
   <meta property="og:title" content="About Alasdair MacLullich | Geriatrician and delirium researcher">
@@ -28,6 +28,7 @@
   <meta name="twitter:title" content="About Alasdair MacLullich | Geriatrician and delirium researcher">
   <meta name="twitter:description" content="Clinical and academic work, professional profiles and the purpose of this independent website.">
   <meta name="twitter:image" content="https://www.alasdairmaclullich.com/assets/social-card.png">
+  <meta name="twitter:image:alt" content="Alasdair MacLullich: geriatrician, delirium researcher and writer">
 
   <script type="application/ld+json">
   {
@@ -41,7 +42,7 @@
         "description": "Clinical work, research, professional roles and verified profiles for Alasdair MacLullich.",
         "isPartOf": { "@id": "https://www.alasdairmaclullich.com/#website" },
         "mainEntity": { "@id": "https://www.alasdairmaclullich.com/#person" },
-        "dateModified": "2026-08-02",
+        "dateModified": "2026-09-04",
         "breadcrumb": { "@id": "https://www.alasdairmaclullich.com/about/#breadcrumb" },
         "inLanguage": "en-GB"
       },
@@ -53,6 +54,7 @@
         "honorificPrefix": "Professor",
         "jobTitle": "Professor of Geriatric Medicine",
         "url": "https://www.alasdairmaclullich.com/",
+        "email": "mailto:a.maclullich@ed.ac.uk",
         "identifier": {
           "@type": "PropertyValue",
           "propertyID": "ORCID",
@@ -65,9 +67,12 @@
           "url": "https://www.ed.ac.uk/"
         },
         "sameAs": [
+          "https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich",
           "https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/",
           "https://orcid.org/0000-0003-3159-9370",
           "https://scholar.google.com/citations?user=MXvw7UIAAAAJ&hl=en",
+          "https://www.scopus.com/authid/detail.uri?authorId=6603279159",
+          "https://www.researchgate.net/profile/Alasdair-Maclullich",
           "https://www.linkedin.com/in/amaclullich/",
           "https://x.com/A_MacLullich",
           "https://bsky.app/profile/amaclullich.bsky.social",
@@ -82,6 +87,48 @@
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alasdairmaclullich.com/" },
           { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.alasdairmaclullich.com/about/" }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.alasdairmaclullich.com/about/#faq",
+        "url": "https://www.alasdairmaclullich.com/about/#frequently-asked-questions",
+        "name": "Frequently asked questions about Alasdair MacLullich and the 4AT",
+        "isPartOf": { "@id": "https://www.alasdairmaclullich.com/#website" },
+        "inLanguage": "en-GB",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who developed the 4AT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Alasdair MacLullich originally designed the 4AT with Tracy Ryan and Helen Cash in 2011."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the 4AT free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The 4AT is free for clinical, education and research use, and no separate permission, payment or registration is required. Reuse is subject to the stated CC BY 4.0 terms at https://www.the4at.com/attribution."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I get the 4AT manual?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The full manual is available free as a PDF or EPUB at https://www.the4at.com/4at-manual. Print editions are available through the regional bookshop chooser at https://www.alasdairmaclullich.com/buy/4at-manual/."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact Alasdair MacLullich?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For professional enquiries, email a.maclullich@ed.ac.uk or use the official University of Edinburgh profile at https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich. This website does not give individual medical advice."
+            }
+          }
+        ]
       }
     ]
   }
@@ -91,7 +138,7 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="/" aria-label="Alasdair MacLullich, home">
+      <a class="brand" href="/" aria-label="AM, Alasdair MacLullich, home">
         <span class="brand-mark" aria-hidden="true">AM</span>
         <span class="brand-name">Alasdair MacLullich</span>
       </a>
@@ -125,7 +172,7 @@
         <div class="prose">
           <p>I am Professor of Geriatric Medicine at the University of Edinburgh and work clinically in acute geriatric medicine and acute orthogeriatrics at the Royal Infirmary of Edinburgh. Read more about my <a href="/research/">delirium and geriatric medicine research</a>.</p>
           <p>Alongside clinical and academic work, I am Editor-in-Chief of <a href="https://deliriumjournal.com/editorial-board"><cite>Delirium</cite></a> and Chair of the <a href="https://publichealthscotland.scot/resources-and-tools/health-strategy-and-outcomes/scottish-national-audit-programme-snap/scottish-hip-fracture-audit-shfa/overview-of-shfa/">Scottish Hip Fracture Audit</a>. I co-founded the European Delirium Association.</p>
-          <p>I led the original development of the <a href="https://www.the4at.com/4atinformation">4AT delirium assessment tool</a> in 2011 and remain responsible for its updates.</p>
+          <p>I originally designed the <a href="https://www.the4at.com/4atinformation">4AT delirium assessment tool</a> with Tracy Ryan and Helen Cash in 2011, and remain responsible for its updates.</p>
           <p>The websites linked from this site cover several distinct kinds of work: information for patients and families, clinical assessment tools, professional education, academic publishing, writing and public awareness.</p>
           <p>The <a href="/delirium/">delirium overview</a> explains the main ideas and directs patients, families, clinicians, students, researchers and journalists to the right specialist resource.</p>
           <h3>Areas of work</h3>
@@ -138,18 +185,52 @@
       </div>
     </section>
 
+    <section class="prose-section section-tint" aria-labelledby="four-at-in-use-heading">
+      <div class="shell prose-layout">
+        <h2 id="four-at-in-use-heading">The 4AT in use</h2>
+        <div class="prose">
+          <p>The 4AT is a brief bedside assessment designed to help healthcare professionals recognise possible delirium and cognitive impairment. <a href="https://www.nice.org.uk/guidance/cg103/chapter/Recommendations#assessment-and-diagnosis">NICE recommends it for assessment when indicators of delirium are identified</a> in hospital or long-term care, except in critical care or the recovery room after surgery. <a href="https://www.sign.ac.uk/our-guidelines/risk-reduction-and-management-of-delirium/">SIGN recommends it to identify probable delirium</a> in emergency and acute hospital settings. It is free to use, needs no registration and is available in <a href="https://www.the4at.com/4at-translations">more than 20 languages</a>.</p>
+          <p>A <a href="https://pubmed.ncbi.nlm.nih.gov/33951145/">2021 systematic review and meta-analysis</a> of 17 studies, comprising 3,702 observations, estimated pooled sensitivity and specificity of 0.88. In a <a href="https://pubmed.ncbi.nlm.nih.gov/31337404/">2019 multicentre study</a>, 785 analysable acute medical patients received an independent reference assessment and were randomised to assessment with either the 4AT or CAM. Sensitivity and specificity were 76% and 94% for the 4AT, and 40% and 100% for the CAM.</p>
+          <p>In a <a href="https://pubmed.ncbi.nlm.nih.gov/40164178/">2025 national Scottish registry study</a>, 16,476 (91%) of 18,040 people presenting with hip fracture received a 4AT assessment.</p>
+          <p>Use the <a href="https://www.the4at.com/4at-download">official 4AT</a>, work through <a href="https://www.the4at.com/4atcases">clinical cases</a>, or read the <a href="https://www.the4at.com/4at-manual">free practical manual</a>. The <a href="/research/">research page</a> gives further findings and links to the published evidence.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="prose-section" aria-labelledby="profiles-heading">
       <div class="shell prose-layout">
         <h2 id="profiles-heading">Profiles</h2>
         <div class="prose">
           <p>These profiles provide current institutional details, publications and researcher identifiers.</p>
           <div class="profile-links">
-            <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">University profile <span aria-hidden="true">↗</span></a>
-            <a href="https://orcid.org/0000-0003-3159-9370" rel="me">ORCID iD 0000-0003-3159-9370 <span aria-hidden="true">↗</span></a>
-            <a href="https://scholar.google.com/citations?user=MXvw7UIAAAAJ&amp;hl=en">Google Scholar <span aria-hidden="true">↗</span></a>
-            <a href="https://publichealthscotland.scot/resources-and-tools/health-strategy-and-outcomes/scottish-national-audit-programme-snap/scottish-hip-fracture-audit-shfa/overview-of-shfa/">Scottish Hip Fracture Audit <span aria-hidden="true">↗</span></a>
+            <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University of Edinburgh profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+            <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer: publications and projects <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+            <a href="https://orcid.org/0000-0003-3159-9370" rel="me">ORCID iD 0000-0003-3159-9370 <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+            <a href="https://scholar.google.com/citations?user=MXvw7UIAAAAJ&amp;hl=en">Google Scholar <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/?term=MacLullich+AMJ%5BAuthor%5D">PubMed author search <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=6603279159">Scopus author profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+            <a href="https://www.researchgate.net/profile/Alasdair-Maclullich">ResearchGate <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
           </div>
-          <p class="profile-reviewed">Profile information reviewed 22 July 2026.</p>
+          <p class="profile-reviewed">Profile links checked 4 September 2026.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="prose-section" aria-labelledby="frequently-asked-questions">
+      <div class="shell prose-layout">
+        <h2 id="frequently-asked-questions">Frequently asked questions</h2>
+        <div class="prose">
+          <h3>Who developed the 4AT?</h3>
+          <p>I originally designed the 4AT with Tracy Ryan and Helen Cash in 2011.</p>
+
+          <h3>Is the 4AT free to use?</h3>
+          <p>Yes. The <a href="https://www.the4at.com/">4AT is free</a> for clinical, education and research use, and no separate permission, payment or registration is required. Reuse is subject to its <a href="https://www.the4at.com/attribution">CC BY 4.0 terms</a>.</p>
+
+          <h3>Where can I get the 4AT manual?</h3>
+          <p>The full manual is available free as a <a href="https://www.the4at.com/4at-manual">PDF or EPUB</a>. Print editions are available through the <a href="/buy/4at-manual/">regional bookshop chooser</a>.</p>
+
+          <h3>How can I contact you?</h3>
+          <p>For professional enquiries, email <a href="mailto:a.maclullich@ed.ac.uk">a.maclullich@ed.ac.uk</a> or use my <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">official University of Edinburgh profile</a>. This website does not give individual medical advice.</p>
         </div>
       </div>
     </section>
@@ -158,10 +239,10 @@
       <div class="shell prose-layout">
         <h2 id="website-heading">This website</h2>
         <div class="prose">
-          <p>This is my independent professional website. It brings together work that otherwise sits across separate organisations, publications and websites. Each linked website has its own purpose and editorial responsibility.</p>
+          <p>This is my independent professional website. It brings together work that is otherwise spread across separate organisations, publications and websites. Each linked website has its own purpose and editorial responsibility.</p>
           <p>This is not an official website of the University of Edinburgh, NHS, <cite>Delirium</cite> journal, European Delirium Association, Scottish Hip Fracture Audit or iDelirium.</p>
           <h3 id="contact">Contact</h3>
-          <p>For professional enquiries, please use the current contact details on my <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">University of Edinburgh profile</a>. I cannot provide individual medical advice.</p>
+          <p>For professional enquiries, email <a href="mailto:a.maclullich@ed.ac.uk">a.maclullich@ed.ac.uk</a> or use my <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">official University of Edinburgh profile</a>. My publications and projects are listed in <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer</a>. This website does not give individual medical advice.</p>
         </div>
       </div>
     </section>
@@ -170,7 +251,7 @@
   <footer class="site-footer">
     <div class="shell footer-main">
       <div class="footer-identity">
-        <a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">
+        <a class="brand footer-brand" href="/" aria-label="AM, Alasdair MacLullich, home">
           <span class="brand-mark" aria-hidden="true">AM</span>
           <span class="brand-name">Alasdair MacLullich</span>
         </a>
@@ -186,15 +267,16 @@
         <a href="/contact/">Contact</a>
         <a href="/accessibility/">Accessibility</a>
         <a href="/privacy/">Privacy</a>
-        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">University profile <span aria-hidden="true">↗</span></a>
-        <a href="https://orcid.org/0000-0003-3159-9370">ORCID <span aria-hidden="true">↗</span></a>
+        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
+        <a href="https://orcid.org/0000-0003-3159-9370">ORCID <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
       </nav>
     </div>
     <div class="shell footer-note">
-      <p>Maintained independently by Alasdair MacLullich. Linked websites have their own editorial responsibility. Profile information reviewed 22 July 2026.</p>
+      <p>Maintained independently by Alasdair MacLullich. Linked websites have their own editorial responsibility. Profile and page information reviewed 4 September 2026.</p>
       <p>General information only; not individual medical advice.</p>
     </div>
   </footer>
-  <script src="/assets/site.js" defer></script>
+  <script src="/assets/site.js?v=20260904-panel-fixes" defer></script>
 </body>
 </html>

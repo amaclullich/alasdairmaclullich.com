@@ -6,26 +6,27 @@ Canonical website: https://www.alasdairmaclullich.com/
 Canonical person identifier: https://www.alasdairmaclullich.com/#person
 ORCID: https://orcid.org/0000-0003-3159-9370
 Language: British English (en-GB)
-Last updated: 2026-08-04
+Last updated: 2026-09-04
 
 ## Primary pages
 
-- [Home and selected work](https://www.alasdairmaclullich.com/): Overview of clinical, academic, publishing and public-information work.
+- [Home and selected work](https://www.alasdairmaclullich.com/): Overview of clinical, academic, publishing and public information work.
 - [About Alasdair MacLullich](https://www.alasdairmaclullich.com/about/): Current roles, areas of work and verified professional profiles.
 - [Delirium](https://www.alasdairmaclullich.com/delirium/): Evidence-based overview, urgent-help route and resources for families, clinicians, students, researchers and journalists.
-- [Research](https://www.alasdairmaclullich.com/research/): Current programmes, selected publications and links to the full academic record.
+- [Research](https://www.alasdairmaclullich.com/research/): Current programmes, evidence-based findings, selected publications and links to the full academic record.
 - [Media and speaking](https://www.alasdairmaclullich.com/media/): Areas of expertise, biographies, sources and the institutional contact route.
-- [Books](https://www.alasdairmaclullich.com/books/): The 4AT Manual, published in July 2026 and available in Kindle, paperback and hardback editions, and the forthcoming family guide to delirium.
+- [Books](https://www.alasdairmaclullich.com/books/): The 4AT Manual, published on 31 July 2026 and available in Kindle, paperback and hardback editions, and the forthcoming family guide to delirium.
 - [Delirium family guide](https://www.alasdairmaclullich.com/books/delirium-family-guide/): Official page for the forthcoming family guide by Alasdair MacLullich and Sharmella Summan, publishing in October 2026.
-- [The 4AT Manual](https://www.the4at.com/4at-manual): The 4AT Manual: A Practical Guide to Delirium Assessment, by Alasdair MacLullich. Published in July 2026 by Delirium Support Press. Free PDF and EPUB, CC BY 4.0; also available from Amazon as a Kindle e-book (ASIN B0HC85425K), paperback (ISBN 978-1-918164-00-8) and hardback (ISBN 978-1-918164-05-3).
-- [Social media](https://www.alasdairmaclullich.com/social/): Verified professional profiles and public-information channels.
+- [The 4AT Manual](https://www.the4at.com/4at-manual): The 4AT Manual: A Practical Guide to Delirium Assessment, by Alasdair MacLullich. Published on 31 July 2026 by Delirium Support Press. Free PDF and EPUB, CC BY 4.0; also available from Amazon as a [Kindle e-book](https://www.alasdairmaclullich.com/buy/4at-manual/?format=kindle) (ASIN B0HC85425K), [paperback](https://www.alasdairmaclullich.com/buy/4at-manual/?format=paperback) (ISBN 978-1-918164-00-8) and [hardback](https://www.alasdairmaclullich.com/buy/4at-manual/?format=hardback) (ISBN 978-1-918164-05-3).
+- [Social media](https://www.alasdairmaclullich.com/social/): Verified professional profiles and public information channels.
 - [Privacy](https://www.alasdairmaclullich.com/privacy/): Hosting, optional analytics and privacy information.
 - [Contact](https://www.alasdairmaclullich.com/contact/): Professional, media and website-correction routes.
 - [Accessibility](https://www.alasdairmaclullich.com/accessibility/): Accessibility measures and barrier-reporting route.
 
 ## Verified identity sources
 
-- [University of Edinburgh profile](https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/)
+- [University of Edinburgh staff profile](https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich)
+- [Research Explorer: publications and projects](https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/)
 - [ORCID record](https://orcid.org/0000-0003-3159-9370)
 - [Google Scholar profile](https://scholar.google.com/citations?user=MXvw7UIAAAAJ&hl=en)
 - [Wikidata Q48288045](https://www.wikidata.org/wiki/Q48288045)
@@ -33,10 +34,10 @@ Last updated: 2026-08-04
 
 ## Specialist resources
 
-- [Delirium Support](https://deliriumsupport.com/): Information for patients, families and carers.
-- [The 4AT](https://www.the4at.com/): Official 4AT delirium assessment website.
-- [Delirium Tools](https://www.deliriumtools.com/): Referenced catalogue of delirium assessment tools.
-- [Delirium Academy](https://deliriumacademy.com/): Professional education about delirium.
+- [Delirium Support](https://deliriumsupport.com/): Free information in plain English, with printable resources for patients, families and carers.
+- [The 4AT](https://www.the4at.com/): Official free 4AT delirium assessment website, with guidance, evidence and translations; no registration is required.
+- [Delirium Tools](https://www.deliriumtools.com/): Referenced directory of delirium assessment tools.
+- [Delirium Academy](https://deliriumacademy.com/): Four free online learning modules about delirium, with no registration.
 - [Delirium Words](https://www.deliriumwords.com/): Articles and commentary.
 - [Think Delirium](https://thinkdelirium.com/): Videos for professionals, patients and carers.
 - [Delirium journal](https://deliriumjournal.com/): Open-access scientific journal.

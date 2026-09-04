@@ -127,8 +127,15 @@
     "amazon.es": "ES",
     "amazon.it": "IT",
     "amazon.nl": "NL",
+    "amazon.se": "SE",
+    "amazon.pl": "PL",
+    "amazon.com.tr": "TR",
     "amazon.in": "IN",
     "amazon.co.jp": "JP",
+    "amazon.sg": "SG",
+    "amazon.ae": "AE",
+    "amazon.sa": "SA",
+    "amazon.eg": "EG",
     "amazon.com.br": "BR",
     "amazon.com.mx": "MX"
   };

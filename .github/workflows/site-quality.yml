@@ -18,4 +18,4 @@ jobs:
       - run: npx browser-driver-manager install chrome
       - run: npm run check
       - run: npx html-validate "**/*.html"
-      - run: python3 -m http.server 8080 --directory . > /tmp/site-server.log 2>&1 & npx wait-on http://127.0.0.1:8080/ && npx axe http://127.0.0.1:8080/ http://127.0.0.1:8080/delirium/ http://127.0.0.1:8080/research/ http://127.0.0.1:8080/books/delirium-family-guide/
+      - run: python3 -m http.server 8080 --directory . > /tmp/site-server.log 2>&1 & npx wait-on http://127.0.0.1:8080/ && npx axe http://127.0.0.1:8080/ http://127.0.0.1:8080/delirium/ http://127.0.0.1:8080/research/ http://127.0.0.1:8080/books/ http://127.0.0.1:8080/books/delirium-family-guide/ http://127.0.0.1:8080/media/ http://127.0.0.1:8080/about/ http://127.0.0.1:8080/social/ http://127.0.0.1:8080/contact/ http://127.0.0.1:8080/privacy/ http://127.0.0.1:8080/accessibility/ http://127.0.0.1:8080/buy/4at-manual/?stay
