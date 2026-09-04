@@ -16,7 +16,7 @@
   var initialPreference = readPreferenceCookie();
 
   window.gtag("consent", "default", {
-    analytics_storage: initialPreference === "denied" ? "denied" : "granted",
+    analytics_storage: initialPreference === "granted" ? "granted" : "denied",
     ad_storage: "denied",
     ad_user_data: "denied",
     ad_personalization: "denied",
@@ -209,11 +209,11 @@
   banner.innerHTML =
     '<div class="consent-inner">' +
       '<div class="consent-copy">' +
-        '<p id="consent-description"><strong>Limited analytics is on.</strong> Google Analytics counts visits so I can improve this independent website. Advertising features are disabled. You can turn analytics off now or later without losing access. <a href="/privacy/">Privacy</a>.</p>' +
+        '<p id="consent-description"><strong>Analytics is off unless you allow it.</strong> Google Analytics helps me understand which pages are used. Advertising features are disabled. You can change this later. <a href="/privacy/">Privacy</a>.</p>' +
       '</div>' +
       '<div class="consent-actions">' +
-        '<button class="consent-button consent-accept" type="button" data-consent-accept>Keep analytics on</button>' +
-        '<button class="consent-button consent-decline" type="button" data-consent-decline>Turn analytics off</button>' +
+        '<button class="consent-button consent-accept" type="button" data-consent-accept>Allow analytics</button>' +
+        '<button class="consent-button consent-decline" type="button" data-consent-decline>Keep analytics off</button>' +
       '</div>' +
     '</div>';
   document.body.appendChild(banner);
@@ -277,7 +277,7 @@
     updateConsent("denied");
     clearAnalyticsCookies();
   } else {
-    loadAnalytics();
+    updateConsent("denied");
     showBanner();
   }
 }());

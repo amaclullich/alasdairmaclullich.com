@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-nwEiBiYAzZYa0quE4ziW5lnoHDLiMLAXeFhj4XybCo0=' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-+99PuC/iz3ikff50OUxCFmO7G+59Ha4FtPbju3DLNxk=' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'">
   <title>Buy The 4AT Manual | Alasdair MacLullich</title>
   <meta name="description" content="Choose an edition and local Amazon store for The 4AT Manual: A Practical Guide to Delirium Assessment.">
   <meta name="author" content="Alasdair MacLullich">
@@ -13,7 +13,7 @@
   <link rel="canonical" href="https://www.alasdairmaclullich.com/buy/4at-manual/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260904-panel-fixes">
+  <link rel="stylesheet" href="/assets/styles.css?v=20260904-final-audit">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Alasdair MacLullich">
   <meta property="og:title" content="Buy The 4AT Manual | Alasdair MacLullich">
@@ -35,7 +35,7 @@
       <nav class="primary-nav" aria-label="Primary navigation">
         <a href="/delirium/">Delirium</a>
         <a href="/research/">Research</a>
-        <a href="/books/">Books</a>
+        <a href="/books/" aria-current="location">Books</a>
         <a href="/media/">Media</a>
         <a href="/about/">About</a>
       </nav>
@@ -54,15 +54,15 @@
     <section class="page-hero shell">
       <p class="eyebrow">Amazon editions</p>
       <h1>Buy <cite>The 4AT Manual</cite></h1>
-      <p class="page-standfirst">Taking you to the <span id="selected-format">Kindle edition</span> in your local Amazon store. If that does not happen, choose a store below.</p>
-      <p><a id="stay-link" href="/buy/4at-manual/?format=kindle&amp;stay">Stay on this page and choose a store</a></p>
+      <p class="page-standfirst" id="route-message">Taking you to the <span id="selected-format">Kindle edition</span> in your local Amazon store. If that does not happen, choose a store below.</p>
+      <p id="stay-row"><a id="stay-link" href="/buy/4at-manual/?format=kindle&amp;stay">Stay on this page and choose a store</a></p>
     </section>
 
     <section class="prose-section" aria-labelledby="edition-heading">
       <div class="shell prose-layout">
         <h2 id="edition-heading">Choose an edition</h2>
         <div class="prose">
-          <ul>
+          <ul class="edition-list">
             <li><a href="/buy/4at-manual/?format=kindle&amp;stay">Kindle</a></li>
             <li><a href="/buy/4at-manual/?format=paperback&amp;stay">Paperback</a></li>
             <li><a href="/buy/4at-manual/?format=hardback&amp;stay">Hardback</a></li>
@@ -76,7 +76,7 @@
         <h2 id="stores-heading">Amazon stores</h2>
         <div class="prose">
           <p>The links below are for the <span id="store-format">Kindle edition</span>.</p>
-          <ul>
+          <ul class="store-list" id="amazon-stores">
             <li><a data-amazon-host="www.amazon.co.uk" href="https://www.amazon.co.uk/dp/B0HC85425K">United Kingdom and Ireland</a></li>
             <li><a data-amazon-host="www.amazon.com" href="https://www.amazon.com/dp/B0HC85425K">United States</a></li>
             <li><a data-amazon-host="www.amazon.ca" href="https://www.amazon.ca/dp/B0HC85425K">Canada</a></li>
@@ -86,19 +86,12 @@
             <li><a data-amazon-host="www.amazon.es" href="https://www.amazon.es/dp/B0HC85425K">Spain</a></li>
             <li><a data-amazon-host="www.amazon.it" href="https://www.amazon.it/dp/B0HC85425K">Italy and Malta</a></li>
             <li><a data-amazon-host="www.amazon.nl" href="https://www.amazon.nl/dp/B0HC85425K">Netherlands</a></li>
-            <li><a data-amazon-host="www.amazon.se" href="https://www.amazon.se/dp/B0HC85425K">Sweden</a></li>
-            <li><a data-amazon-host="www.amazon.pl" href="https://www.amazon.pl/dp/B0HC85425K">Poland</a></li>
-            <li><a data-amazon-host="www.amazon.com.tr" href="https://www.amazon.com.tr/dp/B0HC85425K">Turkey</a></li>
             <li><a data-amazon-host="www.amazon.in" href="https://www.amazon.in/dp/B0HC85425K">India</a></li>
             <li><a data-amazon-host="www.amazon.co.jp" href="https://www.amazon.co.jp/dp/B0HC85425K">Japan</a></li>
-            <li><a data-amazon-host="www.amazon.sg" href="https://www.amazon.sg/dp/B0HC85425K">Singapore</a></li>
-            <li><a data-amazon-host="www.amazon.ae" href="https://www.amazon.ae/dp/B0HC85425K">United Arab Emirates</a></li>
-            <li><a data-amazon-host="www.amazon.sa" href="https://www.amazon.sa/dp/B0HC85425K">Saudi Arabia</a></li>
-            <li><a data-amazon-host="www.amazon.eg" href="https://www.amazon.eg/dp/B0HC85425K">Egypt</a></li>
             <li><a data-amazon-host="www.amazon.com.br" href="https://www.amazon.com.br/dp/B0HC85425K">Brazil</a></li>
             <li><a data-amazon-host="www.amazon.com.mx" href="https://www.amazon.com.mx/dp/B0HC85425K">Mexico</a></li>
           </ul>
-          <p>If the selected edition is not available in your local store, try the <a data-amazon-host="www.amazon.co.uk" href="https://www.amazon.co.uk/dp/B0HC85425K">UK store</a>.</p>
+          <p>If the selected edition is not available in your local store, try the <a id="uk-fallback" href="https://www.amazon.co.uk/dp/B0HC85425K">UK store</a>.</p>
           <p>The manual is also free to download as a PDF or EPUB from <a href="https://www.the4at.com/4at-manual">the4AT.com</a>, with no registration.</p>
           <noscript>
             <p>Automatic store selection needs JavaScript. Use the UK links for the <a href="https://www.amazon.co.uk/dp/B0HC85425K">Kindle</a>, <a href="https://www.amazon.co.uk/dp/1918164002">paperback</a> or <a href="https://www.amazon.co.uk/dp/1918164053">hardback</a> edition.</p>
@@ -120,7 +113,7 @@
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="/delirium/">Delirium</a>
         <a href="/research/">Research</a>
-        <a href="/books/">Books</a>
+        <a href="/books/" aria-current="location">Books</a>
         <a href="/media/">Media</a>
         <a href="/about/">About</a>
         <a href="/social/">Social</a>
@@ -142,10 +135,41 @@
       'use strict';
 
       var formats = {
-        kindle: { identifier: 'B0HC85425K', label: 'Kindle edition' },
-        paperback: { identifier: '1918164002', label: 'paperback edition' },
-        hardback: { identifier: '1918164053', label: 'hardback edition' }
+        kindle: {
+          identifier: 'B0HC85425K',
+          label: 'Kindle edition',
+          hosts: ['www.amazon.co.uk', 'www.amazon.com', 'www.amazon.ca', 'www.amazon.com.au', 'www.amazon.de', 'www.amazon.fr', 'www.amazon.es', 'www.amazon.it', 'www.amazon.nl', 'www.amazon.in', 'www.amazon.co.jp', 'www.amazon.com.br', 'www.amazon.com.mx']
+        },
+        paperback: {
+          identifier: '1918164002',
+          label: 'paperback edition',
+          hosts: ['www.amazon.co.uk', 'www.amazon.com', 'www.amazon.ca', 'www.amazon.com.au', 'www.amazon.de', 'www.amazon.fr', 'www.amazon.es', 'www.amazon.it', 'www.amazon.nl', 'www.amazon.se', 'www.amazon.pl', 'www.amazon.co.jp', 'www.amazon.sg', 'www.amazon.ae', 'www.amazon.com.br', 'www.amazon.com.mx']
+        },
+        hardback: {
+          identifier: '1918164053',
+          label: 'hardback edition',
+          hosts: ['www.amazon.co.uk', 'www.amazon.com', 'www.amazon.ca', 'www.amazon.com.au', 'www.amazon.de', 'www.amazon.fr', 'www.amazon.es', 'www.amazon.it', 'www.amazon.nl', 'www.amazon.se', 'www.amazon.pl', 'www.amazon.sg', 'www.amazon.ae', 'www.amazon.com.br', 'www.amazon.com.mx']
+        }
       };
+      var stores = [
+        { host: 'www.amazon.co.uk', label: 'United Kingdom and Ireland' },
+        { host: 'www.amazon.com', label: 'United States' },
+        { host: 'www.amazon.ca', label: 'Canada' },
+        { host: 'www.amazon.com.au', label: 'Australia and New Zealand' },
+        { host: 'www.amazon.de', label: 'Germany, Austria and Switzerland' },
+        { host: 'www.amazon.fr', label: 'France, Belgium, Luxembourg and Monaco' },
+        { host: 'www.amazon.es', label: 'Spain' },
+        { host: 'www.amazon.it', label: 'Italy and Malta' },
+        { host: 'www.amazon.nl', label: 'Netherlands' },
+        { host: 'www.amazon.se', label: 'Sweden' },
+        { host: 'www.amazon.pl', label: 'Poland' },
+        { host: 'www.amazon.in', label: 'India' },
+        { host: 'www.amazon.co.jp', label: 'Japan' },
+        { host: 'www.amazon.sg', label: 'Singapore' },
+        { host: 'www.amazon.ae', label: 'United Arab Emirates' },
+        { host: 'www.amazon.com.br', label: 'Brazil' },
+        { host: 'www.amazon.com.mx', label: 'Mexico' }
+      ];
       var zones = {
         'Europe/London': 'www.amazon.co.uk',
         'Europe/Belfast': 'www.amazon.co.uk',
@@ -217,14 +241,31 @@
         'America/Edmonton': 'www.amazon.ca',
         'America/Winnipeg': 'www.amazon.ca',
         'America/Halifax': 'www.amazon.ca',
+        'America/Glace_Bay': 'www.amazon.ca',
         'America/Moncton': 'www.amazon.ca',
         'America/St_Johns': 'www.amazon.ca',
+        'America/Goose_Bay': 'www.amazon.ca',
+        'America/Blanc-Sablon': 'www.amazon.ca',
+        'America/Atikokan': 'www.amazon.ca',
+        'America/Resolute': 'www.amazon.ca',
+        'America/Rankin_Inlet': 'www.amazon.ca',
         'America/Regina': 'www.amazon.ca',
+        'America/Swift_Current': 'www.amazon.ca',
+        'America/Cambridge_Bay': 'www.amazon.ca',
+        'America/Inuvik': 'www.amazon.ca',
+        'America/Creston': 'www.amazon.ca',
+        'America/Dawson_Creek': 'www.amazon.ca',
+        'America/Fort_Nelson': 'www.amazon.ca',
+        'America/Dawson': 'www.amazon.ca',
         'America/Whitehorse': 'www.amazon.ca',
         'America/Yellowknife': 'www.amazon.ca',
         'America/Iqaluit': 'www.amazon.ca',
         'America/Mexico_City': 'www.amazon.com.mx',
         'America/Monterrey': 'www.amazon.com.mx',
+        'America/Matamoros': 'www.amazon.com.mx',
+        'America/Ciudad_Juarez': 'www.amazon.com.mx',
+        'America/Ojinaga': 'www.amazon.com.mx',
+        'America/Bahia_Banderas': 'www.amazon.com.mx',
         'America/Cancun': 'www.amazon.com.mx',
         'America/Merida': 'www.amazon.com.mx',
         'America/Chihuahua': 'www.amazon.com.mx',
@@ -249,20 +290,45 @@
         'America/Noronha': 'www.amazon.com.br'
       };
 
-      function localAmazonHost() {
+      function localAmazonHost(availableHosts) {
         var zone = '';
+        var preferredHost = '';
         try {
           zone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
         } catch (error) {
           zone = '';
         }
         if (zone.indexOf('Australia/') === 0 || zone === 'Antarctica/Macquarie') {
-          return 'www.amazon.com.au';
+          preferredHost = 'www.amazon.com.au';
+        } else if (Object.prototype.hasOwnProperty.call(zones, zone)) {
+          preferredHost = zones[zone];
         }
-        if (Object.prototype.hasOwnProperty.call(zones, zone)) {
-          return zones[zone];
+        if (availableHosts.indexOf(preferredHost) !== -1) {
+          return preferredHost;
         }
         return 'www.amazon.co.uk';
+      }
+
+      function renderStores(edition) {
+        var list = document.getElementById('amazon-stores');
+        var fragment = document.createDocumentFragment();
+        while (list.firstChild) {
+          list.removeChild(list.firstChild);
+        }
+        stores.forEach(function (store) {
+          var item;
+          var link;
+          if (edition.hosts.indexOf(store.host) === -1) {
+            return;
+          }
+          item = document.createElement('li');
+          link = document.createElement('a');
+          link.href = 'https://' + store.host + '/dp/' + edition.identifier;
+          link.textContent = store.label;
+          item.appendChild(link);
+          fragment.appendChild(item);
+        });
+        list.appendChild(fragment);
       }
 
       var parameters = new URLSearchParams(window.location.search);
@@ -271,20 +337,24 @@
         format = 'kindle';
       }
       var edition = formats[format];
-      var destination = 'https://' + localAmazonHost() + '/dp/' + edition.identifier;
+      var destination = 'https://' + localAmazonHost(edition.hosts) + '/dp/' + edition.identifier;
 
       document.getElementById('selected-format').textContent = edition.label;
       document.getElementById('store-format').textContent = edition.label;
       document.getElementById('stay-link').href = '/buy/4at-manual/?format=' + format + '&stay';
-      document.querySelectorAll('[data-amazon-host]').forEach(function (link) {
-        link.href = 'https://' + link.getAttribute('data-amazon-host') + '/dp/' + edition.identifier;
-      });
+      document.getElementById('uk-fallback').href = 'https://www.amazon.co.uk/dp/' + edition.identifier;
+      renderStores(edition);
+
+      if (parameters.has('stay')) {
+        document.getElementById('route-message').textContent = 'Choose the ' + edition.label + ' and an Amazon store below.';
+        document.getElementById('stay-row').hidden = true;
+      }
 
       if (!parameters.has('stay')) {
         window.location.replace(destination);
       }
     }());
   </script>
-  <script src="/assets/site.js?v=20260904-panel-fixes" defer></script>
+  <script src="/assets/site.js?v=20260904-final-audit" defer></script>
 </body>
 </html>

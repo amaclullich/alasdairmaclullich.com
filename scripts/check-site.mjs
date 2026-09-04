@@ -1,4 +1,5 @@
 import { readFile, readdir, stat } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -49,6 +50,13 @@ const houseStylePatterns = [
   [/\bpublic-resource\b/i, 'public-resource'],
   [/\bcare-home\b/i, 'care-home']
 ];
+const plainText = (value) => value
+  .replace(/<[^>]+>/g, ' ')
+  .replaceAll('&amp;', '&')
+  .replaceAll('&nbsp;', ' ')
+  .replace(/\s+/g, ' ')
+  .trim()
+  .toLowerCase();
 for (const file of all) {
   const html = await readFile(file, 'utf8');
   const label = relative(root, file);
@@ -68,6 +76,14 @@ for (const file of all) {
   const footerLinks = [...(footerNavigation || '').matchAll(/<a href="([^"]+)"/g)].map((match) => match[1]);
   if (JSON.stringify(footerLinks) !== JSON.stringify(requiredFooterLinks)) throw new Error(`${label} footer navigation is inconsistent`);
   if (/<span\b[^>]*aria-hidden="true"[^>]*>↗<\/span>(?!<span class="visually-hidden"> \(external\)<\/span>)/.test(html)) throw new Error(`${label} has an external-link arrow without accessible text`);
+  for (const pair of html.matchAll(/<p class="eyebrow"[^>]*>([\s\S]*?)<\/p>\s*<h[12](?:\s[^>]*)?>([\s\S]*?)<\/h[12]>/g)) {
+    if (plainText(pair[1]) === plainText(pair[2])) throw new Error(`${label} repeats the same eyebrow and heading text: ${plainText(pair[1])}`);
+  }
+  const allowedInlineHashes = new Set([...html.matchAll(/'sha256-([^']+)'/g)].map((match) => match[1]));
+  for (const script of html.matchAll(/<script>([\s\S]*?)<\/script>/g)) {
+    const hash = createHash('sha256').update(script[1]).digest('base64');
+    if (!allowedInlineHashes.has(hash)) throw new Error(`${label} has an inline script without a matching Content Security Policy hash`);
+  }
   for (const [pattern, wording] of houseStylePatterns) if (pattern.test(html)) throw new Error(`${label} contains retired house-style wording: ${wording}`);
   if (label !== 'buy/4at-manual/index.html' && /href="https:\/\/(?:www\.)?amazon\.[^"]+\/dp\//i.test(html)) throw new Error(`${label} bypasses the regional Amazon chooser`);
   for (const link of html.matchAll(/<a href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
@@ -90,4 +106,7 @@ for (const file of all) {
     if (!(await Promise.all(candidates.map(async (item) => !!(await stat(item).catch(() => null)))).then((checks) => checks.some(Boolean)))) throw new Error(`${label} has broken internal link ${target}`);
   }
 }
+const siteScript = await readFile(join(root, 'assets/site.js'), 'utf8');
+if (!siteScript.includes('analytics_storage: initialPreference === "granted" ? "granted" : "denied"')) throw new Error('Analytics consent must default to denied unless the visitor previously allowed it');
+if (!/else \{\s*updateConsent\("denied"\);\s*showBanner\(\);\s*\}/.test(siteScript)) throw new Error('A first visit must show the analytics choice without loading Analytics');
 console.log(`Static checks passed for ${all.length} HTML files.`);
