@@ -24,6 +24,7 @@ const requiredNavigation = [
   ['/about/', 'About']
 ];
 const requiredFooterLinks = [
+  'https://alasdairmaclullich.substack.com/subscribe',
   '/delirium/',
   '/research/',
   '/books/',
