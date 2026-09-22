@@ -16,11 +16,10 @@
   var initialPreference = readPreferenceCookie();
 
   window.gtag("consent", "default", {
-    analytics_storage: initialPreference === "granted" ? "granted" : "denied",
+    analytics_storage: initialPreference === "denied" ? "denied" : "granted",
     ad_storage: "denied",
     ad_user_data: "denied",
-    ad_personalization: "denied",
-    wait_for_update: 500
+    ad_personalization: "denied"
   });
   window.gtag("set", "ads_data_redaction", true);
 
@@ -76,6 +75,22 @@
     });
   }
 
+  // Keep campaign tags (utm_ parameters) so visits from newsletters and social
+  // posts are attributed; drop every other query string.
+  function pageLocation() {
+    var kept = [];
+    try {
+      new URLSearchParams(window.location.search).forEach(function (value, key) {
+        if (/^utm_(?:source|medium|campaign|term|content|id)$/.test(key)) {
+          kept.push(encodeURIComponent(key) + "=" + encodeURIComponent(value));
+        }
+      });
+    } catch (error) {
+      // Older browsers: send the page address without a query string.
+    }
+    return window.location.origin + window.location.pathname + (kept.length ? "?" + kept.join("&") : "");
+  }
+
   function loadAnalytics() {
     if (analyticsLoaded) {
       return;
@@ -95,7 +110,7 @@
       allow_ad_personalization_signals: false,
       cookie_expires: preferenceMaxAge,
       cookie_update: false,
-      page_location: window.location.origin + window.location.pathname
+      page_location: pageLocation()
     });
   }
 
@@ -209,16 +224,20 @@
   banner.innerHTML =
     '<div class="consent-inner">' +
       '<div class="consent-copy">' +
-        '<p id="consent-description"><strong>Analytics is off unless you allow it.</strong> Google Analytics helps me understand which pages are used. Advertising features are disabled. You can change this later. <a href="/privacy/">Privacy</a>.</p>' +
+        '<p id="consent-description"><strong data-consent-state>Analytics is on.</strong> I use limited Google Analytics to produce aggregate statistics and improve this website. It is not used for advertising or Google Signals. Google receives information such as pages viewed, approximate location, browser or device type and referring website. You can turn analytics off now or at any time. <a href="/privacy/">Privacy</a>.</p>' +
       '</div>' +
       '<div class="consent-actions">' +
-        '<button class="consent-button consent-accept" type="button" data-consent-accept>Allow analytics</button>' +
-        '<button class="consent-button consent-decline" type="button" data-consent-decline>Keep analytics off</button>' +
+        '<button class="consent-button consent-accept" type="button" data-consent-accept>Keep analytics on</button>' +
+        '<button class="consent-button consent-decline" type="button" data-consent-decline>Turn analytics off</button>' +
       '</div>' +
     '</div>';
   document.body.appendChild(banner);
 
   function showBanner(source) {
+    var isOff = readPreferenceCookie() === "denied";
+    banner.querySelector("[data-consent-state]").textContent = isOff ? "Analytics is off." : "Analytics is on.";
+    banner.querySelector("[data-consent-accept]").textContent = isOff ? "Turn analytics on" : "Keep analytics on";
+    banner.querySelector("[data-consent-decline]").textContent = isOff ? "Keep analytics off" : "Turn analytics off";
     returnFocus = source || null;
     banner.hidden = false;
     if (source) {
@@ -270,14 +289,17 @@
     footerNavigation.appendChild(footerButton);
   }
 
+  // Limited analytics is on by default under the UK statistical purposes
+  // exception (PECR as amended by the Data (Use and Access) Act 2025).
+  // Visitors can turn it off at any time; a saved "denied" choice is honoured.
   var savedPreference = initialPreference || migrateLegacyPreference();
-  if (savedPreference === "granted") {
-    loadAnalytics();
-  } else if (savedPreference === "denied") {
+  if (savedPreference === "denied") {
     updateConsent("denied");
     clearAnalyticsCookies();
   } else {
-    updateConsent("denied");
-    showBanner();
+    loadAnalytics();
+    if (savedPreference !== "granted") {
+      showBanner();
+    }
   }
 }());
