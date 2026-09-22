@@ -108,6 +108,6 @@ for (const file of all) {
   }
 }
 const siteScript = await readFile(join(root, 'assets/site.js'), 'utf8');
-if (!siteScript.includes('analytics_storage: initialPreference === "granted" ? "granted" : "denied"')) throw new Error('Analytics consent must default to denied unless the visitor previously allowed it');
-if (!/else \{\s*updateConsent\("denied"\);\s*showBanner\(\);\s*\}/.test(siteScript)) throw new Error('A first visit must show the analytics choice without loading Analytics');
+if (!siteScript.includes('analytics_storage: initialPreference === "denied" ? "denied" : "granted"')) throw new Error('Limited analytics must default to on unless the visitor has turned it off');
+if (!/if \(savedPreference === "denied"\) \{\s*updateConsent\("denied"\);\s*clearAnalyticsCookies\(\);\s*\} else \{\s*loadAnalytics\(\);\s*if \(savedPreference !== "granted"\) \{\s*showBanner\(\);/.test(siteScript)) throw new Error('A saved objection must stop Analytics, and a first visit must show the analytics notice');
 console.log(`Static checks passed for ${all.length} HTML files.`);
