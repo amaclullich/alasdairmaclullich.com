@@ -9,12 +9,16 @@
   <meta name="author" content="Alasdair MacLullich">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="theme-color" content="#f6f5f1">
+  <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://www.alasdairmaclullich.com/accessibility/">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable site guide">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260904-final-audit">
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css?v=20260924">
+
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Alasdair MacLullich">
   <meta property="og:title" content="Accessibility | Alasdair MacLullich">
@@ -23,12 +27,13 @@
   <meta property="og:image" content="https://www.alasdairmaclullich.com/assets/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Alasdair MacLullich: geriatrician, delirium researcher and writer">
+  <meta property="og:image:alt" content="Alasdair MacLullich, Professor of Geriatric Medicine, University of Edinburgh">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Accessibility | Alasdair MacLullich">
   <meta name="twitter:description" content="Accessibility statement and contact route for alasdairmaclullich.com.">
   <meta name="twitter:image" content="https://www.alasdairmaclullich.com/assets/social-card.png">
-  <meta name="twitter:image:alt" content="Alasdair MacLullich: geriatrician, delirium researcher and writer">
+  <meta name="twitter:image:alt" content="Alasdair MacLullich, Professor of Geriatric Medicine, University of Edinburgh">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,18 +44,34 @@
         "url": "https://www.alasdairmaclullich.com/accessibility/",
         "name": "Accessibility | Alasdair MacLullich",
         "description": "Accessibility statement and contact route for alasdairmaclullich.com.",
-        "isPartOf": { "@id": "https://www.alasdairmaclullich.com/#website" },
-        "about": { "@id": "https://www.alasdairmaclullich.com/#person" },
+        "isPartOf": {
+          "@id": "https://www.alasdairmaclullich.com/#website"
+        },
+        "about": {
+          "@id": "https://www.alasdairmaclullich.com/#person"
+        },
         "dateModified": "2026-09-04",
-        "breadcrumb": { "@id": "https://www.alasdairmaclullich.com/accessibility/#breadcrumb" },
+        "breadcrumb": {
+          "@id": "https://www.alasdairmaclullich.com/accessibility/#breadcrumb"
+        },
         "inLanguage": "en-GB"
       },
       {
         "@type": "BreadcrumbList",
         "@id": "https://www.alasdairmaclullich.com/accessibility/#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alasdairmaclullich.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Accessibility", "item": "https://www.alasdairmaclullich.com/accessibility/" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.alasdairmaclullich.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Accessibility",
+            "item": "https://www.alasdairmaclullich.com/accessibility/"
+          }
         ]
       },
       {
@@ -65,26 +86,72 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="/" aria-label="AM, Alasdair MacLullich, home"><span class="brand-mark" aria-hidden="true">AM</span><span class="brand-name">Alasdair MacLullich</span></a>
-      <nav class="primary-nav" aria-label="Primary navigation"><a href="/delirium/">Delirium</a><a href="/research/">Research</a><a href="/books/">Books</a><a href="/media/">Media</a><a href="/about/">About</a></nav>
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Alasdair MacLullich, home">Alasdair MacLullich</a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/cv/">CV</a>
+        <a href="/research/">Research</a>
+        <a href="/books/">Books</a>
+        <a href="/delirium/">Delirium</a>
+        <a href="/media/">Media</a>
+        <a href="/about/">About</a>
+      </nav>
     </div>
   </header>
-  <nav class="breadcrumbs shell" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Accessibility</li></ol></nav>
-  <main class="page-main" id="main-content" tabindex="-1">
-    <section class="page-hero shell">
-      <p class="eyebrow">Using this website</p>
+
+  <main id="main-content" tabindex="-1">
+    <div class="wrap page-head">
       <h1>Accessibility statement</h1>
-      <p class="page-standfirst">This website is intended to be usable with a keyboard, screen magnification, reflow and assistive technologies.</p>
+      <p class="standfirst">This website is intended to be usable with a keyboard, screen magnification, reflow and assistive technologies.</p>
+    </div>
+
+    <section class="wrap page-section" aria-labelledby="measures-heading">
+      <h2 id="measures-heading">Measures taken</h2>
+      <div class="prose">
+        <p>The site aims to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA. Pages use semantic headings, labelled navigation, visible keyboard focus, skip links, descriptive link text and text alternatives for meaningful images. Layouts reflow on small screens and when the browser is zoomed.</p><p>The site does not depend on animation, audio or complex interactive controls. Optional analytics can be accepted, rejected or changed using keyboard-operable controls. A print stylesheet removes navigation and other screen-only elements from printed pages.</p>
+      </div>
     </section>
-    <section class="prose-section" aria-labelledby="measures-heading"><div class="shell prose-layout"><h2 id="measures-heading">Measures taken</h2><div class="prose"><p>The site aims to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA. Pages use semantic headings, labelled navigation, visible keyboard focus, skip links, descriptive link text and text alternatives for meaningful images. Layouts reflow on small screens and when the browser is zoomed.</p><p>The site does not depend on animation, audio or complex interactive controls. Optional analytics can be accepted, rejected or changed using keyboard-operable controls. A print stylesheet removes navigation and other screen-only elements from printed pages.</p></div></div></section>
-    <section class="prose-section" aria-labelledby="feedback-heading"><div class="shell prose-layout"><h2 id="feedback-heading">Report a barrier</h2><div class="prose"><p>If a page or document is difficult to use, please use the <a href="/contact/">contact page</a>. Include the page address, the problem and, if you are comfortable doing so, the browser or assistive technology involved. I will try to provide the information in another accessible format and fix the problem.</p><p>This statement was last reviewed on 4 September 2026.</p></div></div></section>
+
+    <section class="wrap page-section" aria-labelledby="feedback-heading">
+      <h2 id="feedback-heading">Report a barrier</h2>
+      <div class="prose">
+        <p>If a page or document is difficult to use, please use the <a href="/contact/">contact page</a>. Include the page address, the problem and, if you are comfortable doing so, the browser or assistive technology involved. I will try to provide the information in another accessible format and fix the problem.</p><p>This statement was last reviewed on 4 September 2026.</p>
+      </div>
+    </section>
   </main>
+
   <footer class="site-footer">
-    <div class="shell footer-main"><div class="footer-identity"><a class="brand footer-brand" href="/" aria-label="AM, Alasdair MacLullich, home"><span class="brand-mark" aria-hidden="true">AM</span><span class="brand-name">Alasdair MacLullich</span></a><p class="footer-identity-note">Professor of Geriatric Medicine at the University of Edinburgh.</p></div><nav class="footer-nav" aria-label="Footer navigation">
-        <a href="https://alasdairmaclullich.substack.com/subscribe">Free newsletter</a><a href="/delirium/">Delirium</a><a href="/research/">Research</a><a href="/books/">Books</a><a href="/media/">Media</a><a href="/about/">About</a><a href="/social/">Social</a><a href="/contact/">Contact</a><a href="/accessibility/" aria-current="page">Accessibility</a><a href="/privacy/">Privacy</a><a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a><a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a><a href="https://orcid.org/0000-0003-3159-9370">ORCID <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a></nav></div>
-    <div class="shell footer-note"><p>Maintained independently by Alasdair MacLullich. Linked websites have their own editorial responsibility. Profile information reviewed 4 September 2026.</p><p>General information only; not individual medical advice.</p></div>
+    <div class="wrap footer-inner">
+      <p class="footer-name"><a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">Alasdair MacLullich</a></p>
+      <p class="footer-role">Professor of Geriatric Medicine at the University of Edinburgh.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/cv/">CV</a>
+        <a href="/research/">Research</a>
+        <a href="/books/">Books</a>
+        <a href="/delirium/">Delirium</a>
+        <a href="/media/">Media</a>
+        <a href="/about/">About</a>
+        <a href="/social/">Social media</a>
+        <a href="/contact/">Contact</a>
+        <a href="/accessibility/" aria-current="page">Accessibility</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+      <nav class="footer-profiles" aria-label="Profiles">
+        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile</a>
+        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer</a>
+        <a href="https://orcid.org/0000-0003-3159-9370">ORCID</a>
+        <a href="https://scholar.google.com/citations?user=MXvw7UIAAAAJ&amp;hl=en">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/amaclullich/">LinkedIn</a>
+        <a href="https://x.com/A_MacLullich">X</a>
+        <a href="https://bsky.app/profile/amaclullich.bsky.social">Bluesky</a>
+        <a href="https://www.youtube.com/@thinkdelirium">YouTube</a>
+        <a href="https://alasdairmaclullich.substack.com/subscribe">Newsletter</a>
+      </nav>
+      <p class="footer-note">Maintained independently by Alasdair MacLullich. This is not an official website of the University of Edinburgh, NHS, <cite>Delirium</cite> journal, European Delirium Association, Scottish Hip Fracture Audit or iDelirium. Linked websites have their own editorial responsibility. Profile information reviewed 24 September 2026.</p>
+      <p class="footer-note">General information only; not individual medical advice.</p>
+    </div>
   </footer>
   <script src="/assets/site.js?v=20260904-final-audit" defer></script>
 </body>

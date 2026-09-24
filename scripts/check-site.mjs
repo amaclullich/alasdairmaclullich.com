@@ -17,26 +17,35 @@ async function files(dir) {
 }
 const all = await files(root);
 const requiredNavigation = [
-  ['/delirium/', 'Delirium'],
+  ['/cv/', 'CV'],
   ['/research/', 'Research'],
   ['/books/', 'Books'],
+  ['/delirium/', 'Delirium'],
   ['/media/', 'Media'],
   ['/about/', 'About']
 ];
 const requiredFooterLinks = [
-  'https://alasdairmaclullich.substack.com/subscribe',
-  '/delirium/',
+  '/cv/',
   '/research/',
   '/books/',
+  '/delirium/',
   '/media/',
   '/about/',
   '/social/',
   '/contact/',
   '/accessibility/',
-  '/privacy/',
+  '/privacy/'
+];
+const requiredProfileLinks = [
   'https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich',
   'https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/',
-  'https://orcid.org/0000-0003-3159-9370'
+  'https://orcid.org/0000-0003-3159-9370',
+  'https://scholar.google.com/citations?user=MXvw7UIAAAAJ&amp;hl=en',
+  'https://www.linkedin.com/in/amaclullich/',
+  'https://x.com/A_MacLullich',
+  'https://bsky.app/profile/amaclullich.bsky.social',
+  'https://www.youtube.com/@thinkdelirium',
+  'https://alasdairmaclullich.substack.com/subscribe'
 ];
 const houseStylePatterns = [
   [/—/, 'em dash'],
@@ -66,7 +75,7 @@ for (const file of all) {
   const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]);
   if (new Set(ids).size !== ids.length) throw new Error(`${label} has duplicate IDs`);
   const brands = [...html.matchAll(/<a class="brand(?: footer-brand)?"[^>]*aria-label="([^"]+)"/g)];
-  if (brands.length < 1 || brands.some((match) => match[1] !== 'AM, Alasdair MacLullich, home')) throw new Error(`${label} has an inconsistent brand accessible name`);
+  if (brands.length < 1 || brands.some((match) => match[1] !== 'Alasdair MacLullich, home')) throw new Error(`${label} has an inconsistent brand accessible name`);
   const primaryNavigation = html.match(/<nav class="primary-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
   if (!primaryNavigation) throw new Error(`${label} is missing primary navigation`);
   for (const [href, text] of requiredNavigation) {
@@ -76,6 +85,9 @@ for (const file of all) {
   const footerNavigation = html.match(/<nav class="footer-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
   const footerLinks = [...(footerNavigation || '').matchAll(/<a href="([^"]+)"/g)].map((match) => match[1]);
   if (JSON.stringify(footerLinks) !== JSON.stringify(requiredFooterLinks)) throw new Error(`${label} footer navigation is inconsistent`);
+  const profileNavigation = html.match(/<nav class="footer-profiles"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+  const profileLinks = [...(profileNavigation || '').matchAll(/<a href="([^"]+)"/g)].map((match) => match[1]);
+  if (JSON.stringify(profileLinks) !== JSON.stringify(requiredProfileLinks)) throw new Error(`${label} footer profile links are inconsistent`);
   if (/<span\b[^>]*aria-hidden="true"[^>]*>↗<\/span>(?!<span class="visually-hidden"> \(external\)<\/span>)/.test(html)) throw new Error(`${label} has an external-link arrow without accessible text`);
   for (const pair of html.matchAll(/<p class="eyebrow"[^>]*>([\s\S]*?)<\/p>\s*<h[12](?:\s[^>]*)?>([\s\S]*?)<\/h[12]>/g)) {
     if (plainText(pair[1]) === plainText(pair[2])) throw new Error(`${label} repeats the same eyebrow and heading text: ${plainText(pair[1])}`);

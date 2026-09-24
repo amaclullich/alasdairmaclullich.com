@@ -2,13 +2,14 @@
 
 Static source for [www.alasdairmaclullich.com](https://www.alasdairmaclullich.com/).
 
-The site is hosted with GitHub Pages from the `main` branch and repository root. It uses plain HTML, CSS and a small analytics-preference script, with no content management system or contact form. Google Analytics loads only after a visitor allows it, and the choice is remembered for 90 days. The site uses a restrictive content security policy in each HTML page.
+The site is hosted with GitHub Pages from the `main` branch and repository root. It uses plain HTML, CSS and a small analytics-preference script, with no content management system or contact form. Limited Google Analytics loads by default under the UK statistical purposes exception; visitors can turn it off at any time through the notice or Analytics settings in the footer, and the choice is remembered for 90 days. The site uses a restrictive content security policy in each HTML page.
 
 ## Editing
 
 Edit the files in this repository and publish the changes to `main`. The main pages are:
 
 - `index.html`
+- `cv/index.html`
 - `delirium/index.html`
 - `research/index.html`
 - `books/index.html`
@@ -23,6 +24,8 @@ Edit the files in this repository and publish the changes to `main`. The main pa
 The noindex utility page at `buy/4at-manual/index.html` sends Kindle, paperback and hardback links to the visitor's regional Amazon store and also provides a manual store chooser. The legacy `4at-manual-kindle.html` route is retained as a compatibility redirect.
 
 Before publishing, run `npm install --package-lock=false`, `npm run check` and `npx html-validate "**/*.html"`. The GitHub Actions workflow repeats these checks and runs automated accessibility tests across the public pages and the bookshop chooser.
+
+The pages use Source Serif 4 and Source Sans 3, stored in `assets/fonts` under the SIL Open Font Licence (`assets/fonts/OFL.txt`). The media page loads `assets/copy-text.js` for its copy buttons.
 
 The `CNAME` file sets the public host to `www.alasdairmaclullich.com` and must remain in the repository root.
 

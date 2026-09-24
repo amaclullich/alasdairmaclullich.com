@@ -9,12 +9,15 @@
   <meta name="author" content="Alasdair MacLullich">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="theme-color" content="#f6f5f1">
+  <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://www.alasdairmaclullich.com/books/">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable site guide">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260904-final-audit">
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css?v=20260924">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Alasdair MacLullich">
@@ -24,12 +27,12 @@
   <meta property="og:image" content="https://www.alasdairmaclullich.com/assets/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Alasdair MacLullich: geriatrician, delirium researcher and writer">
+  <meta property="og:image:alt" content="Alasdair MacLullich, Professor of Geriatric Medicine, University of Edinburgh">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Books | Alasdair MacLullich">
   <meta name="twitter:description" content="The 4AT Manual, a practical guide to delirium assessment, and a forthcoming family guide to delirium.">
   <meta name="twitter:image" content="https://www.alasdairmaclullich.com/assets/social-card.png">
-  <meta name="twitter:image:alt" content="Alasdair MacLullich: geriatrician, delirium researcher and writer">
+  <meta name="twitter:image:alt" content="Alasdair MacLullich, Professor of Geriatric Medicine, University of Edinburgh">
 
   <script type="application/ld+json">
   {
@@ -41,15 +44,25 @@
         "url": "https://www.alasdairmaclullich.com/books/",
         "name": "Books | Alasdair MacLullich",
         "description": "Books by Alasdair MacLullich: The 4AT Manual and a forthcoming family guide to delirium.",
-        "isPartOf": { "@id": "https://www.alasdairmaclullich.com/#website" },
-        "about": { "@id": "https://www.alasdairmaclullich.com/#person" },
+        "isPartOf": {
+          "@id": "https://www.alasdairmaclullich.com/#website"
+        },
+        "about": {
+          "@id": "https://www.alasdairmaclullich.com/#person"
+        },
         "datePublished": "2026-07-31",
         "dateModified": "2026-09-21",
         "inLanguage": "en-GB",
-        "breadcrumb": { "@id": "https://www.alasdairmaclullich.com/books/#breadcrumb" },
+        "breadcrumb": {
+          "@id": "https://www.alasdairmaclullich.com/books/#breadcrumb"
+        },
         "hasPart": [
-          { "@id": "https://www.alasdairmaclullich.com/books/#the-4at-manual" },
-          { "@id": "https://www.alasdairmaclullich.com/books/delirium-family-guide/#book" }
+          {
+            "@id": "https://www.alasdairmaclullich.com/books/#the-4at-manual"
+          },
+          {
+            "@id": "https://www.alasdairmaclullich.com/books/delirium-family-guide/#book"
+          }
         ]
       },
       {
@@ -61,10 +74,19 @@
         "inLanguage": "en-GB",
         "bookEdition": "First edition",
         "datePublished": "2026-07-31",
-        "author": { "@id": "https://www.alasdairmaclullich.com/#person" },
-        "publisher": { "@type": "Organization", "name": "Delirium Support Press" },
+        "author": {
+          "@id": "https://www.alasdairmaclullich.com/#person"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Delirium Support Press"
+        },
         "license": "https://creativecommons.org/licenses/by/4.0/",
-        "about": { "@type": "MedicalCondition", "name": "Delirium", "alternateName": "Acute confusion" },
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Delirium",
+          "alternateName": "Acute confusion"
+        },
         "workExample": [
           {
             "@type": "Book",
@@ -102,42 +124,31 @@
             "isAccessibleForFree": false,
             "inLanguage": "en-GB"
           }
-        ]
+        ],
+        "image": "https://www.alasdairmaclullich.com/assets/4at-manual-cover.jpg"
       },
       {
         "@type": "Person",
         "@id": "https://www.alasdairmaclullich.com/#person",
         "name": "Alasdair MacLullich",
-        "alternateName": "Alasdair M. J. MacLullich",
-        "honorificPrefix": "Professor",
-        "jobTitle": "Professor of Geriatric Medicine",
-        "url": "https://www.alasdairmaclullich.com/",
-        "identifier": {
-          "@type": "PropertyValue",
-          "propertyID": "ORCID",
-          "value": "0000-0003-3159-9370",
-          "url": "https://orcid.org/0000-0003-3159-9370"
-        },
-        "worksFor": {
-          "@type": "CollegeOrUniversity",
-          "name": "The University of Edinburgh",
-          "url": "https://www.ed.ac.uk/"
-        },
-        "sameAs": [
-          "https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich",
-          "https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/",
-          "https://orcid.org/0000-0003-3159-9370",
-          "https://scholar.google.com/citations?user=MXvw7UIAAAAJ&hl=en",
-          "https://www.wikidata.org/wiki/Q48288045",
-          "https://en.wikipedia.org/wiki/Alasdair_MacLullich"
-        ]
+        "url": "https://www.alasdairmaclullich.com/"
       },
       {
         "@type": "BreadcrumbList",
         "@id": "https://www.alasdairmaclullich.com/books/#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alasdairmaclullich.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Books", "item": "https://www.alasdairmaclullich.com/books/" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.alasdairmaclullich.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Books",
+            "item": "https://www.alasdairmaclullich.com/books/"
+          }
         ]
       }
     ]
@@ -146,171 +157,159 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="/" aria-label="AM, Alasdair MacLullich, home">
-        <span class="brand-mark" aria-hidden="true">AM</span>
-        <span class="brand-name">Alasdair MacLullich</span>
-      </a>
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Alasdair MacLullich, home">Alasdair MacLullich</a>
       <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="/delirium/">Delirium</a>
+        <a href="/cv/">CV</a>
         <a href="/research/">Research</a>
         <a href="/books/" aria-current="page">Books</a>
+        <a href="/delirium/">Delirium</a>
         <a href="/media/">Media</a>
         <a href="/about/">About</a>
       </nav>
     </div>
   </header>
 
-  <nav class="breadcrumbs shell" aria-label="Breadcrumb">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li aria-current="page">Books</li>
-    </ol>
-  </nav>
-
-  <main class="page-main" id="main-content" tabindex="-1">
-    <section class="page-hero page-hero-wide shell">
-      <h1>Books</h1>
-      <p class="page-standfirst">Books and longer writing about delirium. <cite>The 4AT Manual</cite> was published on 31 July 2026. The complete PDF and EPUB are free to read or download from <a href="https://www.the4at.com/4at-manual">the4AT.com</a>, with no registration. Kindle, paperback and hardback editions are also available through Amazon. A guide for patients, families and carers follows in October 2026. Chapter 1 of that guide is free to read now.</p>
-      <div class="page-actions">
+  <main id="main-content" tabindex="-1">
+    <div class="wrap page-head page-head-grid">
+      <div>
+        <h1>Books</h1>
+        <p class="standfirst">Books and longer writing about delirium. <cite>The 4AT Manual</cite> was published on 31 July 2026. The complete PDF and EPUB are free to read or download from <a href="https://www.the4at.com/4at-manual">the4AT.com</a>, with no registration. Kindle, paperback and hardback editions are also available through Amazon. A guide for patients, families and carers follows in October 2026. Chapter 1 of that guide is free to read now.</p>
+        <div class="button-row">
         <a class="button button-primary" href="#the-4at-manual">The 4AT Manual</a>
-        <a class="button button-secondary" href="#delirium-family-guide">Delirium family guide</a>
+        <a class="button" href="#delirium-family-guide">Delirium family guide</a>
+        </div>
       </div>
-    </section>
+      <div class="book-hero-covers">
+      <a href="#the-4at-manual"><img src="/assets/4at-manual-cover.jpg" alt="Front cover of The 4AT Manual" width="400" height="667"></a>
+      <a href="#delirium-family-guide"><img src="/assets/delirium-family-guide-cover-400.jpg" alt="Front cover of Delirium (Acute Confusion): A Family Guide" width="400" height="621"></a>
+      </div>
+    </div>
 
-    <section class="prose-section" id="the-4at-manual" aria-labelledby="manual-heading">
-      <div class="shell prose-layout">
-        <h2 id="manual-heading"><cite>The 4AT Manual</cite></h2>
-        <div class="prose">
-          <img class="book-cover-detail" src="/assets/4at-manual-book.jpg" alt="The 4AT Manual shown as a printed book and on a tablet" width="1600" height="1070">
-          <p class="book-status">Published 31 July 2026</p>
-          <p><strong><cite>The 4AT Manual: A Practical Guide to Delirium Assessment</cite></strong></p>
-          <p class="book-byline">By Professor Alasdair MacLullich</p>
-          <p><cite>The 4AT Manual</cite> is a practical guide to using the assessment consistently and acting on its results.</p>
-          <p>The 102-page print edition includes thirty worked clinical cases. It is written for nurses, doctors, allied health professionals, students and educators.</p>
-          <p>Choose a free PDF or EPUB, or a paperback or hardback from Amazon. The content is the same in every edition.</p>
-          <div class="page-actions">
-            <a class="button button-primary" href="https://www.the4at.com/4at-manual">Free PDF and EPUB <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-            <a class="button button-secondary" href="/buy/4at-manual/?format=paperback">Paperback</a>
-            <a class="button button-secondary" href="/buy/4at-manual/?format=hardback">Hardback</a>
-            <a class="button button-secondary" href="/buy/4at-manual/?format=kindle">Kindle</a>
-          </div>
+    <section class="wrap page-section" id="the-4at-manual" aria-labelledby="manual-heading">
+      <h2 id="manual-heading"><cite>The 4AT Manual</cite></h2>
+      <div class="prose">
+        <img class="book-detail-image" src="/assets/4at-manual-book.jpg" alt="The 4AT Manual shown as a printed book and on a tablet" width="1600" height="1070">
+        <p class="book-status">Published 31 July 2026</p>
+        <p><strong><cite>The 4AT Manual: A Practical Guide to Delirium Assessment</cite></strong></p>
+        <p class="page-note">By Professor Alasdair MacLullich</p>
+        <p><cite>The 4AT Manual</cite> is a practical guide to using the assessment consistently and acting on its results.</p>
+        <p>The 102-page print edition includes thirty worked clinical cases. It is written for nurses, doctors, allied health professionals, students and educators.</p>
+        <p>Choose a free PDF or EPUB, or a paperback or hardback from Amazon. The content is the same in every edition.</p>
+        <div class="button-row">
+        <a class="button button-primary" href="https://www.the4at.com/4at-manual">Free PDF and EPUB</a>
+        <a class="button" href="/buy/4at-manual/?format=paperback">Paperback</a>
+        <a class="button" href="/buy/4at-manual/?format=hardback">Hardback</a>
+        <a class="button" href="/buy/4at-manual/?format=kindle">Kindle</a>
         </div>
       </div>
     </section>
 
-    <section class="prose-section section-tint" id="manual-contents" aria-labelledby="manual-contents-heading">
-      <div class="shell prose-layout">
-        <h2 id="manual-contents-heading">What the manual covers</h2>
-        <div class="prose">
-          <ul>
-            <li>Why the 4AT was developed, and its role in delirium assessment.</li>
-            <li>How to administer and score each of the four items.</li>
-            <li>How to interpret the result and decide what to do next.</li>
-            <li>Worked clinical cases from a range of settings.</li>
-            <li>Common difficulties, special circumstances, and audit.</li>
-            <li>An overview of the supporting evidence.</li>
-          </ul>
-          <p>It is written for nurses, doctors, allied health professionals, students, educators, researchers, and teams implementing delirium pathways or electronic health records.</p>
-        </div>
+    <section class="wrap page-section" id="manual-contents" aria-labelledby="manual-contents-heading">
+      <h2 id="manual-contents-heading">What the manual covers</h2>
+      <div class="prose">
+        <ul>
+        <li>Why the 4AT was developed, and its role in delirium assessment.</li>
+        <li>How to administer and score each of the four items.</li>
+        <li>How to interpret the result and decide what to do next.</li>
+        <li>Worked clinical cases from a range of settings.</li>
+        <li>Common difficulties, special circumstances, and audit.</li>
+        <li>An overview of the supporting evidence.</li>
+        </ul>
+        <p>It is written for nurses, doctors, allied health professionals, students, educators, researchers, and teams implementing delirium pathways or electronic health records.</p>
       </div>
     </section>
 
-    <section class="prose-section" id="manual-details" aria-labelledby="manual-details-heading">
-      <div class="shell prose-layout">
-        <h2 id="manual-details-heading">Editions and licence</h2>
-        <div class="prose prose-wide">
-          <dl class="book-metadata">
-            <div>
-              <dt>Title</dt>
-              <dd><cite>The 4AT Manual: A Practical Guide to Delirium Assessment</cite></dd>
-            </div>
-            <div>
-              <dt>Author</dt>
-              <dd>Professor Alasdair MacLullich</dd>
-            </div>
-            <div>
-              <dt>Edition</dt>
-              <dd>First edition, manual version 1.0, 2026</dd>
-            </div>
-            <div>
-              <dt>Publisher</dt>
-              <dd>Delirium Support Press</dd>
-            </div>
-            <div>
-              <dt>Free editions</dt>
-              <dd>PDF and EPUB from <a href="https://www.the4at.com/4at-manual">the4AT.com</a>, with no registration.</dd>
-            </div>
-            <div>
-              <dt>Paid editions</dt>
-              <dd><a href="/buy/4at-manual/?format=kindle">Kindle</a>, <a href="/buy/4at-manual/?format=paperback">paperback</a> (ISBN 978-1-918164-00-8) and <a href="/buy/4at-manual/?format=hardback">hardback</a> (ISBN 978-1-918164-05-3) from Amazon. Each link selects a local Amazon store.</dd>
-            </div>
-            <div>
-              <dt>Licence</dt>
-              <dd>Except where otherwise stated, the manual's text, tables and original diagrams are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). The 4AT oval logo, cover artwork and design, and separately credited third-party material are excluded. The licence permits reuse and adaptation of the licensed content, including translation, with attribution; see the manual's <a href="https://www.the4at.com/4at-manual">full copyright and reuse terms</a>.</dd>
-            </div>
-          </dl>
-          <p class="profile-reviewed">Page reviewed 21 September 2026.</p>
+    <section class="wrap page-section" id="manual-details" aria-labelledby="manual-details-heading">
+      <h2 id="manual-details-heading">Editions and licence</h2>
+      <div class="prose-wide">
+        <dl class="fact-list">
+        <div>
+        <dt>Title</dt>
+        <dd><cite>The 4AT Manual: A Practical Guide to Delirium Assessment</cite></dd>
         </div>
+        <div>
+        <dt>Author</dt>
+        <dd>Professor Alasdair MacLullich</dd>
+        </div>
+        <div>
+        <dt>Edition</dt>
+        <dd>First edition, manual version 1.0, 2026</dd>
+        </div>
+        <div>
+        <dt>Publisher</dt>
+        <dd>Delirium Support Press</dd>
+        </div>
+        <div>
+        <dt>Free editions</dt>
+        <dd>PDF and EPUB from <a href="https://www.the4at.com/4at-manual">the4AT.com</a>, with no registration.</dd>
+        </div>
+        <div>
+        <dt>Paid editions</dt>
+        <dd><a href="/buy/4at-manual/?format=kindle">Kindle</a>, <a href="/buy/4at-manual/?format=paperback">paperback</a> (ISBN 978-1-918164-00-8) and <a href="/buy/4at-manual/?format=hardback">hardback</a> (ISBN 978-1-918164-05-3) from Amazon. Each link selects a local Amazon store.</dd>
+        </div>
+        <div>
+        <dt>Licence</dt>
+        <dd>Except where otherwise stated, the manual's text, tables and original diagrams are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). The 4AT oval logo, cover artwork and design, and separately credited third-party material are excluded. The licence permits reuse and adaptation of the licensed content, including translation, with attribution; see the manual's <a href="https://www.the4at.com/4at-manual">full copyright and reuse terms</a>.</dd>
+        </div>
+        </dl>
+        <p class="page-note">Page reviewed 21 September 2026.</p>
       </div>
     </section>
 
-    <section class="prose-section section-tint" id="delirium-family-guide" aria-labelledby="family-guide-heading">
-      <div class="shell prose-layout">
-        <h2 id="family-guide-heading"><cite>Delirium (Acute Confusion): A Family Guide</cite></h2>
-        <div class="prose">
-          <img class="book-cover-detail book-cover-portrait" src="/assets/delirium-family-guide-cover.jpg" alt="Front cover of Delirium (Acute Confusion): A Family Guide" width="819" height="1272">
-          <p class="book-status">Publishing October 2026</p>
-          <p><strong><cite>Delirium (Acute Confusion): A Family Guide to Sudden Changes in Thinking and Memory</cite>: Includes advice for people living with dementia</strong></p>
-          <p class="book-byline">By Professor Alasdair MacLullich and Dr Sharmella Summan</p>
-          <p>A guide for people who have experienced delirium, and for families and carers trying to understand a sudden change in someone they know. It explains what delirium is, what families might see, how clinical teams assess and treat its causes, ways relatives and carers can help, and what recovery can be like.</p>
-          <p>Chapter 1 is free. Enter your email address on the book website, <a href="https://deliriumfamilyguide.com/">deliriumfamilyguide.com</a>, and a link to the PDF will be emailed to you.</p>
-          <p>While the book is in preparation, <a href="https://deliriumsupport.com/">Delirium Support</a> provides practical information about sudden confusion, getting help, delirium and dementia, supporting someone, and recovery.</p>
-          <a class="text-link" href="https://deliriumfamilyguide.com/">Read Chapter 1 free on deliriumfamilyguide.com <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-          <a class="text-link" href="/books/delirium-family-guide/">Read about the family guide, including publication details <span aria-hidden="true">→</span></a>
-        </div>
+    <section class="wrap page-section" id="delirium-family-guide" aria-labelledby="family-guide-heading">
+      <h2 id="family-guide-heading"><cite>Delirium (Acute Confusion): A Family Guide</cite></h2>
+      <div class="prose">
+        <p class="book-status">Publishing October 2026</p>
+        <p><strong><cite>Delirium (Acute Confusion): A Family Guide to Sudden Changes in Thinking and Memory</cite>: Includes advice for people living with dementia</strong></p>
+        <p class="page-note">By Professor Alasdair MacLullich and Dr Sharmella Summan</p>
+        <p>A guide for people who have experienced delirium, and for families and carers trying to understand a sudden change in someone they know. It explains what delirium is, what families might see, how clinical teams assess and treat its causes, ways relatives and carers can help, and what recovery can be like.</p>
+        <p>Chapter 1 is free. Enter your email address on the book website, <a href="https://deliriumfamilyguide.com/">deliriumfamilyguide.com</a>, and a link to the PDF will be emailed to you.</p>
+        <p>While the book is in preparation, <a href="https://deliriumsupport.com/">Delirium Support</a> provides practical information about sudden confusion, getting help, delirium and dementia, supporting someone, and recovery.</p>
+        <p><a href="https://deliriumfamilyguide.com/">Read Chapter 1 free on deliriumfamilyguide.com</a></p>
+        <p><a href="/books/delirium-family-guide/">Read about the family guide, including publication details</a></p>
       </div>
     </section>
 
-    <section class="prose-section" aria-labelledby="enquiries-heading">
-      <div class="shell prose-layout">
-        <h2 id="enquiries-heading">Enquiries</h2>
-        <div class="prose">
-          <p>For media or publishing enquiries, please use the <a href="/media/">media and speaking page</a>. For information about delirium, use the <a href="/delirium/">delirium overview</a>, <a href="https://www.the4at.com/">the4AT.com</a> for professionals, or <a href="https://deliriumsupport.com/">Delirium Support</a> for patients, families and carers.</p>
-        </div>
+    <section class="wrap page-section" aria-labelledby="enquiries-heading">
+      <h2 id="enquiries-heading">Enquiries</h2>
+      <div class="prose">
+        <p>For media or publishing enquiries, please use the <a href="/media/">media and speaking page</a>. For information about delirium, use the <a href="/delirium/">delirium overview</a>, <a href="https://www.the4at.com/">the4AT.com</a> for professionals, or <a href="https://deliriumsupport.com/">Delirium Support</a> for patients, families and carers.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-main">
-      <div class="footer-identity">
-        <a class="brand footer-brand" href="/" aria-label="AM, Alasdair MacLullich, home">
-          <span class="brand-mark" aria-hidden="true">AM</span>
-          <span class="brand-name">Alasdair MacLullich</span>
-        </a>
-        <p class="footer-identity-note">Professor of Geriatric Medicine at the University of Edinburgh.</p>
-      </div>
+    <div class="wrap footer-inner">
+      <p class="footer-name"><a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">Alasdair MacLullich</a></p>
+      <p class="footer-role">Professor of Geriatric Medicine at the University of Edinburgh.</p>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="https://alasdairmaclullich.substack.com/subscribe">Free newsletter</a>
-        <a href="/delirium/">Delirium</a>
+        <a href="/cv/">CV</a>
         <a href="/research/">Research</a>
         <a href="/books/" aria-current="page">Books</a>
+        <a href="/delirium/">Delirium</a>
         <a href="/media/">Media</a>
         <a href="/about/">About</a>
-        <a href="/social/">Social</a>
+        <a href="/social/">Social media</a>
         <a href="/contact/">Contact</a>
         <a href="/accessibility/">Accessibility</a>
         <a href="/privacy/">Privacy</a>
-        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-        <a href="https://orcid.org/0000-0003-3159-9370">ORCID <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
       </nav>
-    </div>
-    <div class="shell footer-note">
-      <p>Maintained independently by Alasdair MacLullich. Linked websites have their own editorial responsibility. Profile information reviewed 4 September 2026.</p>
-      <p>General information only; not individual medical advice.</p>
+      <nav class="footer-profiles" aria-label="Profiles">
+        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile</a>
+        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer</a>
+        <a href="https://orcid.org/0000-0003-3159-9370">ORCID</a>
+        <a href="https://scholar.google.com/citations?user=MXvw7UIAAAAJ&amp;hl=en">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/amaclullich/">LinkedIn</a>
+        <a href="https://x.com/A_MacLullich">X</a>
+        <a href="https://bsky.app/profile/amaclullich.bsky.social">Bluesky</a>
+        <a href="https://www.youtube.com/@thinkdelirium">YouTube</a>
+        <a href="https://alasdairmaclullich.substack.com/subscribe">Newsletter</a>
+      </nav>
+      <p class="footer-note">Maintained independently by Alasdair MacLullich. This is not an official website of the University of Edinburgh, NHS, <cite>Delirium</cite> journal, European Delirium Association, Scottish Hip Fracture Audit or iDelirium. Linked websites have their own editorial responsibility. Profile information reviewed 24 September 2026.</p>
+      <p class="footer-note">General information only; not individual medical advice.</p>
     </div>
   </footer>
   <script src="/assets/site.js?v=20260904-final-audit" defer></script>

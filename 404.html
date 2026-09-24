@@ -5,70 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'">
   <title>Page not found | Alasdair MacLullich</title>
+  <meta name="description" content="The page could not be found.">
+  <meta name="author" content="Alasdair MacLullich">
   <meta name="robots" content="noindex">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="theme-color" content="#f6f5f1">
+  <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260904-final-audit">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css?v=20260924">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="/" aria-label="AM, Alasdair MacLullich, home">
-        <span class="brand-mark" aria-hidden="true">AM</span>
-        <span class="brand-name">Alasdair MacLullich</span>
-      </a>
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Alasdair MacLullich, home">Alasdair MacLullich</a>
       <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="/delirium/">Delirium</a>
+        <a href="/cv/">CV</a>
         <a href="/research/">Research</a>
         <a href="/books/">Books</a>
+        <a href="/delirium/">Delirium</a>
         <a href="/media/">Media</a>
         <a href="/about/">About</a>
       </nav>
     </div>
   </header>
-  <main class="error-page shell" id="main-content" tabindex="-1">
-    <div class="error-panel">
-      <p class="error-code">Error 404</p>
-      <h1>Page not found</h1>
-      <p>The address may be incorrect, or the page may have moved.</p>
-      <a class="button button-primary" href="/">Return to the homepage</a>
-      <nav class="error-routes" aria-label="Useful pages">
-        <a href="/delirium/">Delirium information</a>
-        <a href="/research/">Research</a>
-        <a href="/books/">Books</a>
-      </nav>
-    </div>
+
+  <main class="wrap error-page" id="main-content" tabindex="-1">
+    <p class="error-code">Error 404</p>
+    <h1>Page not found</h1>
+    <p>The address may be incorrect, or the page may have moved.</p>
+    <p><a href="/">Return to the homepage</a></p>
+    <nav aria-label="Useful pages">
+      <ul class="link-row">
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/delirium/">Delirium information</a></li>
+        <li><a href="/research/">Research</a></li>
+        <li><a href="/books/">Books</a></li>
+      </ul>
+    </nav>
   </main>
+
   <footer class="site-footer">
-    <div class="shell footer-main">
-      <div class="footer-identity">
-        <a class="brand footer-brand" href="/" aria-label="AM, Alasdair MacLullich, home">
-          <span class="brand-mark" aria-hidden="true">AM</span>
-          <span class="brand-name">Alasdair MacLullich</span>
-        </a>
-        <p class="footer-identity-note">Professor of Geriatric Medicine at the University of Edinburgh.</p>
-      </div>
+    <div class="wrap footer-inner">
+      <p class="footer-name"><a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">Alasdair MacLullich</a></p>
+      <p class="footer-role">Professor of Geriatric Medicine at the University of Edinburgh.</p>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="https://alasdairmaclullich.substack.com/subscribe">Free newsletter</a>
-        <a href="/delirium/">Delirium</a>
+        <a href="/cv/">CV</a>
         <a href="/research/">Research</a>
         <a href="/books/">Books</a>
+        <a href="/delirium/">Delirium</a>
         <a href="/media/">Media</a>
         <a href="/about/">About</a>
-        <a href="/social/">Social</a>
+        <a href="/social/">Social media</a>
         <a href="/contact/">Contact</a>
         <a href="/accessibility/">Accessibility</a>
         <a href="/privacy/">Privacy</a>
-        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-        <a href="https://orcid.org/0000-0003-3159-9370">ORCID <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
       </nav>
-    </div>
-    <div class="shell footer-note">
-      <p>Maintained independently by Alasdair MacLullich. Linked websites have their own editorial responsibility. Profile information reviewed 4 September 2026.</p>
-      <p>General information only; not individual medical advice.</p>
+      <nav class="footer-profiles" aria-label="Profiles">
+        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile</a>
+        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer</a>
+        <a href="https://orcid.org/0000-0003-3159-9370">ORCID</a>
+        <a href="https://scholar.google.com/citations?user=MXvw7UIAAAAJ&amp;hl=en">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/amaclullich/">LinkedIn</a>
+        <a href="https://x.com/A_MacLullich">X</a>
+        <a href="https://bsky.app/profile/amaclullich.bsky.social">Bluesky</a>
+        <a href="https://www.youtube.com/@thinkdelirium">YouTube</a>
+        <a href="https://alasdairmaclullich.substack.com/subscribe">Newsletter</a>
+      </nav>
+      <p class="footer-note">Maintained independently by Alasdair MacLullich. This is not an official website of the University of Edinburgh, NHS, <cite>Delirium</cite> journal, European Delirium Association, Scottish Hip Fracture Audit or iDelirium. Linked websites have their own editorial responsibility. Profile information reviewed 24 September 2026.</p>
+      <p class="footer-note">General information only; not individual medical advice.</p>
     </div>
   </footer>
   <script src="/assets/site.js?v=20260904-final-audit" defer></script>

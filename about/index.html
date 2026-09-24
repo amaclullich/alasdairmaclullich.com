@@ -9,12 +9,16 @@
   <meta name="author" content="Alasdair MacLullich">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="theme-color" content="#f6f5f1">
+  <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://www.alasdairmaclullich.com/about/">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable site guide">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260904-final-audit">
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css?v=20260924">
+
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Alasdair MacLullich">
   <meta property="og:title" content="About Alasdair MacLullich | Geriatrician and delirium researcher">
@@ -23,69 +27,60 @@
   <meta property="og:image" content="https://www.alasdairmaclullich.com/assets/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Alasdair MacLullich: geriatrician, delirium researcher and writer">
+  <meta property="og:image:alt" content="Alasdair MacLullich, Professor of Geriatric Medicine, University of Edinburgh">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About Alasdair MacLullich | Geriatrician and delirium researcher">
   <meta name="twitter:description" content="Clinical and academic work, professional profiles and the purpose of this independent website.">
   <meta name="twitter:image" content="https://www.alasdairmaclullich.com/assets/social-card.png">
-  <meta name="twitter:image:alt" content="Alasdair MacLullich: geriatrician, delirium researcher and writer">
+  <meta name="twitter:image:alt" content="Alasdair MacLullich, Professor of Geriatric Medicine, University of Edinburgh">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["AboutPage", "ProfilePage"],
+        "@type": [
+          "AboutPage",
+          "ProfilePage"
+        ],
         "@id": "https://www.alasdairmaclullich.com/about/#webpage",
         "url": "https://www.alasdairmaclullich.com/about/",
         "name": "About Alasdair MacLullich",
         "description": "Clinical work, research, professional roles and verified profiles for Alasdair MacLullich.",
-        "isPartOf": { "@id": "https://www.alasdairmaclullich.com/#website" },
-        "mainEntity": { "@id": "https://www.alasdairmaclullich.com/#person" },
-        "dateModified": "2026-09-04T22:51:09Z",
-        "breadcrumb": { "@id": "https://www.alasdairmaclullich.com/about/#breadcrumb" },
+        "isPartOf": {
+          "@id": "https://www.alasdairmaclullich.com/#website"
+        },
+        "mainEntity": {
+          "@id": "https://www.alasdairmaclullich.com/#person"
+        },
+        "dateModified": "2026-09-24T16:00:00Z",
+        "breadcrumb": {
+          "@id": "https://www.alasdairmaclullich.com/about/#breadcrumb"
+        },
         "inLanguage": "en-GB"
       },
       {
         "@type": "Person",
         "@id": "https://www.alasdairmaclullich.com/#person",
         "name": "Alasdair MacLullich",
-        "alternateName": "Alasdair M. J. MacLullich",
-        "honorificPrefix": "Professor",
-        "jobTitle": "Professor of Geriatric Medicine",
-        "url": "https://www.alasdairmaclullich.com/",
-        "email": "mailto:a.maclullich@ed.ac.uk",
-        "identifier": {
-          "@type": "PropertyValue",
-          "propertyID": "ORCID",
-          "value": "0000-0003-3159-9370",
-          "url": "https://orcid.org/0000-0003-3159-9370"
-        },
-        "worksFor": {
-          "@type": "CollegeOrUniversity",
-          "name": "The University of Edinburgh",
-          "url": "https://www.ed.ac.uk/"
-        },
-        "sameAs": [
-          "https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich",
-          "https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/",
-          "https://orcid.org/0000-0003-3159-9370",
-          "https://scholar.google.com/citations?user=MXvw7UIAAAAJ&hl=en",
-          "https://www.scopus.com/authid/detail.uri?authorId=6603279159",
-          "https://www.researchgate.net/profile/Alasdair-Maclullich",
-          "https://www.linkedin.com/in/amaclullich/",
-          "https://x.com/A_MacLullich",
-          "https://bsky.app/profile/amaclullich.bsky.social",
-          "https://www.wikidata.org/wiki/Q48288045",
-          "https://en.wikipedia.org/wiki/Alasdair_MacLullich"
-        ]
+        "url": "https://www.alasdairmaclullich.com/"
       },
       {
         "@type": "BreadcrumbList",
         "@id": "https://www.alasdairmaclullich.com/about/#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alasdairmaclullich.com/" },
-          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://www.alasdairmaclullich.com/about/" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.alasdairmaclullich.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://www.alasdairmaclullich.com/about/"
+          }
         ]
       }
     ]
@@ -94,117 +89,124 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="/" aria-label="AM, Alasdair MacLullich, home">
-        <span class="brand-mark" aria-hidden="true">AM</span>
-        <span class="brand-name">Alasdair MacLullich</span>
-      </a>
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Alasdair MacLullich, home">Alasdair MacLullich</a>
       <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="/delirium/">Delirium</a>
+        <a href="/cv/">CV</a>
         <a href="/research/">Research</a>
         <a href="/books/">Books</a>
+        <a href="/delirium/">Delirium</a>
         <a href="/media/">Media</a>
         <a href="/about/" aria-current="page">About</a>
       </nav>
     </div>
   </header>
 
-  <nav class="breadcrumbs shell" aria-label="Breadcrumb">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li aria-current="page">About</li>
-    </ol>
-  </nav>
+  <main id="main-content" tabindex="-1">
+    <div class="wrap page-head page-head-grid">
+      <div>
+        <h1>About Alasdair MacLullich</h1>
+        <p class="standfirst">I am a geriatrician and delirium researcher based in Edinburgh. My work centres on the recognition, assessment and care of people with delirium, alongside acute geriatric medicine and orthogeriatrics.</p>
+      </div>
+      <div class="page-head-aside">
+        <img src="/assets/alasdair-maclullich.jpg" alt="Alasdair MacLullich" width="394" height="493">
+      </div>
+    </div>
 
-  <main class="page-main" id="main-content" tabindex="-1">
-    <section class="page-hero shell">
-      <h1>About Alasdair MacLullich</h1>
-      <p class="page-standfirst">I am a geriatrician and delirium researcher based in Edinburgh. My work centres on the recognition, assessment and care of people with delirium, alongside acute geriatric medicine and orthogeriatrics.</p>
-    </section>
-
-    <section class="prose-section" aria-labelledby="work-heading">
-      <div class="shell prose-layout">
-        <h2 id="work-heading">My work</h2>
-        <div class="prose">
-          <p>I am Professor of Geriatric Medicine at the University of Edinburgh and work clinically in acute geriatric medicine and acute orthogeriatrics at the Royal Infirmary of Edinburgh. Read more about my <a href="/research/">delirium and geriatric medicine research</a>.</p>
-          <p>Alongside clinical and academic work, I am Editor-in-Chief of <a href="https://deliriumjournal.com/editorial-board"><cite>Delirium</cite></a> and Chair of the <a href="https://publichealthscotland.scot/resources-and-tools/health-strategy-and-outcomes/scottish-national-audit-programme-snap/scottish-hip-fracture-audit-shfa/overview-of-shfa/">Scottish Hip Fracture Audit</a>. I co-founded the European Delirium Association.</p>
-          <p>I originally designed the <a href="https://www.the4at.com/4atinformation">4AT delirium assessment tool</a> with Tracy Ryan and Helen Cash in 2011, and remain responsible for its updates.</p>
-          <p>This site links to information for patients and families, clinical tools, education, research, publishing and public awareness. Start with the <a href="/delirium/">delirium overview</a> to find the relevant resource.</p>
-        </div>
+    <section class="wrap page-section" aria-labelledby="work-heading">
+      <h2 id="work-heading">My work</h2>
+      <div class="prose">
+        <p>I am Professor of Geriatric Medicine at the University of Edinburgh and work clinically in acute geriatric medicine and acute orthogeriatrics at the Royal Infirmary of Edinburgh. Read more about my <a href="/research/">delirium and geriatric medicine research</a>.</p>
+        <p>Alongside clinical and academic work, I am Editor-in-Chief of <a href="https://deliriumjournal.com/editorial-board"><cite>Delirium</cite></a> and Chair of the <a href="https://publichealthscotland.scot/resources-and-tools/health-strategy-and-outcomes/scottish-national-audit-programme-snap/scottish-hip-fracture-audit-shfa/overview-of-shfa/">Scottish Hip Fracture Audit</a>.</p>
+        <p>I originally designed the <a href="https://www.the4at.com/4atinformation">4AT delirium assessment tool</a> with Tracy Ryan and Helen Cash in 2011, and remain responsible for its updates.</p>
+        <p>This site links to information for patients and families, clinical tools, education, research, publishing and public awareness. Start with the <a href="/delirium/">delirium overview</a> to find the relevant resource.</p>
       </div>
     </section>
 
-    <section class="prose-section section-tint" aria-labelledby="four-at-in-use-heading">
-      <div class="shell prose-layout">
-        <h2 id="four-at-in-use-heading">The 4AT in use</h2>
-        <div class="prose">
-          <p>The 4AT is a brief bedside assessment designed to help healthcare professionals recognise possible delirium and cognitive impairment. <a href="https://www.nice.org.uk/guidance/cg103/chapter/Recommendations#assessment-and-diagnosis">NICE recommends it for assessment when indicators of delirium are identified</a> in hospital or long-term care, except in critical care or the recovery room after surgery. <a href="https://www.sign.ac.uk/our-guidelines/risk-reduction-and-management-of-delirium/">SIGN recommends it to identify probable delirium</a> in emergency and acute hospital settings. It is free to use, needs no registration and is available in <a href="https://www.the4at.com/4at-translations">more than 20 languages</a>.</p>
-          <p>A <a href="https://pubmed.ncbi.nlm.nih.gov/33951145/">2021 systematic review and meta-analysis</a> of 17 studies, comprising 3,702 observations, estimated pooled sensitivity and specificity of 0.88. In a <a href="https://pubmed.ncbi.nlm.nih.gov/31337404/">2019 multicentre study</a>, 785 analysable acute medical patients received an independent reference assessment and were randomised to assessment with either the 4AT or CAM. Sensitivity and specificity were 76% and 94% for the 4AT, and 40% and 100% for the CAM.</p>
-          <p>In a <a href="https://pubmed.ncbi.nlm.nih.gov/40164178/">2025 national Scottish registry study</a>, 16,476 (91%) of 18,040 people presenting with hip fracture received a 4AT assessment.</p>
-          <p>Use the <a href="https://www.the4at.com/4at-download">official 4AT</a>, work through <a href="https://www.the4at.com/4atcases">clinical cases</a>, or read the <a href="https://www.the4at.com/4at-manual">free practical manual</a>. The <a href="/research/">research page</a> gives further findings and links to the published evidence.</p>
-        </div>
+    <section class="wrap page-section" aria-labelledby="founding-heading">
+      <h2 id="founding-heading">Founding roles, guidelines and awards</h2>
+      <h3 class="list-label" id="founding-list">Founding roles and guidelines</h3>
+      <ul class="roles prose-wide" aria-labelledby="founding-list">
+        <li><span class="role-year">2006</span><span class="role-text">Co-founded the European Delirium Association. President from 2012 to 2015.</span><a class="role-source" href="https://www.europeandeliriumassociation.org/about-us.html">Association website</a></li>
+        <li><span class="role-year">2016</span><span class="role-text">Co-founded World Delirium Awareness Day, an iDelirium initiative.</span><a class="role-source" href="https://www.deliriumday.com/aboutus">deliriumday.com</a></li>
+        <li><span class="role-year">2019</span><span class="role-text">Co-chaired SIGN 157, the Scottish guideline on delirium.</span><a class="role-source" href="https://www.sign.ac.uk/guidelines/risk-reduction-and-management-of-delirium/">SIGN 157</a></li>
+      </ul>
+      <h3 class="list-label" id="awards-list">Awards</h3>
+      <ul class="roles prose-wide" aria-labelledby="awards-list">
+        <li><span class="role-year">2017</span><span class="role-text">William Farr Medal, Worshipful Society of Apothecaries of London</span><a class="role-source" href="https://www.apothecaries.org/wp-content/uploads/2023/06/230609-Farr-Previous-Winners-Master-List-V2.pdf">Society of Apothecaries</a></li>
+        <li><span class="role-year">2018</span><span class="role-text">Maeve Leonard Award, European Delirium Association</span><a class="role-source" href="https://www.europeandeliriumassociation.org/the-maeve-leonard-award.html">Association website</a></li>
+        <li><span class="role-year">2018</span><span class="role-text">Deliriumologist of the Year, Australasian Delirium Association</span><a class="role-source" href="https://www.research.ed.ac.uk/en/prizes/deliriumologist-of-the-year">Research Explorer</a></li>
+      </ul>
+      <p class="page-note cv-after">The <a href="/cv/">CV page</a> lists posts, roles, funders and awards, with dates and sources.</p>
+    </section>
+
+    <section class="wrap page-section" aria-labelledby="four-at-in-use-heading">
+      <h2 id="four-at-in-use-heading">The 4AT in use</h2>
+      <div class="prose">
+        <p>The 4AT is a brief bedside assessment designed to help healthcare professionals recognise possible delirium and cognitive impairment. <a href="https://www.nice.org.uk/guidance/cg103/chapter/Recommendations#assessment-and-diagnosis">NICE recommends it for assessment when indicators of delirium are identified</a> in hospital or long-term care, except in critical care or the recovery room after surgery. <a href="https://www.sign.ac.uk/our-guidelines/risk-reduction-and-management-of-delirium/">SIGN recommends it to identify probable delirium</a> in emergency and acute hospital settings. It is free to use, needs no registration and is available in <a href="https://www.the4at.com/4at-translations">more than 20 languages</a>.</p>
+        <p>A <a href="https://pubmed.ncbi.nlm.nih.gov/33951145/">2021 systematic review and meta-analysis</a> of 17 studies, comprising 3,702 observations, estimated pooled sensitivity and specificity of 0.88. In a <a href="https://pubmed.ncbi.nlm.nih.gov/31337404/">2019 multicentre study</a>, 785 analysable acute medical patients received an independent reference assessment and were randomised to assessment with either the 4AT or CAM. Sensitivity and specificity were 76% and 94% for the 4AT, and 40% and 100% for the CAM.</p>
+        <p>In a <a href="https://pubmed.ncbi.nlm.nih.gov/40164178/">2025 national Scottish registry study</a>, 16,476 (91%) of 18,040 people presenting with hip fracture received a 4AT assessment.</p>
+        <p>Use the <a href="https://www.the4at.com/4at-download">official 4AT</a>, work through <a href="https://www.the4at.com/4atcases">clinical cases</a>, or read the <a href="https://www.the4at.com/4at-manual">free practical manual</a>. The <a href="/research/">research page</a> gives further findings and links to the published evidence.</p>
       </div>
     </section>
 
-    <section class="prose-section" aria-labelledby="profiles-heading">
-      <div class="shell prose-layout">
-        <h2 id="profiles-heading">Profiles</h2>
-        <div class="prose">
-          <p>These links provide institutional details, publications and researcher identifiers.</p>
-          <div class="profile-links">
-            <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University of Edinburgh profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-            <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer: publications and projects <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-            <a href="https://orcid.org/0000-0003-3159-9370" rel="me">ORCID iD 0000-0003-3159-9370 <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-            <a href="https://scholar.google.com/citations?user=MXvw7UIAAAAJ&amp;hl=en">Google Scholar <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-            <a href="https://pubmed.ncbi.nlm.nih.gov/?term=MacLullich+AMJ%5BAuthor%5D">PubMed author search <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-            <a href="https://www.scopus.com/authid/detail.uri?authorId=6603279159">Scopus author profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-            <a href="https://www.researchgate.net/profile/Alasdair-Maclullich">ResearchGate <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-          </div>
-          <p class="profile-reviewed">Profile links checked 4 September 2026.</p>
-        </div>
+    <section class="wrap page-section" aria-labelledby="profiles-heading">
+      <h2 id="profiles-heading">Profiles</h2>
+      <div class="prose">
+        <p>These links provide institutional details, publications and researcher identifiers.</p>
+        <ul class="plain-list">
+          <li><a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University of Edinburgh profile</a></li>
+          <li><a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer: publications and projects</a></li>
+          <li><a href="https://orcid.org/0000-0003-3159-9370" rel="me">ORCID iD 0000-0003-3159-9370</a></li>
+          <li><a href="https://scholar.google.com/citations?user=MXvw7UIAAAAJ&amp;hl=en">Google Scholar</a></li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=MacLullich+AMJ%5BAuthor%5D">PubMed author search</a></li>
+          <li><a href="https://www.scopus.com/authid/detail.uri?authorId=6603279159">Scopus author profile</a></li>
+          <li><a href="https://www.researchgate.net/profile/Alasdair-Maclullich">ResearchGate</a></li>
+        </ul>
+        <p class="page-note">Profile links checked 4 September 2026.</p>
       </div>
     </section>
 
-    <section class="prose-section" aria-labelledby="website-heading">
-      <div class="shell prose-layout">
-        <h2 id="website-heading">This website</h2>
-        <div class="prose">
-          <p>This is my independent professional website. It brings together work that is otherwise spread across separate organisations, publications and websites. Each linked website has its own purpose and editorial responsibility.</p>
-          <p>This is not an official website of the University of Edinburgh, NHS, <cite>Delirium</cite> journal, European Delirium Association, Scottish Hip Fracture Audit or iDelirium.</p>
-        </div>
+    <section class="wrap page-section" aria-labelledby="website-heading">
+      <h2 id="website-heading">This website</h2>
+      <div class="prose">
+        <p>This is my independent professional website. It brings together work that is otherwise spread across separate organisations, publications and websites. Each linked website has its own purpose and editorial responsibility.</p>
+        <p>This is not an official website of the University of Edinburgh, NHS, <cite>Delirium</cite> journal, European Delirium Association, Scottish Hip Fracture Audit or iDelirium.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-main">
-      <div class="footer-identity">
-        <a class="brand footer-brand" href="/" aria-label="AM, Alasdair MacLullich, home">
-          <span class="brand-mark" aria-hidden="true">AM</span>
-          <span class="brand-name">Alasdair MacLullich</span>
-        </a>
-        <p class="footer-identity-note">Professor of Geriatric Medicine at the University of Edinburgh.</p>
-      </div>
+    <div class="wrap footer-inner">
+      <p class="footer-name"><a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">Alasdair MacLullich</a></p>
+      <p class="footer-role">Professor of Geriatric Medicine at the University of Edinburgh.</p>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="https://alasdairmaclullich.substack.com/subscribe">Free newsletter</a>
-        <a href="/delirium/">Delirium</a>
+        <a href="/cv/">CV</a>
         <a href="/research/">Research</a>
         <a href="/books/">Books</a>
+        <a href="/delirium/">Delirium</a>
         <a href="/media/">Media</a>
         <a href="/about/" aria-current="page">About</a>
-        <a href="/social/">Social</a>
+        <a href="/social/">Social media</a>
         <a href="/contact/">Contact</a>
         <a href="/accessibility/">Accessibility</a>
         <a href="/privacy/">Privacy</a>
-        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-        <a href="https://orcid.org/0000-0003-3159-9370">ORCID <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
       </nav>
-    </div>
-    <div class="shell footer-note">
-      <p>Maintained independently by Alasdair MacLullich. Linked websites have their own editorial responsibility. Profile and page information reviewed 4 September 2026.</p>
-      <p>General information only; not individual medical advice.</p>
+      <nav class="footer-profiles" aria-label="Profiles">
+        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile</a>
+        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer</a>
+        <a href="https://orcid.org/0000-0003-3159-9370">ORCID</a>
+        <a href="https://scholar.google.com/citations?user=MXvw7UIAAAAJ&amp;hl=en">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/amaclullich/">LinkedIn</a>
+        <a href="https://x.com/A_MacLullich">X</a>
+        <a href="https://bsky.app/profile/amaclullich.bsky.social">Bluesky</a>
+        <a href="https://www.youtube.com/@thinkdelirium">YouTube</a>
+        <a href="https://alasdairmaclullich.substack.com/subscribe">Newsletter</a>
+      </nav>
+      <p class="footer-note">Maintained independently by Alasdair MacLullich. This is not an official website of the University of Edinburgh, NHS, <cite>Delirium</cite> journal, European Delirium Association, Scottish Hip Fracture Audit or iDelirium. Linked websites have their own editorial responsibility. Profile information reviewed 24 September 2026.</p>
+      <p class="footer-note">General information only; not individual medical advice.</p>
     </div>
   </footer>
   <script src="/assets/site.js?v=20260904-final-audit" defer></script>

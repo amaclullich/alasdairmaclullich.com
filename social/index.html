@@ -9,12 +9,15 @@
   <meta name="author" content="Alasdair MacLullich">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="theme-color" content="#f6f5f1">
+  <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://www.alasdairmaclullich.com/social/">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable site guide">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/styles.css?v=20260904-final-audit">
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-sans-3-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css?v=20260924">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Alasdair MacLullich">
@@ -24,12 +27,12 @@
   <meta property="og:image" content="https://www.alasdairmaclullich.com/assets/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Alasdair MacLullich: geriatrician, delirium researcher and writer">
+  <meta property="og:image:alt" content="Alasdair MacLullich, Professor of Geriatric Medicine, University of Edinburgh">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Social media | Alasdair MacLullich">
   <meta name="twitter:description" content="Professional profiles and public information channels across social media and YouTube.">
   <meta name="twitter:image" content="https://www.alasdairmaclullich.com/assets/social-card.png">
-  <meta name="twitter:image:alt" content="Alasdair MacLullich: geriatrician, delirium researcher and writer">
+  <meta name="twitter:image:alt" content="Alasdair MacLullich, Professor of Geriatric Medicine, University of Edinburgh">
 
   <script type="application/ld+json">
   {
@@ -40,20 +43,56 @@
         "@id": "https://www.alasdairmaclullich.com/social/#webpage",
         "name": "Social media | Alasdair MacLullich",
         "url": "https://www.alasdairmaclullich.com/social/",
-        "isPartOf": { "@id": "https://www.alasdairmaclullich.com/#website" },
+        "isPartOf": {
+          "@id": "https://www.alasdairmaclullich.com/#website"
+        },
         "inLanguage": "en-GB",
-        "about": { "@id": "https://www.alasdairmaclullich.com/#person" },
-        "dateModified": "2026-09-04",
-        "breadcrumb": { "@id": "https://www.alasdairmaclullich.com/social/#breadcrumb" },
+        "about": {
+          "@id": "https://www.alasdairmaclullich.com/#person"
+        },
+        "dateModified": "2026-09-24",
+        "breadcrumb": {
+          "@id": "https://www.alasdairmaclullich.com/social/#breadcrumb"
+        },
         "mainEntity": {
           "@type": "ItemList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "LinkedIn", "url": "https://www.linkedin.com/in/amaclullich/" },
-            { "@type": "ListItem", "position": 2, "name": "X", "url": "https://x.com/A_MacLullich" },
-            { "@type": "ListItem", "position": 3, "name": "Bluesky", "url": "https://bsky.app/profile/amaclullich.bsky.social" },
-            { "@type": "ListItem", "position": 4, "name": "Think Delirium on YouTube", "url": "https://www.youtube.com/@thinkdelirium" },
-            { "@type": "ListItem", "position": 5, "name": "Think Delirium on Threads", "url": "https://www.threads.com/@think_delirium" },
-            { "@type": "ListItem", "position": 6, "name": "Delirium Support on Facebook", "url": "https://www.facebook.com/deliriumsupport" }
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "LinkedIn",
+              "url": "https://www.linkedin.com/in/amaclullich/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "X",
+              "url": "https://x.com/A_MacLullich"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Bluesky",
+              "url": "https://bsky.app/profile/amaclullich.bsky.social"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Think Delirium on YouTube",
+              "url": "https://www.youtube.com/@thinkdelirium"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Think Delirium on Threads",
+              "url": "https://www.threads.com/@think_delirium"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Delirium Support on Facebook",
+              "url": "https://www.facebook.com/deliriumsupport"
+            }
           ]
         }
       },
@@ -61,39 +100,24 @@
         "@type": "Person",
         "@id": "https://www.alasdairmaclullich.com/#person",
         "name": "Alasdair MacLullich",
-        "alternateName": "Alasdair M. J. MacLullich",
-        "honorificPrefix": "Professor",
-        "jobTitle": "Professor of Geriatric Medicine",
-        "url": "https://www.alasdairmaclullich.com/",
-        "identifier": {
-          "@type": "PropertyValue",
-          "propertyID": "ORCID",
-          "value": "0000-0003-3159-9370",
-          "url": "https://orcid.org/0000-0003-3159-9370"
-        },
-        "worksFor": {
-          "@type": "CollegeOrUniversity",
-          "name": "The University of Edinburgh",
-          "url": "https://www.ed.ac.uk/"
-        },
-        "sameAs": [
-          "https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich",
-          "https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/",
-          "https://orcid.org/0000-0003-3159-9370",
-          "https://scholar.google.com/citations?user=MXvw7UIAAAAJ&hl=en",
-          "https://www.linkedin.com/in/amaclullich/",
-          "https://x.com/A_MacLullich",
-          "https://bsky.app/profile/amaclullich.bsky.social",
-          "https://www.wikidata.org/wiki/Q48288045",
-          "https://en.wikipedia.org/wiki/Alasdair_MacLullich"
-        ]
+        "url": "https://www.alasdairmaclullich.com/"
       },
       {
         "@type": "BreadcrumbList",
         "@id": "https://www.alasdairmaclullich.com/social/#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alasdairmaclullich.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Social", "item": "https://www.alasdairmaclullich.com/social/" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.alasdairmaclullich.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Social",
+            "item": "https://www.alasdairmaclullich.com/social/"
+          }
         ]
       }
     ]
@@ -104,126 +128,91 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="/" aria-label="AM, Alasdair MacLullich, home">
-        <span class="brand-mark" aria-hidden="true">AM</span>
-        <span class="brand-name">Alasdair MacLullich</span>
-      </a>
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Alasdair MacLullich, home">Alasdair MacLullich</a>
       <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="/delirium/">Delirium</a>
+        <a href="/cv/">CV</a>
         <a href="/research/">Research</a>
         <a href="/books/">Books</a>
+        <a href="/delirium/">Delirium</a>
         <a href="/media/">Media</a>
         <a href="/about/">About</a>
       </nav>
     </div>
   </header>
 
-  <nav class="breadcrumbs shell" aria-label="Breadcrumb">
-    <ol>
-      <li><a href="/">Home</a></li>
-      <li aria-current="page">Social</li>
-    </ol>
-  </nav>
-
-  <main class="page-main" id="main-content" tabindex="-1">
-    <section class="page-hero page-hero-wide shell">
-      <p class="eyebrow">Professional channels</p>
+  <main id="main-content" tabindex="-1">
+    <div class="wrap page-head">
       <h1>Updates, research and public information</h1>
-      <p class="page-standfirst">LinkedIn, X and Bluesky are my professional profiles. Think Delirium and Delirium Support are public information channels connected with my work.</p>
-    </section>
+      <p class="standfirst">LinkedIn, X and Bluesky are my professional profiles. Think Delirium and Delirium Support are public information channels connected with my work.</p>
+    </div>
 
-    <section class="social-section" aria-label="Social media accounts">
-      <div class="shell">
-        <ul class="social-grid">
-          <li>
-            <a class="social-card" href="https://www.linkedin.com/in/amaclullich/" aria-label="Visit Alasdair MacLullich on LinkedIn">
-              <span class="social-platform">LinkedIn</span>
-              <h2>Alasdair MacLullich</h2>
-              <p class="social-description">Professional updates, research, clinical commentary and longer posts.</p>
-              <span class="social-cta">Visit LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></span>
-            </a>
-          </li>
-
-          <li>
-            <a class="social-card" href="https://x.com/A_MacLullich" aria-label="Visit Alasdair MacLullich on X">
-              <span class="social-platform">X</span>
-              <h2>@A_MacLullich</h2>
-              <p class="social-description">Delirium research, education, clinical practice and discussion.</p>
-              <span class="social-cta">Visit X <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></span>
-            </a>
-          </li>
-
-          <li>
-            <a class="social-card" href="https://bsky.app/profile/amaclullich.bsky.social" aria-label="Visit Alasdair MacLullich on Bluesky">
-              <span class="social-platform">Bluesky</span>
-              <h2>@amaclullich.bsky.social</h2>
-              <p class="social-description">Research, professional updates and discussion about delirium and older people's care.</p>
-              <span class="social-cta">Visit Bluesky <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></span>
-            </a>
-          </li>
-
-          <li>
-            <a class="social-card" href="https://www.youtube.com/@thinkdelirium" aria-label="Visit Think Delirium on YouTube">
-              <span class="social-platform">YouTube</span>
-              <h2>Think Delirium</h2>
-              <p class="social-description">Videos about delirium for healthcare professionals, patients, families and carers.</p>
-              <span class="social-cta">Visit YouTube <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></span>
-            </a>
-          </li>
-
-          <li>
-            <a class="social-card" href="https://www.threads.com/@think_delirium" aria-label="Visit Think Delirium on Threads">
-              <span class="social-platform">Threads</span>
-              <h2>@think_delirium</h2>
-              <p class="social-description">Brief delirium education and public information from Think Delirium.</p>
-              <span class="social-cta">Visit Threads <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></span>
-            </a>
-          </li>
-
-          <li>
-            <a class="social-card" href="https://www.facebook.com/deliriumsupport" aria-label="Visit Delirium Support on Facebook">
-              <span class="social-platform">Facebook</span>
-              <h2>Delirium Support</h2>
-              <p class="social-description">Information and resources for patients, families and carers affected by delirium.</p>
-              <span class="social-cta">Visit Facebook <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></span>
-            </a>
-          </li>
-        </ul>
-
-        <p class="social-note">These links lead to external social media services. Each service has its own privacy, cookie and account policies.</p>
-      </div>
+    <section class="wrap" aria-label="Social media accounts">
+      <ul class="channel-list">
+        <li>
+          <span class="entry-label">LinkedIn</span>
+          <h2><a href="https://www.linkedin.com/in/amaclullich/">Alasdair MacLullich</a></h2>
+          <p>Professional updates, research, clinical commentary and longer posts.</p>
+        </li>
+        <li>
+          <span class="entry-label">X</span>
+          <h2><a href="https://x.com/A_MacLullich">@A_MacLullich</a></h2>
+          <p>Delirium research, education, clinical practice and discussion.</p>
+        </li>
+        <li>
+          <span class="entry-label">Bluesky</span>
+          <h2><a href="https://bsky.app/profile/amaclullich.bsky.social">@amaclullich.bsky.social</a></h2>
+          <p>Research, professional updates and discussion about delirium and older people's care.</p>
+        </li>
+        <li>
+          <span class="entry-label">YouTube</span>
+          <h2><a href="https://www.youtube.com/@thinkdelirium">Think Delirium</a></h2>
+          <p>Videos about delirium for healthcare professionals, patients, families and carers.</p>
+        </li>
+        <li>
+          <span class="entry-label">Threads</span>
+          <h2><a href="https://www.threads.com/@think_delirium">@think_delirium</a></h2>
+          <p>Brief delirium education and public information from Think Delirium.</p>
+        </li>
+        <li>
+          <span class="entry-label">Facebook</span>
+          <h2><a href="https://www.facebook.com/deliriumsupport">Delirium Support</a></h2>
+          <p>Information and resources for patients, families and carers affected by delirium.</p>
+        </li>
+      </ul>
+      <p class="page-note cv-after">These links lead to external social media services. Each service has its own privacy, cookie and account policies.</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-main">
-      <div class="footer-identity">
-        <a class="brand footer-brand" href="/" aria-label="AM, Alasdair MacLullich, home">
-          <span class="brand-mark" aria-hidden="true">AM</span>
-          <span class="brand-name">Alasdair MacLullich</span>
-        </a>
-        <p class="footer-identity-note">Professor of Geriatric Medicine at the University of Edinburgh.</p>
-      </div>
+    <div class="wrap footer-inner">
+      <p class="footer-name"><a class="brand footer-brand" href="/" aria-label="Alasdair MacLullich, home">Alasdair MacLullich</a></p>
+      <p class="footer-role">Professor of Geriatric Medicine at the University of Edinburgh.</p>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="https://alasdairmaclullich.substack.com/subscribe">Free newsletter</a>
-        <a href="/delirium/">Delirium</a>
+        <a href="/cv/">CV</a>
         <a href="/research/">Research</a>
         <a href="/books/">Books</a>
+        <a href="/delirium/">Delirium</a>
         <a href="/media/">Media</a>
         <a href="/about/">About</a>
-        <a href="/social/" aria-current="page">Social</a>
+        <a href="/social/" aria-current="page">Social media</a>
         <a href="/contact/">Contact</a>
         <a href="/accessibility/">Accessibility</a>
         <a href="/privacy/">Privacy</a>
-        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
-        <a href="https://orcid.org/0000-0003-3159-9370">ORCID <span aria-hidden="true">↗</span><span class="visually-hidden"> (external)</span></a>
       </nav>
-    </div>
-    <div class="shell footer-note">
-      <p>Maintained independently by Alasdair MacLullich. Linked websites and social media services have their own editorial responsibility. Profile information reviewed 4 September 2026.</p>
-      <p>General information only; not individual medical advice.</p>
+      <nav class="footer-profiles" aria-label="Profiles">
+        <a href="https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich">University profile</a>
+        <a href="https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/">Research Explorer</a>
+        <a href="https://orcid.org/0000-0003-3159-9370">ORCID</a>
+        <a href="https://scholar.google.com/citations?user=MXvw7UIAAAAJ&amp;hl=en">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/amaclullich/">LinkedIn</a>
+        <a href="https://x.com/A_MacLullich">X</a>
+        <a href="https://bsky.app/profile/amaclullich.bsky.social">Bluesky</a>
+        <a href="https://www.youtube.com/@thinkdelirium">YouTube</a>
+        <a href="https://alasdairmaclullich.substack.com/subscribe">Newsletter</a>
+      </nav>
+      <p class="footer-note">Maintained independently by Alasdair MacLullich. This is not an official website of the University of Edinburgh, NHS, <cite>Delirium</cite> journal, European Delirium Association, Scottish Hip Fracture Audit or iDelirium. Linked websites have their own editorial responsibility. Profile information reviewed 24 September 2026.</p>
+      <p class="footer-note">General information only; not individual medical advice.</p>
     </div>
   </footer>
   <script src="/assets/site.js?v=20260904-final-audit" defer></script>
