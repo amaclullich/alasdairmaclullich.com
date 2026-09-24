@@ -1159,6 +1159,74 @@ code {
   margin-top: 0.8rem;
 }
 
+/* Newsletter and free chapter */
+
+.newsletter-box p {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.newsletter-box .button {
+  margin-top: 0.9rem;
+  font-size: 0.9375rem;
+}
+
+.signup-band {
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--tint-rule);
+  background: var(--tint);
+}
+
+.signup-band + .site-footer {
+  margin-top: 0;
+}
+
+.signup-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  padding-block: 2rem 2.25rem;
+}
+
+.signup-card h2 {
+  font-size: 1.3125rem;
+}
+
+.signup-card p {
+  max-width: 34rem;
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.signup-card .signup-action {
+  margin-top: 1rem;
+}
+
+.signup-book {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.signup-book img {
+  width: 4.5rem;
+  box-shadow: 0 0 0 1px rgb(22 25 27 / 8%);
+}
+
+@media (min-width: 52rem) {
+  .signup-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    padding-block: 2.5rem 2.75rem;
+  }
+}
+
 /* Footer */
 
 .site-footer {
@@ -1695,6 +1763,7 @@ code {
   .info-box,
   .tint-box,
   .contact-box,
+  .signup-band,
   .consent-banner,
   .consent-button,
   .button,
@@ -1718,7 +1787,9 @@ code {
   .copy-button,
   .copy-status,
   .cv-toc,
-  .button-row {
+  .button-row,
+  .signup-band,
+  .newsletter-box {
     display: none !important;
   }
 
@@ -1754,7 +1825,8 @@ code {
     color: inherit;
   }
 
-  .site-footer {
+  .site-footer,
+  .signup-band + .site-footer {
     margin-top: 1.5rem;
   }
 }
