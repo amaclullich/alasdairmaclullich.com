@@ -17,34 +17,42 @@ async function files(dir) {
 }
 const all = await files(root);
 const requiredNavigation = [
-  ['/cv/', 'CV'],
   ['/research/', 'Research'],
-  ['/books/', 'Books'],
   ['/delirium/', 'Delirium'],
+  ['/websites/', 'Websites'],
+  ['/books/', 'Books'],
   ['/media/', 'Media'],
+  ['/social/', 'Social'],
+  ['/cv/', 'CV'],
   ['/about/', 'About']
 ];
 const requiredFooterLinks = [
-  '/cv/',
   '/research/',
-  '/books/',
   '/delirium/',
+  '/websites/',
+  '/books/',
   '/media/',
-  '/about/',
   '/social/',
-  '/contact/',
-  '/accessibility/',
-  '/privacy/'
+  '/cv/',
+  '/about/',
+  '/contact/'
 ];
 const requiredProfileLinks = [
   'https://edwebprofiles.ed.ac.uk/profile/alasdair-maclullich',
   'https://www.research.ed.ac.uk/en/persons/alasdair-maclullich/',
   'https://orcid.org/0000-0003-3159-9370',
   'https://scholar.google.com/citations?user=MXvw7UIAAAAJ&amp;hl=en',
+  'https://pubmed.ncbi.nlm.nih.gov/?term=MacLullich+AMJ%5BAuthor%5D'
+];
+const requiredFollowLinks = [
   'https://www.linkedin.com/in/amaclullich/',
   'https://x.com/A_MacLullich',
   'https://bsky.app/profile/amaclullich.bsky.social',
   'https://www.youtube.com/@thinkdelirium',
+  'https://www.instagram.com/a_maclullich/',
+  'https://www.tiktok.com/@a_maclullich',
+  'https://www.threads.com/@a_maclullich',
+  'https://www.facebook.com/deliriumsupport',
   'https://alasdairmaclullich.substack.com/subscribe'
 ];
 const houseStylePatterns = [
@@ -88,6 +96,9 @@ for (const file of all) {
   const profileNavigation = html.match(/<nav class="footer-profiles"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
   const profileLinks = [...(profileNavigation || '').matchAll(/<a href="([^"]+)"/g)].map((match) => match[1]);
   if (JSON.stringify(profileLinks) !== JSON.stringify(requiredProfileLinks)) throw new Error(`${label} footer profile links are inconsistent`);
+  const followNavigation = html.match(/<nav class="footer-follow"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+  const followLinks = [...(followNavigation || '').matchAll(/<a href="([^"]+)"/g)].map((match) => match[1]);
+  if (JSON.stringify(followLinks) !== JSON.stringify(requiredFollowLinks)) throw new Error(`${label} footer follow links are inconsistent`);
   if (/<span\b[^>]*aria-hidden="true"[^>]*>↗<\/span>(?!<span class="visually-hidden"> \(external\)<\/span>)/.test(html)) throw new Error(`${label} has an external-link arrow without accessible text`);
   for (const pair of html.matchAll(/<p class="eyebrow"[^>]*>([\s\S]*?)<\/p>\s*<h[12](?:\s[^>]*)?>([\s\S]*?)<\/h[12]>/g)) {
     if (plainText(pair[1]) === plainText(pair[2])) throw new Error(`${label} repeats the same eyebrow and heading text: ${plainText(pair[1])}`);

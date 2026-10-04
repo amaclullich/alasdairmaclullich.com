@@ -43,9 +43,13 @@
   --muted: #4b5558;
   --teal: #0e3c4c;
   --link: #15535b;
-  --rule: #d7ddde;
-  --tint: #f1f5f5;
-  --tint-rule: #d3dedf;
+  --rule: #dcd9d0;
+  --paper: #f4f2ec;
+  --paper-light: #fbfaf7;
+  --surface: #ffffff;
+  --band: #e9ebe4;
+  --on-teal: #dfe8e8;
+  --on-teal-strong: #ffffff;
   --white: #ffffff;
   --focus: #9b5200;
   --focus-light: #ffdc7a;
@@ -62,7 +66,7 @@
 }
 
 html {
-  background: var(--white);
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--serif);
   font-size: 100%;
@@ -73,7 +77,7 @@ html {
 body {
   margin: 0;
   min-width: 20rem;
-  background: var(--white);
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--serif);
   font-size: 1.0625rem;
@@ -205,7 +209,9 @@ code {
 /* Header */
 
 .site-header {
+  border-top: 4px solid var(--teal);
   border-bottom: 1px solid var(--rule);
+  background: var(--paper-light);
 }
 
 .header-inner {
@@ -346,7 +352,7 @@ code {
   width: 4.5rem;
   height: 5.625rem;
   object-fit: cover;
-  background: var(--tint);
+  background: var(--surface);
 }
 
 .intro-photo-wide {
@@ -429,7 +435,8 @@ code {
 .info-box {
   margin-top: 1.6rem;
   padding: 1.1rem 1.1rem 1.25rem;
-  background: var(--tint);
+  border: 1px solid var(--rule);
+  background: var(--surface);
 }
 
 .info-box h2 {
@@ -447,7 +454,7 @@ code {
 
 .info-box li {
   padding: 0.55rem 0;
-  border-top: 1px solid var(--tint-rule);
+  border-top: 1px solid var(--rule);
 }
 
 .info-box li:first-child {
@@ -736,7 +743,8 @@ code {
   max-width: 47.5rem;
   margin-top: 0.9rem;
   padding: 1rem 1.1rem;
-  background: var(--tint);
+  border: 1px solid var(--rule);
+  background: var(--surface);
 }
 
 .tint-box > * + * {
@@ -1175,8 +1183,8 @@ code {
 
 .signup-band {
   margin-top: 3.5rem;
-  border-top: 1px solid var(--tint-rule);
-  background: var(--tint);
+  border-top: 1px solid var(--rule);
+  background: var(--band);
 }
 
 .signup-band + .site-footer {
@@ -1227,16 +1235,25 @@ code {
   }
 }
 
-/* Footer */
+/* Footer: four columns on dark teal */
 
 .site-footer {
   margin-top: 3.5rem;
-  border-top: 1px solid var(--rule);
-  background: var(--white);
+  background: var(--teal);
+  color: var(--on-teal);
 }
 
 .footer-inner {
-  padding-block: 1.75rem 2.25rem;
+  padding-block: 2.25rem 2.5rem;
+}
+
+.site-footer a {
+  color: var(--on-teal-strong);
+}
+
+.site-footer a:hover {
+  color: var(--on-teal-strong);
+  text-decoration-thickness: 2px;
 }
 
 .footer-name .brand {
@@ -1246,49 +1263,60 @@ code {
 
 .footer-role {
   margin-top: 0.2rem;
-  color: var(--muted);
+  color: var(--on-teal);
   font-size: 0.9375rem;
 }
 
-.footer-nav,
-.footer-profiles {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0 1.1rem;
-  margin-top: 0.9rem;
+.footer-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.75rem 2.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgb(223 232 232 / 30%);
+}
+
+.footer-heading {
+  margin-bottom: 0.3rem;
+  color: var(--on-teal-strong);
   font-family: var(--sans);
   font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.35;
 }
 
-.footer-profiles {
-  margin-top: 0.35rem;
+.footer-col nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.footer-nav a,
-.footer-profiles a,
+.footer-col nav a,
 .cookie-settings-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   min-height: 2.75rem;
-  padding: 0.6rem 0;
+  padding: 0.3rem 0;
   border: 0;
   background: transparent;
-  color: var(--ink);
+  color: var(--on-teal-strong);
   font-family: var(--sans);
   font-size: 0.9375rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.4;
+  text-align: left;
 }
 
-.footer-nav a:hover,
-.footer-profiles a:hover,
-.cookie-settings-button:hover {
-  color: var(--teal);
-}
-
-.footer-nav a[aria-current] {
-  color: var(--teal);
+.footer-col nav a[aria-current] {
   font-weight: 600;
+}
+
+.footer-col .icon {
+  flex: none;
+  width: 1.125rem;
+  height: 1.125rem;
 }
 
 .cookie-settings-button,
@@ -1306,6 +1334,11 @@ code {
   outline-offset: 3px;
 }
 
+.site-footer a:focus-visible,
+.site-footer .cookie-settings-button:focus-visible {
+  outline-color: var(--focus-light);
+}
+
 .privacy-settings-button {
   min-height: 2.75rem;
   padding: 0;
@@ -1317,9 +1350,8 @@ code {
 }
 
 .footer-note {
-  max-width: 56rem;
   margin-top: 0.9rem;
-  color: var(--muted);
+  color: var(--on-teal);
   font-family: var(--sans);
   font-size: 0.875rem;
   line-height: 1.5;
@@ -1327,6 +1359,23 @@ code {
 
 .footer-note + .footer-note {
   margin-top: 0.35rem;
+}
+
+@media (min-width: 40rem) {
+  .footer-cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .footer-cols {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .footer-col nav a,
+  .cookie-settings-button {
+    min-height: 2.25rem;
+  }
 }
 
 /* Analytics notice (behaviour and wording set in site.js; look kept from the previous design) */
@@ -1844,4 +1893,497 @@ code {
   font-weight: 400;
   line-height: 1.3;
   letter-spacing: 0;
+}
+
+/* 2026-10 additions */
+
+.list-label::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 2px;
+  margin-bottom: 0.55rem;
+  background: var(--teal);
+}
+
+.intro-photo,
+.intro-photo-wide,
+.page-head-aside img,
+.media-photo img,
+.side-portrait img {
+  border: 1px solid var(--rule);
+}
+
+/* Figures row on the homepage */
+
+.figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1.5rem;
+  margin-top: 1.6rem;
+  padding: 1.1rem 0 1.2rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.figures dt {
+  color: var(--teal);
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.figures dd {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+/* Website cards on the homepage */
+
+.site-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 1.25rem;
+  margin-top: 1.4rem;
+  list-style: none;
+}
+
+.site-card a {
+  display: block;
+  text-decoration: none;
+}
+
+.site-card img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+}
+
+.site-card-name {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--link);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.site-card a:hover .site-card-name {
+  color: var(--teal);
+  text-decoration-thickness: 2px;
+}
+
+.site-card-audience {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+.section-more {
+  margin-top: 1.25rem;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+}
+
+.section-more a {
+  display: inline-block;
+  padding-block: 0.3rem;
+}
+
+/* Follow panel on the homepage */
+
+.follow-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.3rem;
+  list-style: none;
+}
+
+.info-box .follow-icons li {
+  padding: 0;
+  border: 0;
+}
+
+.follow-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--ink);
+}
+
+.follow-icons a:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.follow-icons .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.info-box .follow-all {
+  margin-top: 0.5rem;
+  font-family: var(--sans);
+}
+
+.info-box .follow-all a {
+  font-size: 1rem;
+}
+
+/* Homepage band on teal; other pages use the light band */
+
+.signup-band-home {
+  border-top: 0;
+  background: var(--teal);
+  color: var(--on-teal);
+}
+
+.signup-band-home h2 {
+  color: var(--on-teal-strong);
+}
+
+.signup-band-home .signup-card p {
+  color: var(--on-teal);
+}
+
+.signup-band-home .button-primary {
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--teal);
+}
+
+.signup-band-home .button-primary:hover {
+  color: var(--teal);
+}
+
+.signup-band-home a:focus-visible {
+  outline-color: var(--focus-light);
+}
+
+.signup-band-home + .site-footer {
+  border-top: 1px solid rgb(223 232 232 / 30%);
+}
+
+/* Websites page */
+
+.site-rows {
+  list-style: none;
+}
+
+.site-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.site-row:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.site-row-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+}
+
+.site-row-audience {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+}
+
+.site-row h2 {
+  margin-top: 0.2rem;
+  font-size: 1.5rem;
+}
+
+.site-row-domain {
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.875rem;
+}
+
+.site-row-desc {
+  max-width: 36rem;
+  margin-top: 0.7rem;
+}
+
+.site-row-action {
+  margin-top: 1.1rem;
+}
+
+.site-list-compact {
+  max-width: 52rem;
+  margin-top: 1rem;
+}
+
+.site-list-compact .site {
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.site-list-compact .site:last-child {
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Social media page */
+
+.social-newsletter {
+  max-width: 47.5rem;
+  margin-top: 1.5rem;
+}
+
+.account-audience {
+  max-width: 47.5rem;
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 1rem;
+}
+
+.account-cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  max-width: 64rem;
+  margin-top: 1.1rem;
+  list-style: none;
+}
+
+.account-card {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding: 1.1rem 1.2rem 1.25rem;
+  border: 1px solid var(--rule);
+  background: var(--surface);
+}
+
+.account-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--ink);
+}
+
+.account-card h3 {
+  font-size: 1.1875rem;
+  line-height: 1.25;
+}
+
+.account-handle {
+  margin-top: 0.1rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+}
+
+.account-desc {
+  margin-top: 0.45rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.account-card .button {
+  margin-top: 0.9rem;
+}
+
+/* Side column on inner pages */
+
+.side-col {
+  display: none;
+}
+
+.side-label {
+  color: var(--teal);
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.side-toc ol {
+  margin-top: 0.5rem;
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  list-style: none;
+}
+
+.side-toc li + li {
+  margin-top: 0.15rem;
+}
+
+.side-toc a {
+  display: inline-block;
+  padding-block: 0.3rem;
+  color: var(--ink);
+}
+
+.side-panel {
+  margin-top: 1.75rem;
+}
+
+.side-panel p {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.info-box.side-panel p a {
+  font-size: inherit;
+  font-weight: 600;
+}
+
+.side-portrait {
+  margin-top: 1.75rem;
+}
+
+.side-portrait img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 52rem) {
+  .figures {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .site-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .site-row {
+    grid-template-columns: 55fr 45fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .account-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .site-cards {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .site-row {
+    gap: 3.5rem;
+    padding: 2.75rem 0;
+  }
+
+  .site-row h2 {
+    font-size: 1.9375rem;
+  }
+
+  .with-side {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 18.75rem;
+    gap: 4rem;
+  }
+
+  .side-col {
+    display: block;
+    padding-top: 3.5rem;
+  }
+
+  .side-col .info-box.side-panel {
+    margin-top: 1.75rem;
+  }
+
+  .page-head-grid.has-side-portrait {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .has-side-portrait .page-head-aside {
+    display: none;
+  }
+}
+
+@media (min-width: 64rem) and (min-height: 46rem) {
+  .side-inner {
+    position: sticky;
+    top: 1.5rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .site-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (forced-colors: active) {
+  .account-card,
+  .site-footer,
+  .site-card img,
+  .site-row-image img {
+    border: 1px solid CanvasText;
+  }
+}
+
+@media print {
+  html,
+  body,
+  .site-header {
+    background: #ffffff;
+  }
+
+  .site-header {
+    border-top: 0;
+  }
+
+  .site-footer {
+    border-top: 1px solid #999999;
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .site-footer a {
+    color: inherit;
+  }
+
+  .footer-cols {
+    display: block;
+    border-top: 0;
+  }
+
+  .footer-cols nav,
+  .footer-heading,
+  .side-col,
+  .follow-box,
+  .account-card .button {
+    display: none !important;
+  }
+
+  .footer-note {
+    color: #000000;
+  }
+
+  .with-side {
+    display: block;
+  }
 }

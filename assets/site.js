@@ -277,7 +277,7 @@
     });
   });
 
-  var footerNavigation = document.querySelector(".footer-nav");
+  var footerNavigation = document.querySelector(".footer-about") || document.querySelector(".footer-nav");
   if (footerNavigation && !footerNavigation.querySelector(".js-cookie-settings")) {
     var footerButton = document.createElement("button");
     footerButton.className = "cookie-settings-button js-cookie-settings";
