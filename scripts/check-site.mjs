@@ -53,6 +53,7 @@ const requiredFollowLinks = [
   'https://www.tiktok.com/@a_maclullich',
   'https://www.threads.com/@a_maclullich',
   'https://www.facebook.com/deliriumsupport',
+  'https://www.pinterest.com/deliriumsupport/',
   'https://alasdairmaclullich.substack.com/subscribe'
 ];
 const houseStylePatterns = [
