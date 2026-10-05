@@ -6,14 +6,14 @@ Canonical website: https://www.alasdairmaclullich.com/
 Canonical person identifier: https://www.alasdairmaclullich.com/#person
 ORCID: https://orcid.org/0000-0003-3159-9370
 Language: British English (en-GB)
-Last updated: 2026-10-04
+Last updated: 2026-10-05
 
 ## Primary pages
 
-- [Home and selected work](https://www.alasdairmaclullich.com/): Current roles, founding roles with years, websites grouped by reader, books, and research and contact links.
+- [Home and selected work](https://www.alasdairmaclullich.com/): Current roles, founding roles with years, key figures for the 4AT, his main delirium websites, books, and research and contact links.
 - [CV](https://www.alasdairmaclullich.com/cv/): A short CV: posts, qualifications, founding and leadership roles, the 4AT and the guidelines that recommend it, research funders, awards and books, with sources.
 - [About Alasdair MacLullich](https://www.alasdairmaclullich.com/about/): Current roles, founding roles, guidelines, awards and verified professional profiles.
-- [Delirium](https://www.alasdairmaclullich.com/delirium/): Evidence-based overview, urgent-help route and resources for families, clinicians, students, researchers and journalists.
+- [Delirium](https://www.alasdairmaclullich.com/delirium/): Evidence-based overview, urgent-help route, the guidelines that recommend the 4AT, and resources for families, clinicians, students, researchers and journalists.
 - [Research](https://www.alasdairmaclullich.com/research/): Current programmes, evidence-based findings, selected publications and links to fuller publication profiles.
 - [Media and speaking](https://www.alasdairmaclullich.com/media/): Biographies of about 30, 100 and 200 words, a line to introduce him from the stage, areas of expertise, sources and the institutional contact route.
 - [Books](https://www.alasdairmaclullich.com/books/): The 4AT Manual, published on 31 July 2026 and available in Kindle, paperback and hardback editions, and the forthcoming family guide to delirium.
@@ -21,7 +21,7 @@ Last updated: 2026-10-04
 - [Delirium family guide book site](https://deliriumfamilyguide.com/): Book website for the family guide. Chapter 1 is free: readers give an email address and a link to the PDF is sent to them. News of publication goes to the same list.
 - [The 4AT Manual](https://www.the4at.com/4at-manual): The 4AT Manual: A Practical Guide to Delirium Assessment, by Alasdair MacLullich. Published on 31 July 2026 by Delirium Support Press. Free PDF and EPUB, CC BY 4.0; also available from Amazon as a [Kindle e-book](https://www.alasdairmaclullich.com/buy/4at-manual/?format=kindle) (ASIN B0HC85425K), [paperback](https://www.alasdairmaclullich.com/buy/4at-manual/?format=paperback) (ISBN 978-1-918164-00-8) and [hardback](https://www.alasdairmaclullich.com/buy/4at-manual/?format=hardback) (ISBN 978-1-918164-05-3).
 - [Social media](https://www.alasdairmaclullich.com/social/): Verified professional profiles and public information channels.
-- [Websites](https://www.alasdairmaclullich.com/websites/): His delirium websites, each with a picture of its landing page, plus other resources and separate organisations.
+- [Delirium websites](https://www.alasdairmaclullich.com/websites/): His delirium websites, each with a picture of its landing page, plus other resources and separate organisations.
 - [Privacy](https://www.alasdairmaclullich.com/privacy/): Hosting, optional analytics and privacy information.
 - [Contact](https://www.alasdairmaclullich.com/contact/): Professional, media and website-correction routes.
 - [Accessibility](https://www.alasdairmaclullich.com/accessibility/): Accessibility measures and barrier-reporting route.
