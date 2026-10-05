@@ -1,6 +1,6 @@
 Icons in this folder
 
-bluesky, facebook, instagram, substack, threads, tiktok, x and youtube: Simple Icons (https://simpleicons.org/), CC0 1.0. Trademarks belong to their owners.
+bluesky, facebook, instagram, pinterest, substack, threads, tiktok, x and youtube: Simple Icons (https://simpleicons.org/), CC0 1.0. Trademarks belong to their owners.
 
 linkedin: Bootstrap Icons (https://icons.getbootstrap.com/), MIT licence:
 
