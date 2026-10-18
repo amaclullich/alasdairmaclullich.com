@@ -1,0 +1,31 @@
+# Tells Bing and other IndexNow search engines about changed pages after each push.
+name: IndexNow
+on:
+  push:
+    branches: [main]
+    paths: ['**.html']
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Wait for GitHub Pages to publish
+        run: sleep 120
+      - name: Submit changed pages
+        env:
+          HOST: www.alasdairmaclullich.com
+          KEY: 16ce507d29004f0e86b1c72481f14e00
+          PREFIX: ''
+        run: |
+          urls=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- "${PREFIX}*.html" "${PREFIX}**/*.html" \
+            | sed "s#^${PREFIX}##" | { grep -v '^404\.html$' || true; } \
+            | sed -e 's#index\.html$##' -e "s#^#https://${HOST}/#" | sort -u)
+          [ -z "$urls" ] && { echo "No changed pages"; exit 0; }
+          echo "$urls"
+          list=$(printf '%s\n' $urls | jq -R . | jq -s -c .)
+          body=$(jq -n -c --arg h "$HOST" --arg k "$KEY" --argjson u "$list" '{host:$h,key:$k,keyLocation:("https://"+$h+"/"+$k+".txt"),urlList:$u}')
+          code=$(curl -sS -o /dev/null -w '%{http_code}' -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$body")
+          echo "IndexNow answered $code"
+          case "$code" in 200|202) ;; *) exit 1 ;; esac
