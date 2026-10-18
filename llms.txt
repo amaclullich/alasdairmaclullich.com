@@ -6,7 +6,7 @@ Canonical website: https://www.alasdairmaclullich.com/
 Canonical person identifier: https://www.alasdairmaclullich.com/#person
 ORCID: https://orcid.org/0000-0003-3159-9370
 Language: British English (en-GB)
-Last updated: 2026-10-05
+Last updated: 2026-10-18
 
 ## Primary pages
 
@@ -44,6 +44,7 @@ Last updated: 2026-10-05
 - [Illustrated Delirium Stories](https://deliriumsupport.com/stories/): Short illustrated stories about delirium for patients, families and carers.
 - [The 4AT](https://www.the4at.com/): Official free 4AT delirium assessment website, with guidance, evidence and translations; no registration is required.
 - [Delirium Tools](https://www.deliriumtools.com/): Referenced directory of delirium assessment tools.
+- [ACE-T](https://theace-t.com/): Free nursing tool for the first hours after a positive delirium screen (Acute Triggers, Patient Experience and Treatment), with a bedside form, narrated walkthrough and pilot evidence. He is a co-developer.
 - [Delirium Academy](https://deliriumacademy.com/): Free delirium courses for staff caring for adults, starting with Delirium in 30, a 30-minute foundation course. No registration.
 - [Delirium Words](https://www.deliriumwords.com/): Articles and commentary.
 - [Think Delirium](https://www.youtube.com/@thinkdelirium): Videos for professionals, patients and carers.
